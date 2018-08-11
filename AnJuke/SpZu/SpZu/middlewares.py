@@ -140,12 +140,13 @@ class RandomProxy(object):
     def process_response(self, request, response, spider):
         print('到这了')
         print(request.url)
-        print(response.status)
+        # print(response.status)
         if response.status==302:
+            print('有验证码了，被重定向了')
             print('终于看到你了')
         if 'captcha-verify' in request.url:
             print(request)
-            print("这是到哪了呀，你知道吗".format(request['meta']))
+            print("这是到哪了呀，你知道吗{}".format(request.meta.get('redirect_urls')[0]))
             r = redis.Redis(host='127.0.0.1', port=6379, db=1)
             # r.lpush('sp_zu:start_urls',response['meta'])
         return response

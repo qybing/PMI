@@ -2,6 +2,7 @@
 import re
 from time import sleep
 
+import redis
 import scrapy
 from parsel import Selector
 from w3lib.html import remove_tags
@@ -12,7 +13,9 @@ from SpZu.items import SpzuItem
 class SpDetailSpider(scrapy.Spider):
     name = 'sp_detail'
     allowed_domains = ['anjuke.comm']
-    start_urls = ['https://sh.sp.anjuke.com/zu/59378052/?pt=2']
+    start_urls = ['https://sh.sp.anjuke.com/zu/59378052/?pt=2',
+                  'https://sh.sp.anjuke.com/zu/59483743/?pt=2',
+                  'https://sh.sp.anjuke.com/shou/59536706/?pt=2']
     redis_key = "sp_detail:start_urls"
     # allowed_domains = ['anjuke.com']
 
@@ -62,11 +65,16 @@ class SpDetailSpider(scrapy.Spider):
 
     }
 
-
-
     def parse(self, response):
-        detail_urls_content = response.text
-        if '访问验证-安居客' not in detail_urls_content:
+        if 'captcha-verify' in response.url:
+            print('遇到验证码了，url放入待爬队列里面')
+            url = str(response.meta.get('redirect_urls')[0])
+            pool = redis.ConnectionPool(host='localhost', port=6379,db=1, decode_responses=True)
+            r = redis.Redis(connection_pool=pool)
+            r.lpush('sp_detail:start_urls', url)
+        else:
+            detail_urls_content = response.text
+        # if '访问验证-安居客' not in detail_urls_content:
             item = SpzuItem()
             lat_lng = re.findall(r'lat: "(.*?)",.*?lng: "(.*?)"', detail_urls_content, re.S)
             real_lat_lng = lat_lng[0]
@@ -238,7 +246,8 @@ class SpDetailSpider(scrapy.Spider):
             # rs = 'total:%s,月租:%s,转让费:%s,总价:%s,单价:%s,物业费:%s,面积:%s,面宽:%s,层高:%s,进深:%s,楼层:%s,状态:%s,起租期:%s,人群:%s ,押付:%s ,地址:%s,免租期:%s,是否临街:%s,发布时间:%s,房源编号:%s ,房源描述:%s ,商铺小区名字:%s,开发商:%s ,物业公司:%s ,物业费:%s,统一管理:%s,竣工时间:%s,总楼层:%s,总面积:%s' % (
             #     deatil_mss)
             yield item
+
             # print(rs)
-        else:
-            print('有验证码')
-            sleep(20)
+        # else:
+        #         #     print('有验证码')
+        #         #     sleep(20)

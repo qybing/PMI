@@ -14,6 +14,19 @@ BOT_NAME = 'XzlSpider'
 SPIDER_MODULES = ['XzlSpider.spiders']
 NEWSPIDER_MODULE = 'XzlSpider.spiders'
 
+# Crawl responsibly by identifying yourself (and your website) on the user-agent
+# USER_AGENT = 'Article (+http://www.yourdomain.com)'
+#使用scrapy-redis里的去重组件，不使用scrapy默认的去重
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+#使用scrapy-redis里的调度器组件，不使用scrapy默认的去重
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+SCHEDULER_PERSIST = True
+
+SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
+#SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderQueue"
+#SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
+
+REDIE_URL = None
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'XzlSpider (+http://www.yourdomain.com)'
@@ -92,14 +105,41 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"  #启用Redis调度存储请求队列
-SCHEDULER_PERSIST = True    #不清除Redis队列、这样可以暂停/恢复 爬取
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"  #确保所有的爬虫通过Redis去重
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
-REDIS_HOST = 'localhost'  # 也可以根据情况改成 localhost
-REDIS_PORT = 6379
-REDIS_PARAMS = {
-   # 'password': 在此设置密码,
-   'db': 2
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"  #启用Redis调度存储请求队列
+# SCHEDULER_PERSIST = True    #不清除Redis队列、这样可以暂停/恢复 爬取
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"  #确保所有的爬虫通过Redis去重
+# SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
+# REDIS_HOST = 'localhost'  # 也可以根据情况改成 localhost
+# REDIS_PORT = 6379
+# # REDIS_PARAMS = {
+# #    # 'password': 在此设置密码,
+# #    'db': 2
+# # }
+# REDIS_URL = None
+house_config ={
+    '日租金':'daily_hire',
+    '月租金':'month_hire',
+    '得房率':'get_house',
+    '楼盘名':'house_name',
+    '地址':'address',
+    '地铁':'subway',
+    '建筑面积':'covered_area',
+    '楼层':'floor',
+    '工位数':'station',
+    '物业费':'property_management_fee',
+    '类型':'type',
+    '总楼层':'total_floor',
+    '竣工年月':'completion_date',
+    '大堂层高':'lobby_height',
+    '空调类型':'air_conditioning_type',
+    '车位':'parking_space',
+    '单层面积':'every_area',
+    # '得房率':'get_house',
+    '物业公司':'property_company',
+    '标准层高':'standard_floor_hegiht',
+    '电梯':'elevator',
+    '是否涉外':'is_foregin',
+    '单价':'unit_price',
+    '总价':'total_price',
+    '面积':'area',
 }
-REDIS_URL = None

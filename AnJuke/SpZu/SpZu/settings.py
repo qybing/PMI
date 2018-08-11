@@ -84,7 +84,7 @@ SCHEDULER_PERSIST = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'SpZu.pipelines.SpzuPipeline': 300,
+    'SpZu.pipelines.SpzuPipeline': 300,
     'scrapy_redis.pipelines.RedisPipeline':400,
 }
 
@@ -110,11 +110,14 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 REDIS_HOST = '127.0.0.1'  # 主机ip
 REDIS_PORT = 6379
-REDIS_DB = 0
+REDIS_PARAMS = {
+   # 'password': 在此设置密码,
+   'db': 1
+}
 
 
 #设置重定向参数
-REDIRECT_ENABLED = False
+# REDIRECT_ENABLED = False
 
 
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"

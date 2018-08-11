@@ -11,17 +11,22 @@ class CrawlCitySpider(scrapy.Spider):
     start_urls = ['https://sh.sp.anjuke.com/zu/']
 
     def parse(self, response):
-        detail_urls_content = response.text
-        if '访问验证-安居客' not in detail_urls_content:
+        if 'captcha-verify' in response.url:
+            print('遇到验证码了，url放入待爬队列里面')
+            url = str(response.meta.get('redirect_urls')[0])
+            pool = redis.ConnectionPool(host='localhost', port=6379, db=1, decode_responses=True)
+            r = redis.Redis(connection_pool=pool)
+            r.rpush('crawl_city:start_urls', url)
+        else:
+        # if '访问验证-安居客' not in detail_urls_content:
+            detail_urls_content = response.text
             pool = redis.ConnectionPool(host='localhost', port=6379,db=1, decode_responses=True)
             r = redis.Redis(connection_pool=pool)
             xpath_css = Selector(text=detail_urls_content)
             citys = xpath_css.xpath('//*[@id="city_list"]/dl/dd/a/@href').extract()
             print(citys)
             for city in citys:
-                r.lpush('crawl_city:start_urls',city)
+                r.lpush('crawl_county:start_urls',city)
             print('已经入库完毕')
             print(len(citys))
             # return citys
-        else:
-            print('有验证码')
