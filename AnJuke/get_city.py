@@ -17,28 +17,28 @@ proxies_ips = [
     'http://221.7.255.168:8080',
 ]
 
-db = pymysql.connect(host='127.0.0.1', user='root', passwd='123456', db='jovan',
-                     charset='utf8')
-cursor = db.cursor()
+# db = pymysql.connect(host='127.0.0.1', user='root', passwd='123456', db='jovan',
+#                      charset='utf8')
+# cursor = db.cursor()
 
 
 # 获取url网页内容，start_url为目标网址
 def get_html_content(start_url):
     for tries in range(5):
         ua = UserAgent()
-        url = 'http://127.0.0.1:5000/get'
-        proxies_ips = requests.get(url)
+        # url = 'http://127.0.0.1:5000/get'
+        # proxies_ips = requests.get(url)
         # print(random.choice(proxies_ips))
         headers = {
             'User-Agent': '{}'.format(ua.random),
         }
-        proxies = {
-            "http": "http://{}".format(proxies_ips.text),
-            # "https": "http://170.244.141.53:53281",
-        }
-        print(proxies)
+        # proxies = {
+        #     "http": "http://{}".format(proxies_ips.text),
+        #     # "https": "http://170.244.141.53:53281",
+        # }
+        # print(proxies)
         try:
-            res = requests.get(url=start_url, headers=headers, proxies=proxies)
+            res = requests.get(url=start_url, headers=headers) #, proxies=proxies
             # print(res)
             if res.status_code == 200:
                 return res.text
@@ -144,7 +144,6 @@ def main():
 def handler_detail_msm_sp(detail_urls_content, url):
     if '访问验证-安居客' not in detail_urls_content:
         xpath_css = Selector(text=detail_urls_content)
-        city_lists = []
         citys = xpath_css.xpath('//*[@id="city_list"]/dl/dd/a/@href').extract()
         print(citys)
         print(len(citys))
@@ -208,10 +207,65 @@ def save_to_mysql(new_urls):
     else:
         print('已经存在')
 
+
+def handler_xinpan(detail_urls_content):
+    if '访问验证-安居客' not in detail_urls_content:
+        xpath_css = Selector(text=detail_urls_content)
+        citys = xpath_css.xpath('//div[@class="sel-city"]/div[@class="city-mod"]/dl/dd/a/@href').extract()
+        print(len(citys))
+        # return citys
+    else:
+        print('有验证码')
+
+
+def get_xinpan_list(start_url_content):
+    city_content = start_url_content
+    xpath_css = Selector(text=city_content)
+    # pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
+    # r = redis.Redis(connection_pool=pool)
+    sp_urls = [str(sp_url).replace(r'loupan/',r'loupan/canshu-') for sp_url in xpath_css.xpath('//*[@id="container"]/div[2]/div[1]/div[4]/div/@data-link').extract()]
+    print(sp_urls)
+    print(len(sp_urls))
+    # for sp_url in sp_urls:
+    #     r.rpush('sp_detail:start_urls', sp_url)
+    # print(sp_urls)
+    # print('一共{}个url已经入库完毕'.format(len(sp_urls)))
+    next_page = xpath_css.xpath('//a[@class="next-page next-link"]/@href').extract_first()
+    if next_page:
+        start_url_content = get_html_content(next_page)
+        # citys = handler_detail_msm_sp(start_url_content, start_url)
+        # citys = handler_xinpan(start_url_content)
+        get_xinpan_list(start_url_content)
+
+
+def get_xinpan_detail(start_url_content):
+    detail_urls_content = start_url_content
+    if '访问验证-安居客' not in detail_urls_content:
+        # lat_lng = re.findall(r'lat: "(.*?)",.*?lng: "(.*?)"', detail_urls_content, re.S)
+        # real_lat_lng = lat_lng[0]
+        xpath_css = Selector(text=detail_urls_content)
+        item = {}
+        # if 'zu' in url:
+        house_msgs_l = xpath_css.xpath('//*[@id="container"]/div[1]/div[1]/div/div[2]/ul/li')[:-2]
+        for house_msg in house_msgs_l:
+            key1 = house_msg.xpath('./div[1]/text()').extract_first()
+            if '楼盘特点' in key1:
+                item[key1] = [ i for i in str(remove_tags(str(house_msg.xpath('./div[2]').extract_first()).replace('\n', ''))).strip().split(' ') if i]
+            else:
+            # key = house_config.get(house_msg.xpath('./span[1]/text()').extract_first())
+                item[key1] = remove_tags(str(house_msg.xpath('./div[2]').extract_first()).replace('\n', '').replace(' ', ''))
+        print(item)
+    else:
+        print('有验证码')
+
+
 if __name__ == '__main__':
-    start_url = 'https://bj.sp.anjuke.com/zu/'
+    start_url = 'https://sh.fang.anjuke.com/loupan/canshu-443800.html?from=loupan_tab'
     start_url_content = get_html_content(start_url)
-    citys = handler_detail_msm_sp(start_url_content, start_url)
+    # citys = handler_detail_msm_sp(start_url_content, start_url)
+    citys = handler_xinpan(start_url_content)
+    get_xinpan_list(start_url_content)
+    get_xinpan_detail(start_url_content)
     # all_urls = []
     # for i in range(1, 100):
     #     city_content = get_html_content('https://sh.sp.anjuke.com/zu/p{}'.format(i))

@@ -414,26 +414,7 @@ if __name__ == '__main__':
     start_urls = ['https://bj.sp.anjuke.com/zu/58632051/?pt=2', 'https://bj.sp.anjuke.com/zu/59267202/?pt=2',
                   'https://bj.sp.anjuke.com/zu/59324737/?pt=2', 'https://bj.sp.anjuke.com/zu/59233021/?pt=2',
                   'https://bj.sp.anjuke.com/zu/59245229/?pt=2', 'https://bj.sp.anjuke.com/zu/59331314/?pt=2',
-                  'https://bj.sp.anjuke.com/zu/58477826/?pt=2', 'https://bj.sp.anjuke.com/zu/59057244/?pt=2',
-                  'https://bj.sp.anjuke.com/zu/58943189/?pt=2', 'https://bj.sp.anjuke.com/zu/59088704/',
-                  'https://bj.sp.anjuke.com/zu/59088983/', 'https://bj.sp.anjuke.com/zu/58946184/',
-                  'https://bj.sp.anjuke.com/zu/58467924/', 'https://bj.sp.anjuke.com/zu/58940878/',
-                  'https://bj.sp.anjuke.com/zu/58339949/', 'https://bj.sp.anjuke.com/zu/57777349/',
-                  'https://bj.sp.anjuke.com/zu/58575574/', 'https://bj.sp.anjuke.com/zu/58349810/',
-                  'https://bj.sp.anjuke.com/zu/58848195/', 'https://bj.sp.anjuke.com/zu/58572481/',
-                  'https://bj.sp.anjuke.com/zu/58383606/', 'https://bj.sp.anjuke.com/zu/58577446/',
-                  'https://bj.sp.anjuke.com/zu/58247581/', 'https://bj.sp.anjuke.com/zu/58491084/',
-                  'https://bj.sp.anjuke.com/zu/57732436/', 'https://bj.sp.anjuke.com/zu/58436180/',
-                  'https://bj.sp.anjuke.com/zu/57992330/', 'https://bj.sp.anjuke.com/zu/58993806/',
-                  'https://bj.sp.anjuke.com/zu/58649467/', 'https://bj.sp.anjuke.com/zu/57723199/',
-                  'https://bj.sp.anjuke.com/zu/57974585/', 'https://bj.sp.anjuke.com/zu/58183071/',
-                  'https://bj.sp.anjuke.com/zu/59014466/', 'https://bj.sp.anjuke.com/zu/57736836/',
-                  'https://bj.sp.anjuke.com/zu/58123223/', 'https://bj.sp.anjuke.com/zu/57772267/',
-                  'https://bj.sp.anjuke.com/zu/59196919/', 'https://bj.sp.anjuke.com/zu/57987846/',
-                  'https://bj.sp.anjuke.com/zu/58886052/', 'https://bj.sp.anjuke.com/zu/58528749/',
-                  'https://bj.sp.anjuke.com/zu/58339689/', 'https://bj.sp.anjuke.com/zu/57879932/',
-                  'https://bj.sp.anjuke.com/zu/57727732/', 'https://bj.sp.anjuke.com/zu/57582306/',
-                  'https://bj.sp.anjuke.com/zu/57727113/']
+                 ]
     a = ['https://sh.sp.anjuke.com/zu/59391219/?pt=2']
     for start_url in a:
         start_url_content = get_html_content(start_url)
@@ -441,3 +422,6 @@ if __name__ == '__main__':
             handler_detail_msm_xzl(start_url_content, start_url)
         else:
             handler_detail_msm_sp(start_url_content, start_url)
+
+
+'//div[@class="key-list"]/div[@class="item-mod"]/@data-link'
