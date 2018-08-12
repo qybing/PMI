@@ -1,4 +1,4 @@
-import random
+﻿import random
 import re
 
 import pymysql
@@ -258,7 +258,7 @@ def get_xinpan_detail(start_url_content):
     else:
         print('有验证码')
 
-
+我看见你了，你知道吗
 if __name__ == '__main__':
     start_url = 'https://sh.fang.anjuke.com/loupan/canshu-443800.html?from=loupan_tab'
     start_url_content = get_html_content(start_url)
