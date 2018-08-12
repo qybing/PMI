@@ -4,6 +4,7 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+import redis
 from fake_useragent import UserAgent
 from scrapy import signals
 
@@ -112,3 +113,37 @@ class UserAgentMiddleware(object):
         request.headers["User-Agent"] = agent
         # print(agent)
         print('更换了UserAgent:{}'.format(agent))
+
+
+class RandomProxy(object):
+    # def process_request(self, request, spider):
+    #     # 随机取出一个代理ip
+    #     url = 'http://127.0.0.1:5000/get'
+    #     proxies_ips = requests.get(url)
+    #     if proxies_ips.status_code == 200:
+    #         # print(proxies_ips)
+    #         request.meta['proxy'] = "http://{}".format(proxies_ips.text)
+    #         print('使用第一个更换了代理IP:{}'.format(proxies_ips.text))
+    #     else:
+    #         url = 'http://127.0.0.1:8080/get'
+    #         proxies_ips = requests.get(url)
+    #         if proxies_ips.status_code == 200:
+    #             # print(proxies_ips)
+    #             request.meta['proxy'] = "http://{}".format(proxies_ips.text)
+    #             print('使用第一个更换了代理IP:{}'.format(proxies_ips.text))
+    #         else:
+    #             sleep(10 * 60)
+
+    def process_response(self, request, response, spider):
+        print('到这了')
+        print(request.url)
+        # print(response.status)
+        if response.status==302:
+            print('有验证码了，被重定向了')
+            print('终于看到你了')
+        if 'captcha-verify' in request.url:
+            print(request)
+            print("这是到哪了呀，你知道吗{}".format(request.meta.get('redirect_urls')[0]))
+            r = redis.Redis(host='127.0.0.1', port=6379, db=1)
+            # r.lpush('sp_zu:start_urls',response['meta'])
+        return response

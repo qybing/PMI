@@ -5,12 +5,15 @@ from time import sleep
 import redis
 import scrapy
 from parsel import Selector
+from scrapy_redis.spiders import RedisSpider
 from w3lib.html import remove_tags
 
 from SpZu.items import SpzuItem
 
 
-class SpDetailSpider(scrapy.Spider):
+# class SpDetailSpider(scrapy.Spider):
+class SpDetailSpider(RedisSpider):
+
     name = 'sp_detail'
     allowed_domains = ['anjuke.comm']
     start_urls = ['https://sh.sp.anjuke.com/zu/59378052/?pt=2',
@@ -68,10 +71,11 @@ class SpDetailSpider(scrapy.Spider):
     def parse(self, response):
         if 'captcha-verify' in response.url:
             print('遇到验证码了，url放入待爬队列里面')
-            url = str(response.meta.get('redirect_urls')[0])
-            pool = redis.ConnectionPool(host='localhost', port=6379,db=1, decode_responses=True)
+            pool = redis.ConnectionPool(host='localhost', port=6379,db=0, decode_responses=True)
             r = redis.Redis(connection_pool=pool)
-            r.lpush('sp_detail:start_urls', url)
+            urls = response.meta.get('redirect_urls')
+            for url in urls:
+                r.rpush('sp_detail:start_urls', url)
         else:
             detail_urls_content = response.text
         # if '访问验证-安居客' not in detail_urls_content:
@@ -132,17 +136,17 @@ class SpDetailSpider(scrapy.Spider):
             item['describe'] = real_describe.strip()
             shop_name = xpath_css.xpath('//div[@class="item-mod"]/h3/b/text()').extract_first().strip()
 
-            print(shop_name)
+            # print(shop_name)
             item['shop_name'] = shop_name
             print(real_house_facilities)
             item['lat_lng'] = real_lat_lng
-            print(real_lat_lng)
-            print(real_describe.strip())
+            # print(real_lat_lng)
+            # print(real_describe.strip())
             public_time = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[1].root
             item['public_time'] = public_time
             house_number = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[2].root
             item['house_number'] = house_number
-            print(public_time, house_number)
+            # print(public_time, house_number)
             print(sp_item)
 
 

@@ -110,10 +110,10 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 REDIS_HOST = '127.0.0.1'  # 主机ip
 REDIS_PORT = 6379
-REDIS_PARAMS = {
-   # 'password': 在此设置密码,
-   'db': 1
-}
+# REDIS_PARAMS = {
+#    # 'password': 在此设置密码,
+#    'db': 0
+# }
 
 
 #设置重定向参数

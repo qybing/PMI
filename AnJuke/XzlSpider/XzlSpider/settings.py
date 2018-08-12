@@ -67,7 +67,8 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'XzlSpider.middlewares.XzlspiderDownloaderMiddleware': 543,
-    'XzlSpider.middlewares.UserAgentMiddleware':543
+    'XzlSpider.middlewares.UserAgentMiddleware':543,
+    'XzlSpider.middlewares.RandomProxy':560
 }
 
 # Enable or disable extensions
@@ -109,13 +110,13 @@ ITEM_PIPELINES = {
 # SCHEDULER_PERSIST = True    #不清除Redis队列、这样可以暂停/恢复 爬取
 # DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"  #确保所有的爬虫通过Redis去重
 # SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
-# REDIS_HOST = 'localhost'  # 也可以根据情况改成 localhost
-# REDIS_PORT = 6379
-# # REDIS_PARAMS = {
-# #    # 'password': 在此设置密码,
-# #    'db': 2
-# # }
-# REDIS_URL = None
+REDIS_HOST = 'localhost'  # 也可以根据情况改成 localhost
+REDIS_PORT = 6379
+REDIS_PARAMS = {
+   # 'password': 在此设置密码,
+   'db': 1
+}
+REDIS_URL = None
 house_config ={
     '日租金':'daily_hire',
     '月租金':'month_hire',

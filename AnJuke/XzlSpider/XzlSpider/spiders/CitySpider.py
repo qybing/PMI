@@ -11,21 +11,22 @@ class CityspiderSpider(scrapy.Spider):
     redis_key = "CitySpider:start_urls"
 
     def parse(self, response):
+        pool = redis.ConnectionPool(host='localhost', port=6379, db=1, decode_responses=True)
+        r = redis.Redis(connection_pool=pool)
         if 'captcha-verify' in response.url:
             print('遇到验证码了，url放入待爬队列里面')
-            url = str(response.meta.get('redirect_urls')[0])
-            pool = redis.ConnectionPool(host='localhost', port=6379, db=1, decode_responses=True)
-            r = redis.Redis(connection_pool=pool)
-            r.rpush('crawl_city:start_urls', url)
-        else:
+            urls = response.meta.get('redirect_urls')
+            for url in urls:
+                r.rpush('CitySpider:start_urls', url)
         # if '访问验证-安居客' not in detail_urls_content:
+        else:
             detail_urls_content = response.text
-            pool = redis.ConnectionPool(host='localhost', port=6379,db=1, decode_responses=True)
-            r = redis.Redis(connection_pool=pool)
+            # pool = redis.ConnectionPool(host='localhost', port=6379, db=1, decode_responses=True)
+            # r = redis.Redis(connection_pool=pool)
             xpath_css = Selector(text=detail_urls_content)
-            citys = xpath_css.xpath('//*[@id="city_list"]/dl/dd/a/@href').extract()
-            print(citys)
-            for city in citys:
-                r.lpush('crawl_county:start_urls',city)
-            print('已经入库完毕')
-            print(len(citys))
+            countys = xpath_css.xpath('/html/body/div[5]/div[2]/div/div[1]/div/a/@href').extract()
+            # print(countys[1:])
+            for county in countys[1:]:
+                r.rpush('CountySpider:start_urls', county)
+            print(countys[1:])
+            print('一共{}个url已经入库完毕'.format(len(countys[1:])))
