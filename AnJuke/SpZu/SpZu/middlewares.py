@@ -133,20 +133,20 @@ url = 'http://127.0.0.1:5000/get'
 
 
 class RandomProxy(object):
-    # def process_request(self, request, spider):
-    #     # 随机取出一个代理ip
-    #     for i in range(10):
-    #         proxies_ips = requests.get(url)
-    #         # proxies_ips.status_code == 200
-    #         if i == 5:
-    #             sleep(3)
-    #         if proxies_ips.status_code == 200:
-    #             request.meta['proxy'] = "http://{}".format(proxies_ips.text)
-    #             print('使用了代理-----------IP:{}'.format(proxies_ips.text))
-    #             break
-    #         if proxies_ips.status_code == 500:
-    #             print('没有可用代理了，我休息一会')
-    #             sleep(5 * 60)
+    def process_request(self, request, spider):
+        # 随机取出一个代理ip
+        for i in range(10):
+            proxies_ips = requests.get(url)
+            # proxies_ips.status_code == 200
+            if i == 5:
+                sleep(3)
+            if proxies_ips.status_code == 200:
+                request.meta['proxy'] = "http://{}".format(proxies_ips.text)
+                print('使用了代理-----------IP:{}'.format(proxies_ips.text))
+                break
+            if proxies_ips.status_code == 500:
+                print('没有可用代理了，我休息一会')
+                sleep(5 * 60)
         # else:
         #     sleep(2)
         #     proxies_ips = requests.get(url)
@@ -164,16 +164,20 @@ class RandomProxy(object):
     #             sleep(10 * 60)
 
     def process_exception(self, request, exception, spider):
-        print('IP代理不可用，本次url：{}   需要重新入库处理'.format(request.url))
-        print(exception)
-        status = exception.osError
+
+        print('错误原因：{}'.format(exception))
+        try:
+            value_url = request.meta.get('redirect_urls')[0]
+        except:
+            value_url = request.url
+        print('IP代理不可用，本次url：{}   需要重新入库处理'.format(value_url))
         key = getattr(spider, 'redis_key')
         print('本次的类名加属性名字为：{}'.format(key))
         # if status:
         pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
         r = redis.Redis(connection_pool=pool)
-        r.rpush(key, request.url)
-        print('url:{} 入库成功'.format(request.url))
+        r.rpush(key, value_url)
+        print('url:{} 入库成功'.format(value_url))
 
     def process_response(self, request, response, spider):
         print('到这了：{}'.format('process_response'))

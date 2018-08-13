@@ -16,7 +16,7 @@ class CrawlTownSpider(RedisSpider):
         pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
         r = redis.Redis(connection_pool=pool)
         if 'captcha-verify' in response.url:
-            print('遇到验证码了，url放入待爬队列里面')
+            print('遇到验证码了，url重新放入待爬队列里面')
             urls = response.meta.get('redirect_urls')
             for url in urls:
                 r.rpush('crawl_town:start_urls', url)
@@ -29,7 +29,7 @@ class CrawlTownSpider(RedisSpider):
             towns = xpath_css.xpath('//div[@class="sub-items"]/a/@href').extract()
             # print(towns[1:])
             for town in towns[1:]:
-                r.rpush('crawl_sp_page:start_urls', town)
+                r.rpush('crawl_sp_list:start_urls', town)
             print(towns[1:])
             print('一共{}个url已经入库完毕'.format(len(towns[1:])))
             # return citys
