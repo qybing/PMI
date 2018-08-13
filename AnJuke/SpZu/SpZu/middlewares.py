@@ -115,18 +115,44 @@ class UserAgentMiddleware(object):
         agent = ua.random
         request.headers["User-Agent"] = agent
         # print(agent)
-        print('更换了UserAgent:{}'.format(agent))
+        print('更换了--------------UserAgent:{}'.format(agent))
+
+    # def process_exception(self, request, exception, spider):
+    #     print('UserAgent不可用，本次url需要重新入库处理')
+    #     print(exception)
+    #     status = exception.osError
+    #     key = getattr(spider, 'redis_key')
+    #     if status:
+    #         pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
+    #         r = redis.Redis(connection_pool=pool)
+    #         r.rpush(key, request.url)
+    #         print('url:{} 入库成功'.format(request.url))
+
+
+url = 'http://127.0.0.1:5000/get'
 
 
 class RandomProxy(object):
     # def process_request(self, request, spider):
     #     # 随机取出一个代理ip
-    #     url = 'http://127.0.0.1:5000/get'
-    #     proxies_ips = requests.get(url)
-    #     if proxies_ips.status_code == 200:
-    #         # print(proxies_ips)
-    #         request.meta['proxy'] = "http://{}".format(proxies_ips.text)
-    #         print('使用第一个更换了代理IP:{}'.format(proxies_ips.text))
+    #     for i in range(10):
+    #         proxies_ips = requests.get(url)
+    #         # proxies_ips.status_code == 200
+    #         if i == 5:
+    #             sleep(3)
+    #         if proxies_ips.status_code == 200:
+    #             request.meta['proxy'] = "http://{}".format(proxies_ips.text)
+    #             print('使用了代理-----------IP:{}'.format(proxies_ips.text))
+    #             break
+    #         if proxies_ips.status_code == 500:
+    #             print('没有可用代理了，我休息一会')
+    #             sleep(5 * 60)
+        # else:
+        #     sleep(2)
+        #     proxies_ips = requests.get(url)
+        #     request.meta['proxy'] = "http://{}".format(proxies_ips.text)
+        #     print('使用第二个更换了代理IP:{}'.format(proxies_ips.text))
+
     #     else:
     #         url = 'http://127.0.0.1:8080/get'
     #         proxies_ips = requests.get(url)
@@ -137,16 +163,32 @@ class RandomProxy(object):
     #         else:
     #             sleep(10 * 60)
 
+    def process_exception(self, request, exception, spider):
+        print('IP代理不可用，本次url：{}   需要重新入库处理'.format(request.url))
+        print(exception)
+        status = exception.osError
+        key = getattr(spider, 'redis_key')
+        print('本次的类名加属性名字为：{}'.format(key))
+        # if status:
+        pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
+        r = redis.Redis(connection_pool=pool)
+        r.rpush(key, request.url)
+        print('url:{} 入库成功'.format(request.url))
+
     def process_response(self, request, response, spider):
-        print('到这了')
-        print(request.url)
+        print('到这了：{}'.format('process_response'))
         # print(response.status)
-        if response.status==302:
-            print('有验证码了，被重定向了')
-            print('终于看到你了')
+        print(request.url)
+        if response.status != 200:
+            print('出现问题了，这是状态码：{}'.format(request.status))
+            print(request.url)
+            print('仔细看状态码')
+            sleep(2)
+            proxies_ips = requests.get(url)
+            request.meta['proxy'] = "http://{}".format(proxies_ips.text)
+            print('使用第二个更换了代理IP:{}'.format(proxies_ips.text))
+            return request
         if 'captcha-verify' in request.url:
             print(request)
-            print("这是到哪了呀，你知道吗{}".format(request.meta.get('redirect_urls')[0]))
-            r = redis.Redis(host='127.0.0.1', port=6379, db=1)
-            # r.lpush('sp_zu:start_urls',response['meta'])
+            # print("有验证码了----{}".format(request.meta.get('redirect_urls')[0]))
         return response

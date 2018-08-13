@@ -21,8 +21,9 @@ NEWSPIDER_MODULE = 'SpZu.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
-# Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+# Configure maximum concurrent requests performed by Scrapy
+#并发数
+# CONCURRENT_REQUESTS = 1
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -122,3 +123,6 @@ REDIS_PORT = 6379
 
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
+# RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+RETRY_TIMES= 3
+DOWNLOAD_TIMEOUT = 15

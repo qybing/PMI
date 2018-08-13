@@ -6,9 +6,10 @@ from scrapy_redis.spiders import RedisSpider
 
 
 class CrawlTownSpider(RedisSpider):
+# class CrawlTownSpider(scrapy.Spider):
     name = 'crawl_town'
     allowed_domains = ['anjuke.com']
-    start_urls = ['https://sh.sp.anjuke.com/zu/baoshan/']
+    start_urls = ['https://wh.sp.anjuke.com/zu/jiangan/']
     redis_key = "crawl_town:start_urls"
 
     def parse(self, response):
@@ -28,7 +29,7 @@ class CrawlTownSpider(RedisSpider):
             towns = xpath_css.xpath('//div[@class="sub-items"]/a/@href').extract()
             # print(towns[1:])
             for town in towns[1:]:
-                r.rpush('crawl_sp_list:start_urls', town)
+                r.rpush('crawl_sp_page:start_urls', town)
             print(towns[1:])
             print('一共{}个url已经入库完毕'.format(len(towns[1:])))
             # return citys
