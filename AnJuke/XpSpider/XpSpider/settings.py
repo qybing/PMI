@@ -54,8 +54,8 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'XpSpider.middlewares.XpspiderDownloaderMiddleware': 543,
-   #  'XpSpider.middlewares.RandomProxy':543,
-    'XpSpider.middlewares.UserAgentMiddleware':550,
+    'XpSpider.middlewares.RandomProxy':543,
+    'XpSpider.middlewares.UserAgentMiddleware':555,
 }
 
 
@@ -113,10 +113,12 @@ REDIS_PORT = 6379
 #    'db': 0
 # }
 #防止反爬
-DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 2
 
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 #重试次数
 RETRY_TIMES= 3
 #下载时间设置
 DOWNLOAD_TIMEOUT = 15
+#使用集合对start_requests去重
+REDIS_START_URLS_AS_SET = True

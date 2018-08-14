@@ -6,6 +6,8 @@ import scrapy
 from parsel import Selector
 from scrapy import Request
 
+from tool.handle_redis import RedisClient
+
 
 class XzllistSpider(scrapy.Spider):
     name = 'XzlList'
@@ -14,8 +16,9 @@ class XzllistSpider(scrapy.Spider):
     redis_key = "XzlList:start_urls"
 
     def parse(self, response):
-        pool = redis.ConnectionPool(host='localhost', port=6379, db=1, decode_responses=True)
-        r = redis.Redis(connection_pool=pool)
+        # pool = redis.ConnectionPool(host='localhost', port=6379, db=1, decode_responses=True)
+        # r = redis.Redis(connection_pool=pool)
+        db = RedisClient()
         city_content = response.text
         xpath_css = Selector(text=city_content)
         sp_urls = xpath_css.xpath('//*[@id="list-content"]/div[@class="list-item"]/@link').extract()
@@ -23,15 +26,15 @@ class XzllistSpider(scrapy.Spider):
             print('遇到验证码了，url放入待爬队列里面')
             urls = response.meta.get('redirect_urls')
             for url in urls:
-                r.rpush('XzlList:start_urls', url)
+                db.add_value('XzlList:start_urls', url)
 
         elif len(sp_urls) < 0 or '请换个搜索词或试试筛选吧' in city_content:
                 print('本url:{}-----没有搜索结果'.format(response.url))
-                r.rpush('not_url:xzl', response.url)
+                db.add_value('not_url:xzl', response.url)
         else:
             sp_urls = xpath_css.xpath('//*[@id="list-content"]/div[@class="list-item"]/@link').extract()
             for sp_url in sp_urls:
-                r.rpush('DetailSpider:start_urls', sp_url)
+                db.add_value('DetailSpider:start_urls', sp_url)
             print(sp_urls)
             print('一共{}个url已经入库完毕'.format(len(sp_urls)))
             next_page = xpath_css.xpath('//a[@class="aNxt"]/@href').extract_first()

@@ -40,7 +40,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 2
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -68,7 +68,7 @@ ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
    # 'XzlSpider.middlewares.XzlspiderDownloaderMiddleware': 543,
     'XzlSpider.middlewares.UserAgentMiddleware':543,
-    # 'XzlSpider.middlewares.RandomProxy':560
+    'XzlSpider.middlewares.RandomProxy':532
 }
 
 # Enable or disable extensions
@@ -117,6 +117,13 @@ REDIS_PARAMS = {
    'db': 1
 }
 REDIS_URL = None
+#防止反爬
+DOWNLOAD_DELAY = 2
+
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+#重试次数
 RETRY_TIMES= 3
+#下载时间设置
 DOWNLOAD_TIMEOUT = 15
+#使用集合对start_requests去重
+REDIS_START_URLS_AS_SET = True

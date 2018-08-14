@@ -11,6 +11,8 @@ import redis
 from fake_useragent import UserAgent
 from scrapy import signals
 
+from tool.handle_redis import RedisClient
+
 
 class XzlspiderSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -148,7 +150,6 @@ class RandomProxy(object):
                 sleep(5 * 60)
 
     def process_exception(self, request, exception, spider):
-
         print('错误原因：{}'.format(exception))
         try:
             value_url = request.meta.get('redirect_urls')[0]
@@ -158,10 +159,12 @@ class RandomProxy(object):
         key = getattr(spider, 'redis_key')
         print('本次的类名加属性名字为：{}'.format(key))
         # if status:
-        pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
-        r = redis.Redis(connection_pool=pool)
-        r.rpush(key, value_url)
-        print('url:{} 入库成功'.format(value_url))
+        # pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
+        # r = redis.Redis(connection_pool=pool)
+        # r.rpush(key, value_url)
+        # print('url:{} 入库成功'.format(value_url))
+        db = RedisClient()
+        db.add_value(key, value_url)
 
     def process_response(self, request, response, spider):
         print('到这了：{}'.format('process_response'))

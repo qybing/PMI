@@ -1,7 +1,7 @@
 import redis
 
 
-class RedisClient(object):
+class Raa(object):
     def __init__(self, host=HOST, port=PORT):
         if PASSWORD:
             self._db = redis.Redis(host=host, port=port, password=PASSWORD)

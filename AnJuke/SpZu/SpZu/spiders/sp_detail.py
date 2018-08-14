@@ -13,6 +13,7 @@ from SpZu.items import SpzuItem
 
 # class SpDetailSpider(scrapy.Spider):
 from tools.get_province import get_key
+from tools.handle_redis import RedisClient
 
 
 class SpDetailSpider(RedisSpider):
@@ -72,11 +73,12 @@ class SpDetailSpider(RedisSpider):
     def parse(self, response):
         if 'captcha-verify' in response.url:
             print('遇到验证码了，url放入待爬队列里面')
-            pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
-            r = redis.Redis(connection_pool=pool)
+            # pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
+            # r = redis.Redis(connection_pool=pool)
+            db = RedisClient()
             urls = response.meta.get('redirect_urls')
             for url in urls:
-                r.rpush('sp_detail:start_urls', url)
+                db.add_value('sp_detail:start_urls', url)
         else:
             detail_urls_content = response.text
             # if '访问验证-安居客' not in detail_urls_content:

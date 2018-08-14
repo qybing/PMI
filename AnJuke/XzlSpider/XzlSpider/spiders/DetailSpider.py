@@ -9,6 +9,7 @@ from w3lib.html import remove_tags
 
 from XzlSpider.items import XzlspiderItem
 from tool.get_province import get_key
+from tool.handle_redis import RedisClient
 
 house_config ={
     '日租金':'daily_hire',
@@ -52,11 +53,12 @@ class DetailspiderSpider(scrapy.Spider):
     def parse(self, response):
         if 'captcha-verify' in response.url:
             print('遇到验证码了，url放入待爬队列里面')
-            pool = redis.ConnectionPool(host='localhost', port=6379,db=1, decode_responses=True)
-            r = redis.Redis(connection_pool=pool)
+            # pool = redis.ConnectionPool(host='localhost', port=6379,db=1, decode_responses=True)
+            # r = redis.Redis(connection_pool=pool)
+            db = RedisClient()
             urls = response.meta.get('redirect_urls')
             for url in urls:
-                r.rpush('DetailSpider:start_urls', url)
+                db.add_value('DetailSpider:start_urls', url)
         else:
             detail_urls_content = response.text
             lat_lng = re.findall(r'lat: "(.*?)",.*?lng: "(.*?)"', detail_urls_content, re.S)
