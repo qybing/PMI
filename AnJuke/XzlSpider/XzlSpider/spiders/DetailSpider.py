@@ -8,6 +8,7 @@ from scrapy_redis.spiders import RedisCrawlSpider
 from w3lib.html import remove_tags
 
 from XzlSpider.items import XzlspiderItem
+from tool.get_province import get_key
 
 house_config ={
     '日租金':'daily_hire',
@@ -35,15 +36,18 @@ house_config ={
     '单价':'unit_price',
     '总价':'total_price',
     '面积':'area',
+    '省份':'province',
+    '市':'city',
+    '县':'county',
 }
 
-# class DetailspiderSpider(scrapy.Spider):
-class DetailspiderSpider(RedisCrawlSpider):
+class DetailspiderSpider(scrapy.Spider):
+# class DetailspiderSpider(RedisCrawlSpider):
 
     name = 'DetailSpider'
     # allowed_domains = ['anjuke.com']
     redis_key = "DetailSpider:start_urls"
-    start_urls = ['https://sh.xzl.anjuke.com/zu/59027662/?pt=2']
+    start_urls = ['https://hz.xzl.anjuke.com/shou/59251819/?pt=2']
 
     def parse(self, response):
         if 'captcha-verify' in response.url:
@@ -54,13 +58,15 @@ class DetailspiderSpider(RedisCrawlSpider):
             for url in urls:
                 r.rpush('DetailSpider:start_urls', url)
         else:
-        # if '访问验证-安居客' not in detail_urls_content:
             detail_urls_content = response.text
             lat_lng = re.findall(r'lat: "(.*?)",.*?lng: "(.*?)"', detail_urls_content, re.S)
             real_lat_lng = lat_lng[0]
             xpath_css = Selector(text=detail_urls_content)
-
             item = XzlspiderItem()
+            every_address=[str(ad).replace('写字楼出租','').replace('房产网','').replace('写字楼出售','') for ad in xpath_css.xpath('/html/body/div[2]/a/text()').extract()[1:3]]
+            new_address = self.gen_address(every_address)
+            print(new_address)
+            item['province'],item['city'],item['county'] = new_address[0],new_address[1],new_address[2]
             item['url'] = response.url
             item['total'] = xpath_css.xpath('//*[@id="j-triggerlayer"]/text()').extract_first()
             # if 'zu' in url:
@@ -107,3 +113,9 @@ class DetailspiderSpider(RedisCrawlSpider):
             print(public_time, house_number)
             print(item)
             yield item
+
+    def gen_address(self,every_address):
+        every_address[0] = every_address[0]+'市'
+        province = get_key(every_address[0])
+        every_address.insert(0,province)
+        return every_address

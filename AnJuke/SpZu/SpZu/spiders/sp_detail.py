@@ -12,8 +12,10 @@ from SpZu.items import SpzuItem
 
 
 # class SpDetailSpider(scrapy.Spider):
-class SpDetailSpider(RedisSpider):
+from tools.get_province import get_key
 
+
+class SpDetailSpider(RedisSpider):
     name = 'sp_detail'
     allowed_domains = ['anjuke.comm']
     start_urls = ['https://sh.sp.anjuke.com/zu/59378052/?pt=2',
@@ -25,7 +27,6 @@ class SpDetailSpider(RedisSpider):
     # start_urls = ['https://sh.sp.anjuke.com/zu/58513492/']
     # pool = redis.ConnectionPool(host='localhost', port=6379,db=1, decode_responses=True)
     # r = redis.Redis(connection_pool=pool)
-
 
     # custom_settings = {
     #     # 指定redis数据库的连接参数
@@ -71,19 +72,26 @@ class SpDetailSpider(RedisSpider):
     def parse(self, response):
         if 'captcha-verify' in response.url:
             print('遇到验证码了，url放入待爬队列里面')
-            pool = redis.ConnectionPool(host='localhost', port=6379,db=0, decode_responses=True)
+            pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
             r = redis.Redis(connection_pool=pool)
             urls = response.meta.get('redirect_urls')
             for url in urls:
                 r.rpush('sp_detail:start_urls', url)
         else:
             detail_urls_content = response.text
-        # if '访问验证-安居客' not in detail_urls_content:
+            # if '访问验证-安居客' not in detail_urls_content:
             item = SpzuItem()
             lat_lng = re.findall(r'lat: "(.*?)",.*?lng: "(.*?)"', detail_urls_content, re.S)
             real_lat_lng = lat_lng[0]
             item['url'] = response.url
             xpath_css = Selector(text=detail_urls_content)
+            every_address = [str(ad).replace('商铺出租', '').replace('房产网', '').replace('商铺出售', '') for ad in
+                             xpath_css.xpath('/html/body/div[2]/a/text()').extract()[1:3]]
+            new_address = self.gen_address(every_address)
+            print(new_address)
+            item['province'], item['city'], item['county'] = new_address[0], new_address[1], new_address[2]
+
+
             item['total'] = xpath_css.xpath('//*[@id="content"]/div/h1/text()').extract_first()
             house_facilities = xpath_css.xpath('//ul[@class="mod-peitao clearfix"]/li[not(contains(@class,"gray"))]')
             real_house_facilities = []
@@ -95,20 +103,22 @@ class SpDetailSpider(RedisSpider):
             sp_houses = xpath_css.xpath('//*[@id="fy_info"]/ul/li')
             for house_msg in sp_houses:
                 key1 = house_msg.xpath('./span[1]/text()').extract_first()
-                key = self.sp_house_config.get(house_msg.xpath('./span[1]/text()').extract_first().replace('：',''))
+                key = self.sp_house_config.get(house_msg.xpath('./span[1]/text()').extract_first().replace('：', ''))
                 item[key] = remove_tags(
                     str(house_msg.xpath('./span[2]').extract_first()).replace('\n', '').replace(' ', ''))
 
             house_resources_l = xpath_css.xpath('//div[@class="itemCon clearfix"]/ul[@class="litem"]/li')
             for house_resource in house_resources_l:
                 key1 = house_resource.xpath('./span[1]/text()').extract_first()
-                key = self.sp_house_config.get(house_resource.xpath('./span[1]/text()').extract_first().replace('：',''))
+                key = self.sp_house_config.get(
+                    house_resource.xpath('./span[1]/text()').extract_first().replace('：', ''))
                 item[key] = remove_tags(
                     str(house_resource.xpath('./span[2]').extract_first()).replace('\n', '').replace(' ', ''))
             house_resources_r = xpath_css.xpath('//div[@class="itemCon clearfix"]/ul[@class="ritem"]/li')
             for house_resource in house_resources_r:
                 key1 = house_resource.xpath('./span[1]/text()').extract_first()
-                key = self.sp_house_config.get(house_resource.xpath('./span[1]/text()').extract_first().replace('：',''))
+                key = self.sp_house_config.get(
+                    house_resource.xpath('./span[1]/text()').extract_first().replace('：', ''))
                 item[key] = remove_tags(str(house_resource.xpath('./span[2]').extract_first()))
             # house_msgs_r = xpath_css.xpath('//*[@id="fy_info"]/ul[@class="ritem"]/li')
             # for house_msg in house_msgs_r:
@@ -148,7 +158,6 @@ class SpDetailSpider(RedisSpider):
             item['house_number'] = house_number
             # print(public_time, house_number)
             print(sp_item)
-
 
             print('---')
             # item['real_house_facilities'] = real_house_facilities
@@ -255,3 +264,9 @@ class SpDetailSpider(RedisSpider):
         # else:
         #         #     print('有验证码')
         #         #     sleep(20)
+
+    def gen_address(self,every_address):
+        every_address[0] = every_address[0]+'市'
+        province = get_key(every_address[0])
+        every_address.insert(0,province)
+        return every_address

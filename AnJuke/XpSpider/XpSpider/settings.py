@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'XpSpider.spiders'
 #USER_AGENT = 'XpSpider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -52,9 +52,25 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'XpSpider.middlewares.XpspiderDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   # 'XpSpider.middlewares.XpspiderDownloaderMiddleware': 543,
+   #  'XpSpider.middlewares.RandomProxy':543,
+    'XpSpider.middlewares.UserAgentMiddleware':550,
+}
+
+
+
+#使用scrapy-redis里的去重组件，不使用scrapy默认的去重
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+#使用scrapy-redis里的调度器组件，不使用scrapy默认的去重
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+SCHEDULER_PERSIST = True
+
+
+
+
+
+
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -64,9 +80,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'XpSpider.pipelines.XpspiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'XpSpider.pipelines.XpspiderPipeline': 300,
+    'scrapy_redis.pipelines.RedisPipeline': 400,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +105,18 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+REDIS_HOST = '127.0.0.1'  # 主机ip
+REDIS_PORT = 6379
+# REDIS_PARAMS = {
+#    # 'password': 在此设置密码,
+#    'db': 0
+# }
+#防止反爬
+DOWNLOAD_DELAY = 3
+
+RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+#重试次数
+RETRY_TIMES= 3
+#下载时间设置
+DOWNLOAD_TIMEOUT = 15

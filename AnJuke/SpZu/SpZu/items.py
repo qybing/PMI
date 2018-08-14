@@ -70,5 +70,8 @@ class SpzuItem(scrapy.Item):
     completion_time = scrapy.Field()
     total_floor = scrapy.Field()
     total_area = scrapy.Field()
+    province = scrapy.Field()
+    city = scrapy.Field()
+    county = scrapy.Field()
 
     pass

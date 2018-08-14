@@ -45,4 +45,7 @@ class XzlspiderItem(scrapy.Item):
      unit_price = scrapy.Field()
      total_price = scrapy.Field()
      area = scrapy.Field()
+     province = scrapy.Field()
+     city = scrapy.Field()
+     county = scrapy.Field()
      pass
