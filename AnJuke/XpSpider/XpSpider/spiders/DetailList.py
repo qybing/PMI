@@ -5,11 +5,12 @@ import redis
 import scrapy
 from parsel import Selector
 from scrapy import Request
+from scrapy_redis.spiders import RedisSpider
 
 from tool.handle_redis import RedisClient
 
 
-class DetaillistSpider(scrapy.Spider):
+class DetaillistSpider(RedisSpider):
     name = 'DetailList'
     allowed_domains = ['anjuke.com']
     start_urls = ['http://anjuke.com/']
@@ -25,12 +26,12 @@ class DetaillistSpider(scrapy.Spider):
             urls = response.meta.get('redirect_urls')
             print('遇到验证码了，url:{}重新放入待爬队列里面'.format(urls))
             for url in urls:
-                db.add_value('XinPanCity:start_urls', url)
+                db.add_value('DetailList:start_urls', url)
         sp_urls = [str(sp_url).replace(r'loupan/', r'loupan/canshu-') for sp_url in
                    xpath_css.xpath('//*[@id="container"]/div[2]/div[1]/div[@class="key-list"]/div/@data-link').extract()]
         if len(sp_urls) > 0:
             for sp_url in sp_urls:
-                db.add_value('DetailList:start_urls', sp_url)
+                db.add_value('XinPan_spider:start_urls', sp_url)
         print(sp_urls)
         print('一共有{}个楼盘url,入库成功'.format(len(sp_urls)))
         next_page = xpath_css.xpath('//a[@class="next-page next-link"]/@href').extract_first()

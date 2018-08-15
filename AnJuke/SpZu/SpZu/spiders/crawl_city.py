@@ -13,7 +13,7 @@ class CrawlCitySpider(RedisSpider):
     name = 'crawl_city'
     redis_key = "crawl_city:start_urls"
     allowed_domains = ['anjuke.com']
-    start_urls = ['https://sh.sp.anjuke.com/zu/']
+    start_urls = ['https://sh.sp.anjuke.com/shou/']
 
     def parse(self, response):
         # pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)

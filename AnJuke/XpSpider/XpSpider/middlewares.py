@@ -7,7 +7,8 @@
 import redis
 import requests
 from time import sleep
-
+import base64
+from scrapy.downloadermiddlewares.httpproxy import HttpProxyMiddleware
 from fake_useragent import UserAgent
 from scrapy import signals
 
@@ -34,6 +35,7 @@ class XpspiderSpiderMiddleware(object):
         return None
 
     def process_spider_output(self, response, result, spider):
+        print('我错了{}'.format('process_spider_output'))
         # Called with the results returned from the Spider, after
         # it has processed the response.
 
@@ -42,6 +44,7 @@ class XpspiderSpiderMiddleware(object):
             yield i
 
     def process_spider_exception(self, response, exception, spider):
+        print('我错了{}'.format('process_spider_exception'))
         # Called when a spider or process_spider_input() method
         # (from other spider middleware) raises an exception.
 
@@ -130,10 +133,40 @@ class UserAgentMiddleware(object):
     #         r.rpush(key, request.url)
     #         print('url:{} 入库成功'.format(request.url))
 
+# 代理服务器
+proxyServer = "http://proxy.abuyun.com:9020"
+
+# 隧道身份信息
+proxyUser = "H58053994503UZ9D"
+proxyPass = "6A29C1C28E3929F6"
+# proxyAuth = "Basic " + base64.urlsafe_b64encode(proxyUser + ":" + proxyPass)
+proxyAuth = "Basic " + "SDU4MDUzOTk0NTAzVVo5RDo2QTI5QzFDMjhFMzkyOUY2"
+class ProxyMiddleware(HttpProxyMiddleware):
+    proxies = {}
+
+    def __init__(self, auth_encoding='latin-1'):
+        self.auth_encoding = auth_encoding
+        self.proxies[proxyServer] = proxyUser + proxyPass
+
+    def process_request(self, request, spider):
+        request.meta["proxy"] = proxyServer
+        request.headers["Proxy-Authorization"] = proxyAuth
+
+    def process_exception(self, request, exception, spider):
+
+        print('错误原因：{}'.format(exception))
+        try:
+            value_url = request.meta.get('redirect_urls')[0]
+        except:
+            value_url = request.url
+        print('IP代理不可用，本次url：{}   需要重新入库处理'.format(value_url))
+        key = getattr(spider, 'redis_key')
+        print('本次的类名加属性名字为：{}'.format(key))
+        # if status:
+        db = RedisClient()
+        db.add_value(key, value_url)
 
 url = 'http://127.0.0.1:5000/get'
-
-
 class RandomProxy(object):
     def process_request(self, request, spider):
         # 随机取出一个代理ip

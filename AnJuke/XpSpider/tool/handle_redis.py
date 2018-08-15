@@ -3,7 +3,7 @@ import redis
 
 class RedisClient(object):
     def __init__(self):
-        self.pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
+        self.pool = redis.ConnectionPool(host='localhost', port=6379, db=8, decode_responses=True)
         self.r = redis.Redis(connection_pool=self.pool)
 
     def __del__(self):

@@ -127,3 +127,52 @@ RETRY_TIMES= 3
 DOWNLOAD_TIMEOUT = 15
 #使用集合对start_requests去重
 REDIS_START_URLS_AS_SET = True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NEWHOUSE ={
+    '日租金':'daily_hire',
+    '月租金':'month_hire',
+    '得房率':'get_house',
+    '楼盘名':'house_name',
+    '地址':'address',
+    '地铁':'subway',
+    '建筑面积':'covered_area',
+    '楼层':'floor',
+    '工位数':'station',
+    '物业费':'property_management_fee',
+    '类型':'type',
+    '总楼层':'total_floor',
+    '竣工年月':'completion_date',
+    '大堂层高':'lobby_height',
+    '空调类型':'air_conditioning_type',
+    '车位':'parking_space',
+    '单层面积':'every_area',
+    # '得房率':'get_house',
+    '物业公司':'property_company',
+    '标准层高':'standard_floor_hegiht',
+    '电梯':'elevator',
+    '是否涉外':'is_foregin',
+    '单价':'unit_price',
+    '总价':'total_price',
+    '面积':'area',
+    '省份':'province',
+    '市':'city',
+    '县':'county',
+}

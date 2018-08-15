@@ -5,8 +5,10 @@ from time import sleep
 import redis
 import scrapy
 from parsel import Selector
+from scrapy.conf import settings
 from scrapy_redis.spiders import RedisSpider
 from w3lib.html import remove_tags
+from xpinyin import Pinyin
 
 from SpZu.items import SpzuItem
 
@@ -41,34 +43,33 @@ class SpDetailSpider(RedisSpider):
     #     },
     # }
 
-    sp_house_config = {
-        '总价': 'total_price',
-        '单价': 'unit_price',
-        '预期租金收益': 'expected_rental_income',
-        '月租': 'monthly_rent',
-        '转让费': 'transfer_fee',
-        '物业费': 'property_management_fee',
-        '面积': 'area',
-        '面宽': 'face_width',
-        '层高': 'layer_height',
-        '进深': 'depth',
-        '楼层': 'floor',
-        '状态': 'status',
-        '起租期': 'lease_period',
-        '人群': 'crowd',
-        '押付': 'pay',
-        '免租期': 'rent_free_period',
-        '地址': 'address',
-        '是否临街': 'is_face_street',
-        '商铺名字': 'shop_name',
-        '开发商': 'developer',
-        '物业公司': 'property_company',
-        '统一管理': 'unified_management',
-        '竣工时间': 'completion_time',
-        '总楼层': 'total_floor',
-        '总面积': 'total_area',
-
-    }
+    # sp_house_config = {
+    #     '总价': 'total_price',
+    #     '单价': 'unit_price',
+    #     '预期租金收益': 'expected_rental_income',
+    #     '月租': 'monthly_rent',
+    #     '转让费': 'transfer_fee',
+    #     '物业费': 'property_management_fee',
+    #     '面积': 'area',
+    #     '面宽': 'face_width',
+    #     '层高': 'layer_height',
+    #     '进深': 'depth',
+    #     '楼层': 'floor',
+    #     '状态': 'status',
+    #     '起租期': 'lease_period',
+    #     '人群': 'crowd',
+    #     '押付': 'pay',
+    #     '免租期': 'rent_free_period',
+    #     '地址': 'address',
+    #     '是否临街': 'is_face_street',
+    #     '商铺名字': 'shop_name',
+    #     '开发商': 'developer',
+    #     '物业公司': 'property_company',
+    #     '统一管理': 'unified_management',
+    #     '竣工时间': 'completion_time',
+    #     '总楼层': 'total_floor',
+    #     '总面积': 'total_area',
+    # }
 
     def parse(self, response):
         if 'captcha-verify' in response.url:
@@ -81,7 +82,6 @@ class SpDetailSpider(RedisSpider):
                 db.add_value('sp_detail:start_urls', url)
         else:
             detail_urls_content = response.text
-            # if '访问验证-安居客' not in detail_urls_content:
             item = SpzuItem()
             lat_lng = re.findall(r'lat: "(.*?)",.*?lng: "(.*?)"', detail_urls_content, re.S)
             real_lat_lng = lat_lng[0]
@@ -92,8 +92,8 @@ class SpDetailSpider(RedisSpider):
             new_address = self.gen_address(every_address)
             print(new_address)
             item['province'], item['city'], item['county'] = new_address[0], new_address[1], new_address[2]
-
-
+            pin = Pinyin()
+            item['sheetname'] = pin.get_pinyin(item['province'], "").replace('sheng', '').replace('shi', '')
             item['total'] = xpath_css.xpath('//*[@id="content"]/div/h1/text()').extract_first()
             house_facilities = xpath_css.xpath('//ul[@class="mod-peitao clearfix"]/li[not(contains(@class,"gray"))]')
             real_house_facilities = []
@@ -101,25 +101,25 @@ class SpDetailSpider(RedisSpider):
                 one = rs.xpath('./p/text()').extract_first()
                 real_house_facilities.append(one)
             item['real_house_facilities'] = real_house_facilities
-            sp_item = {}
+            new_house = settings['NEWHOUSE']
             sp_houses = xpath_css.xpath('//*[@id="fy_info"]/ul/li')
             for house_msg in sp_houses:
                 key1 = house_msg.xpath('./span[1]/text()').extract_first()
-                key = self.sp_house_config.get(house_msg.xpath('./span[1]/text()').extract_first().replace('：', ''))
+                key = new_house.get(house_msg.xpath('./span[1]/text()').extract_first().replace('：', ''))
                 item[key] = remove_tags(
                     str(house_msg.xpath('./span[2]').extract_first()).replace('\n', '').replace(' ', ''))
 
             house_resources_l = xpath_css.xpath('//div[@class="itemCon clearfix"]/ul[@class="litem"]/li')
             for house_resource in house_resources_l:
                 key1 = house_resource.xpath('./span[1]/text()').extract_first()
-                key = self.sp_house_config.get(
+                key = new_house.get(
                     house_resource.xpath('./span[1]/text()').extract_first().replace('：', ''))
                 item[key] = remove_tags(
                     str(house_resource.xpath('./span[2]').extract_first()).replace('\n', '').replace(' ', ''))
             house_resources_r = xpath_css.xpath('//div[@class="itemCon clearfix"]/ul[@class="ritem"]/li')
             for house_resource in house_resources_r:
                 key1 = house_resource.xpath('./span[1]/text()').extract_first()
-                key = self.sp_house_config.get(
+                key = new_house.get(
                     house_resource.xpath('./span[1]/text()').extract_first().replace('：', ''))
                 item[key] = remove_tags(str(house_resource.xpath('./span[2]').extract_first()))
             # house_msgs_r = xpath_css.xpath('//*[@id="fy_info"]/ul[@class="ritem"]/li')
@@ -147,21 +147,13 @@ class SpDetailSpider(RedisSpider):
             real_describe = remove_tags(str(describes))
             item['describe'] = real_describe.strip()
             shop_name = xpath_css.xpath('//div[@class="item-mod"]/h3/b/text()').extract_first().strip()
-
-            # print(shop_name)
             item['shop_name'] = shop_name
             print(real_house_facilities)
             item['lat_lng'] = real_lat_lng
-            # print(real_lat_lng)
-            # print(real_describe.strip())
             public_time = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[1].root
             item['public_time'] = public_time
             house_number = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[2].root
             item['house_number'] = house_number
-            # print(public_time, house_number)
-            print(sp_item)
-
-            print('---')
             # item['real_house_facilities'] = real_house_facilities
             # # print(real_house_facilities)
             # item['total_price'] = ''
@@ -261,11 +253,6 @@ class SpDetailSpider(RedisSpider):
             # rs = 'total:%s,月租:%s,转让费:%s,总价:%s,单价:%s,物业费:%s,面积:%s,面宽:%s,层高:%s,进深:%s,楼层:%s,状态:%s,起租期:%s,人群:%s ,押付:%s ,地址:%s,免租期:%s,是否临街:%s,发布时间:%s,房源编号:%s ,房源描述:%s ,商铺小区名字:%s,开发商:%s ,物业公司:%s ,物业费:%s,统一管理:%s,竣工时间:%s,总楼层:%s,总面积:%s' % (
             #     deatil_mss)
             yield item
-
-            # print(rs)
-        # else:
-        #         #     print('有验证码')
-        #         #     sleep(20)
 
     def gen_address(self,every_address):
         every_address[0] = every_address[0]+'市'

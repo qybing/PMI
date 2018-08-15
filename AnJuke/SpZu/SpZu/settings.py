@@ -56,7 +56,9 @@ ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
    # 'SpZu.middlewares.SpzuDownloaderMiddleware': 543,
     'SpZu.middlewares.UserAgentMiddleware':421,
+    'SpZu.middlewares.ProxyMiddleware':415,
     # 'SpZu.middlewares.RandomProxy':415
+
 }
 
 # Enable or disable extensions
@@ -111,10 +113,10 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 REDIS_HOST = '127.0.0.1'  # 主机ip
 REDIS_PORT = 6379
-# REDIS_PARAMS = {
-#    # 'password': 在此设置密码,
-#    'db': 0
-# }
+REDIS_PARAMS = {
+   # 'password': 在此设置密码,
+   'db': 2
+}
 
 
 #设置重定向参数
@@ -133,3 +135,55 @@ RETRY_TIMES= 3
 DOWNLOAD_TIMEOUT = 15
 #使用集合对start_requests去重
 REDIS_START_URLS_AS_SET = True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SP_HOSER = {
+        '总价': 'total_price',
+        '单价': 'unit_price',
+        '预期租金收益': 'expected_rental_income',
+        '月租': 'monthly_rent',
+        '转让费': 'transfer_fee',
+        '物业费': 'property_management_fee',
+        '面积': 'area',
+        '面宽': 'face_width',
+        '层高': 'layer_height',
+        '进深': 'depth',
+        '楼层': 'floor',
+        '状态': 'status',
+        '起租期': 'lease_period',
+        '人群': 'crowd',
+        '押付': 'pay',
+        '免租期': 'rent_free_period',
+        '地址': 'address',
+        '是否临街': 'is_face_street',
+        '商铺名字': 'shop_name',
+        '开发商': 'developer',
+        '物业公司': 'property_company',
+        '统一管理': 'unified_management',
+        '竣工时间': 'completion_time',
+        '总楼层': 'total_floor',
+        '总面积': 'total_area',
+    }

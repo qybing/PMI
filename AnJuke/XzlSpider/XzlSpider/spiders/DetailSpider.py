@@ -4,46 +4,49 @@ import re
 import redis
 import scrapy
 from parsel import Selector
+from scrapy.conf import settings
 from scrapy_redis.spiders import RedisCrawlSpider
 from w3lib.html import remove_tags
+from xpinyin import Pinyin
 
 from XzlSpider.items import XzlspiderItem
 from tool.get_province import get_key
 from tool.handle_redis import RedisClient
 
-house_config ={
-    '日租金':'daily_hire',
-    '月租金':'month_hire',
-    '得房率':'get_house',
-    '楼盘名':'house_name',
-    '地址':'address',
-    '地铁':'subway',
-    '建筑面积':'covered_area',
-    '楼层':'floor',
-    '工位数':'station',
-    '物业费':'property_management_fee',
-    '类型':'type',
-    '总楼层':'total_floor',
-    '竣工年月':'completion_date',
-    '大堂层高':'lobby_height',
-    '空调类型':'air_conditioning_type',
-    '车位':'parking_space',
-    '单层面积':'every_area',
-    # '得房率':'get_house',
-    '物业公司':'property_company',
-    '标准层高':'standard_floor_hegiht',
-    '电梯':'elevator',
-    '是否涉外':'is_foregin',
-    '单价':'unit_price',
-    '总价':'total_price',
-    '面积':'area',
-    '省份':'province',
-    '市':'city',
-    '县':'county',
-}
+
+# house_config ={
+#     '日租金':'daily_hire',
+#     '月租金':'month_hire',
+#     '得房率':'get_house',
+#     '楼盘名':'house_name',
+#     '地址':'address',
+#     '地铁':'subway',
+#     '建筑面积':'covered_area',
+#     '楼层':'floor',
+#     '工位数':'station',
+#     '物业费':'property_management_fee',
+#     '类型':'type',
+#     '总楼层':'total_floor',
+#     '竣工年月':'completion_date',
+#     '大堂层高':'lobby_height',
+#     '空调类型':'air_conditioning_type',
+#     '车位':'parking_space',
+#     '单层面积':'every_area',
+#     # '得房率':'get_house',
+#     '物业公司':'property_company',
+#     '标准层高':'standard_floor_hegiht',
+#     '电梯':'elevator',
+#     '是否涉外':'is_foregin',
+#     '单价':'unit_price',
+#     '总价':'total_price',
+#     '面积':'area',
+#     '省份':'province',
+#     '市':'city',
+#     '县':'county',
+# }
 
 class DetailspiderSpider(scrapy.Spider):
-# class DetailspiderSpider(RedisCrawlSpider):
+    # class DetailspiderSpider(RedisCrawlSpider):
 
     name = 'DetailSpider'
     # allowed_domains = ['anjuke.com']
@@ -53,8 +56,6 @@ class DetailspiderSpider(scrapy.Spider):
     def parse(self, response):
         if 'captcha-verify' in response.url:
             print('遇到验证码了，url放入待爬队列里面')
-            # pool = redis.ConnectionPool(host='localhost', port=6379,db=1, decode_responses=True)
-            # r = redis.Redis(connection_pool=pool)
             db = RedisClient()
             urls = response.meta.get('redirect_urls')
             for url in urls:
@@ -65,14 +66,16 @@ class DetailspiderSpider(scrapy.Spider):
             real_lat_lng = lat_lng[0]
             xpath_css = Selector(text=detail_urls_content)
             item = XzlspiderItem()
-            every_address=[str(ad).replace('写字楼出租','').replace('房产网','').replace('写字楼出售','') for ad in xpath_css.xpath('/html/body/div[2]/a/text()').extract()[1:3]]
+            every_address = [str(ad).replace('写字楼出租', '').replace('房产网', '').replace('写字楼出售', '') for ad in
+                             xpath_css.xpath('/html/body/div[2]/a/text()').extract()[1:3]]
             new_address = self.gen_address(every_address)
-            print(new_address)
-            item['province'],item['city'],item['county'] = new_address[0],new_address[1],new_address[2]
+            item['province'], item['city'], item['county'] = new_address[0], new_address[1], new_address[2]
             item['url'] = response.url
+            pin = Pinyin()
+            item['sheetname'] = pin.get_pinyin(item['province'], "").replace('sheng', '').replace('shi', '')
             item['total'] = xpath_css.xpath('//*[@id="j-triggerlayer"]/text()').extract_first()
-            # if 'zu' in url:
             house_msgs_l = xpath_css.xpath('//*[@id="fy_info"]/ul[@class="litem"]/li')
+            house_config = settings['NEWHOUSE']
             for house_msg in house_msgs_l:
                 key1 = house_msg.xpath('./span[1]/text()').extract_first()
                 key = house_config.get(house_msg.xpath('./span[1]/text()').extract_first())
@@ -100,24 +103,17 @@ class DetailspiderSpider(scrapy.Spider):
                     item[key] = remove_tags(str(house_resource.xpath('./span[2]').extract_first()))
             describes = xpath_css.xpath('//*[@id="xzl_desc"]/div').extract_first()
             real_describe = remove_tags(str(describes))
-
             item['describe'] = real_describe.strip()
             item['lat_lng'] = real_lat_lng
-            print(real_lat_lng)
-
-            print(real_describe.strip())
             public_time = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[1].root
             item['public_time'] = public_time
-
             house_number = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[2].root
             item['house_number'] = house_number
-
-            print(public_time, house_number)
-            print(item)
+            # print(item)
             yield item
 
-    def gen_address(self,every_address):
-        every_address[0] = every_address[0]+'市'
+    def gen_address(self, every_address):
+        every_address[0] = every_address[0] + '市'
         province = get_key(every_address[0])
-        every_address.insert(0,province)
+        every_address.insert(0, province)
         return every_address

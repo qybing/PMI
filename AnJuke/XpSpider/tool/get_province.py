@@ -40,5 +40,5 @@ province_city = {
 def get_key(value):
     pro_list = [k for k, v in province_city.items() if value in v]
     return ''.join(pro_list)
-c = get_key('乌鲁木齐市')
-print(c)
+# c = get_key('乌鲁木齐市')
+# print(c)

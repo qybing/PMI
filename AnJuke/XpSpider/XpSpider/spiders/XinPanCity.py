@@ -2,11 +2,12 @@
 import redis
 import scrapy
 from parsel import Selector
+from scrapy_redis.spiders import RedisSpider
 
 from tool.handle_redis import RedisClient
 
 
-class XinpancitySpider(scrapy.Spider):
+class XinpancitySpider(RedisSpider):
     name = 'XinPanCity'
     allowed_domains = ['anjuke.com']
     start_urls = ['http://anjuke.com/']
