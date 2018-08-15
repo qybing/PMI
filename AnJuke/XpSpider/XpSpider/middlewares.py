@@ -137,10 +137,10 @@ class UserAgentMiddleware(object):
 proxyServer = "http://proxy.abuyun.com:9020"
 
 # 隧道身份信息
-proxyUser = "H58053994503UZ9D"
-proxyPass = "6A29C1C28E3929F6"
+proxyUser = "H58053994503UZ9F"
+proxyPass = "6A29C1C28E3929F7"
 # proxyAuth = "Basic " + base64.urlsafe_b64encode(proxyUser + ":" + proxyPass)
-proxyAuth = "Basic " + "SDU4MDUzOTk0NTAzVVo5RDo2QTI5QzFDMjhFMzkyOUY2"
+proxyAuth = "Basic " + "SDU4MDUzOTk0NTAzVVo5RDo2QTI5QzFDMjhFMzkyOUY3"
 class ProxyMiddleware(HttpProxyMiddleware):
     proxies = {}
 

@@ -2,35 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb9f76dc-e896-4198-93c1-e3d98454aa51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../XpSpider/tool/abuyun.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../XpSpider/tool/myTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../XzlSpider/tool/area.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/spiders/crawl_city.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/spiders/crawl_city.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/handle_redis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/DetailList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/DetailList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPan_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPan_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/tool/get_province.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/tool/get_province.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/tool/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/tool/handle_redis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/spiders/DetailSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/spiders/DetailSpider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/tool/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/tool/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XzlSpider/tool/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/tool/area.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,13 +84,13 @@
         <counts>
           <entry key="a" value="1" />
           <entry key="b" value="1" />
-          <entry key="py" value="148" />
+          <entry key="py" value="151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="148" />
+          <entry key="Python" value="151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -132,28 +108,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_city.py">
+        <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="33" />
-              <folding>
-                <element signature="e#24#36#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2323">
+              <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
+        <entry file="file://$PROJECT_DIR$/SpZu/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="70" />
-              <folding>
-                <element signature="e#372#2034#0" />
-                <element signature="e#2081#3723#0" />
-                <element signature="e#3765#4501#0" />
-                <element signature="e#4571#7094#0" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -189,15 +165,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/tes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-414">
-              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/get_province.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-592" />
@@ -242,8 +209,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DOWMLOAD_DELY</find>
-      <find>'(.*?)':</find>
       <find>'(.*?)',</find>
       <find>=</find>
       <find>real_describe</find>
@@ -272,6 +237,8 @@
       <find>r.rpush</find>
       <find>DOWNLOAD_DELAY</find>
       <find>sp_item</find>
+      <find>https://cc.sp.anjuke.com/shou/zhongdongruijia</find>
+      <find>https://bj.sp.anjuke.com/shou/xianghe/</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -529,10 +496,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2934947" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2934947" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32820514" />
@@ -542,7 +508,7 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32991454" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49924356" visible="true" weight="0.42735043" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49924356" visible="true" weight="0.42735043" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.47521368" />
@@ -728,33 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="70" />
-          <folding>
-            <element signature="e#372#2034#0" />
-            <element signature="e#2081#3723#0" />
-            <element signature="e#3765#4501#0" />
-            <element signature="e#4571#7094#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_city.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23">
@@ -820,6 +759,27 @@
     <entry file="file://$PROJECT_DIR$/tools/get_province.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-592" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2323">
+          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="70" />
+        </state>
       </provider>
     </entry>
   </component>

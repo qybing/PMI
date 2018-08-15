@@ -16,7 +16,12 @@ urls_city = []
 dict = {}
 base = 'http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2017/'
 for url in all_urls:
-    urls_city.append((base+url.xpath('./@href').extract_first(),url.xpath('./text()').extract_first()))
+    province_url = base+url.xpath('./@href').extract_first()
+    province = url.xpath('./text()').extract_first()
+    res = requests.get(province_url, headers=headers).content
+    html = res.decode('gbk')
+    xpath_css = Selector(text=html)
+    city_code = xpath_css.xpath('//tr[@class="citytr"]/td[1]/a/text()').extract()
+    city_list = xpath_css.xpath('//tr[@class="citytr"]/td[2]/a/text()').extract()
 
-# for url in urls_city:
-# print(urls_city)
+    print(province,city_list)

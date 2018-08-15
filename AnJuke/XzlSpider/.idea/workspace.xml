@@ -2,35 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fdedc5e-607b-4479-a080-6fb2c30d59b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpZu/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../XpSpider/tool/abuyun.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../XpSpider/tool/myTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool/area.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpZu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_city.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_city.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/spiders/sp_detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/spiders/sp_detail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/tools/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/tools/handle_redis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/DetailList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/DetailList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPan_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPan_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/tool/get_province.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/tool/get_province.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/tool/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/tool/handle_redis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XzlSpider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XzlSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/area.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +18,7 @@
     <SUITE FILE_PATH="coverage/XzlSpider$db.coverage" NAME="db Coverage Results" MODIFIED="1534330497131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
     <SUITE FILE_PATH="coverage/XzlSpider$main.coverage" NAME="main Coverage Results" MODIFIED="1534242450424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XzlSpider" />
     <SUITE FILE_PATH="coverage/XzlSpider$get_province.coverage" NAME="get_province Coverage Results" MODIFIED="1534242241527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
-    <SUITE FILE_PATH="coverage/XzlSpider$area.coverage" NAME="area Coverage Results" MODIFIED="1534330862796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/XzlSpider$area.coverage" NAME="area Coverage Results" MODIFIED="1534332192711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1974884521">
@@ -84,22 +60,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="36" />
+          <entry key="py" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="36" />
+          <entry key="Python" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1175" />
+          <entry key="py" value="1268" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1175" />
+          <entry key="Python" value="1268" />
         </counts>
       </usages-collector>
     </session>
@@ -152,15 +128,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XzlSpider/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/CountySpider.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
@@ -193,8 +160,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tool/area.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="237">
+              <caret line="24" column="43" lean-forward="true" selection-end-line="26" selection-end-column="29" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -266,7 +233,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="47" />
     <option name="y" value="99" />
     <option name="width" value="1386" />
@@ -463,8 +430,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26928896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -502,6 +468,11 @@
           <url>file://$PROJECT_DIR$/tool/db.py</url>
           <line>10</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tool/area.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -621,10 +592,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/requests/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="378" selection-start-line="378" selection-end-line="378" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tool/area.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="237">
+          <caret line="24" column="43" lean-forward="true" selection-end-line="26" selection-end-column="29" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
