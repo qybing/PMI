@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import logging
 import re
 
 import redis
@@ -44,6 +45,7 @@ from tool.handle_redis import RedisClient
 #     '市':'city',
 #     '县':'county',
 # }
+logger = logging.getLogger(__name__)
 
 class DetailspiderSpider(scrapy.Spider):
     # class DetailspiderSpider(RedisCrawlSpider):
@@ -54,8 +56,8 @@ class DetailspiderSpider(scrapy.Spider):
     start_urls = ['https://hz.xzl.anjuke.com/shou/59251819/?pt=2']
 
     def parse(self, response):
-        if 'captcha-verify' in response.url:
-            print('遇到验证码了，url放入待爬队列里面')
+        if 'verify' in response.url:
+            logger.info('遇到验证码了，url放入待爬队列里面')
             db = RedisClient()
             urls = response.meta.get('redirect_urls')
             for url in urls:
@@ -109,7 +111,7 @@ class DetailspiderSpider(scrapy.Spider):
             item['public_time'] = public_time
             house_number = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[2].root
             item['house_number'] = house_number
-            # print(item)
+            # logger.info(item)
             yield item
 
     def gen_address(self, every_address):

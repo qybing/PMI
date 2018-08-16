@@ -37,7 +37,7 @@ class XpspiderItem(scrapy.Item):
 
     building_type = scrapy.Field()  #建筑类型
     monthly_supply = scrapy.Field() #月供
-
+    property_offers = scrapy.Field() #楼盘优惠
     #----------------------------------
     commercial_area = scrapy.Field()            #商业面积
     total_surface_area = scrapy.Field()         #总建筑面积

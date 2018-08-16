@@ -4,8 +4,11 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+import logging
+
 import pymongo
 
+logger = logging.getLogger(__name__)
 
 class SpzuPipeline(object):
     def __init__(self, mongo_uri, mongo_db):
@@ -27,7 +30,7 @@ class SpzuPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
-        self.db[item['sheetname']].update({'url': item['url']}, dict(item), True)
-        print(item)
-        print('已经存进去了')
+        self.db[item['sheetname']].update({'url': item['url']}, {'$set': dict(item)}, True)
+        logger.info(item)
+        logger.info('已经存进去了')
         return item

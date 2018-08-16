@@ -34,7 +34,7 @@ ROBOTSTXT_OBEY = False
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -55,8 +55,8 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'SpZu.middlewares.SpzuDownloaderMiddleware': 543,
-    'SpZu.middlewares.UserAgentMiddleware':421,
-    'SpZu.middlewares.ProxyMiddleware':415,
+    'SpZu.middlewares.UserAgentMiddleware':444,
+    'SpZu.middlewares.ProxyMiddleware':543,
     # 'SpZu.middlewares.RandomProxy':415
 
 }
@@ -88,7 +88,7 @@ SCHEDULER_PERSIST = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'SpZu.pipelines.SpzuPipeline': 300,
-    'scrapy_redis.pipelines.RedisPipeline':400,
+    # 'scrapy_redis.pipelines.RedisPipeline':400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -126,7 +126,8 @@ REDIS_PARAMS = {
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
 #防止反爬
-DOWNLOAD_DELAY = 2
+CONCURRENT_REQUESTS = 5
+DOWNLOAD_DELAY = 1
 
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 #重试次数
@@ -135,16 +136,18 @@ RETRY_TIMES= 3
 DOWNLOAD_TIMEOUT = 15
 #使用集合对start_requests去重
 REDIS_START_URLS_AS_SET = True
+# LOG_FILE = "sp.log"
+# LOG_LEVEL = "DEBUG"
+#重定向
+REDIRECT_ENABLED = False
 
 
 
 
 
 
-
-
-
-
+MONGO_URI = 'localhost'
+MONGO_DATABASE = 'AnJuKeXp'
 
 
 

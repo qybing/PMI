@@ -1,5 +1,8 @@
+import logging
+
 import redis
 
+logger = logging.getLogger(__name__)
 
 class RedisClient(object):
     def __init__(self):
@@ -8,11 +11,11 @@ class RedisClient(object):
 
     def __del__(self):
         self.pool.disconnect()
-        print('关闭了')
+        logger.info('关闭了')
 
     def add_value(self, key, value):
         is_repeat = self.r.sadd(key, value)
         if is_repeat == 1:
-            print('url:{}-----插入成功'.format(value))
+            logger.info('url:{}-----插入成功'.format(value))
         else:
-            print('url:{}-----已经存在队列中'.format(value))
+            logger.info('url:{}-----已经存在队列中'.format(value))

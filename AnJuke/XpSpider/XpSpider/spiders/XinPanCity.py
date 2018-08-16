@@ -14,8 +14,6 @@ class XinpancitySpider(RedisSpider):
     redis_key = "XinPanCity:start_urls"
 
     def parse(self, response):
-        # pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
-        # r = redis.Redis(connection_pool=pool)
         db = RedisClient()
         detail_urls_content = response.text
         xpath_css = Selector(text=detail_urls_content)

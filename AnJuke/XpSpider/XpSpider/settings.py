@@ -22,7 +22,6 @@ NEWSPIDER_MODULE = 'XpSpider.spiders'
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 4
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -54,9 +53,9 @@ COOKIES_ENABLED = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'XpSpider.middlewares.XpspiderDownloaderMiddleware': 543,
-    'XpSpider.middlewares.RandomProxy':543,
+   #  'XpSpider.middlewares.RandomProxy':543,
     'XpSpider.middlewares.UserAgentMiddleware':444,
-    # 'XpSpider.middlewares.ProxyMiddleware':543
+    'XpSpider.middlewares.ProxyMiddleware':543
 }
 
 
@@ -111,10 +110,13 @@ REDIS_HOST = '127.0.0.1'  # 主机ip
 REDIS_PORT = 6379
 REDIS_PARAMS = {
    # 'password': 在此设置密码,
-   'db': 8
+   'db': 9
 }
 #防止反爬
+CONCURRENT_REQUESTS = 5
 DOWNLOAD_DELAY = 2
+
+REDIRECT_ENABLED = False
 
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 #重试次数
@@ -133,7 +135,7 @@ REDIS_START_URLS_AS_SET = True
 
 
 MONGO_URI = 'localhost'
-MONGO_DATABASE = 'AnJuKe'
+MONGO_DATABASE = 'AnJuKeXp'
 
 
 # MONGODB_HOST = '127.0.0.1'
@@ -194,6 +196,7 @@ NEWHOUSE = {'楼盘名称': 'property_name',
                  '城市': 'city',
                  '区': 'county',
                 '建筑类型':'building_type',
-                '月供':'monthly_supply'
+                '月供':'monthly_supply',
+                '楼盘优惠':'property_offers'
                  }
 

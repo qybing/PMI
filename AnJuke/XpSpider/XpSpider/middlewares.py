@@ -140,7 +140,7 @@ proxyServer = "http://proxy.abuyun.com:9020"
 proxyUser = "H58053994503UZ9F"
 proxyPass = "6A29C1C28E3929F7"
 # proxyAuth = "Basic " + base64.urlsafe_b64encode(proxyUser + ":" + proxyPass)
-proxyAuth = "Basic " + "SDU4MDUzOTk0NTAzVVo5RDo2QTI5QzFDMjhFMzkyOUY3"
+proxyAuth = "Basic " + "SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjky"
 class ProxyMiddleware(HttpProxyMiddleware):
     proxies = {}
 
@@ -151,6 +151,7 @@ class ProxyMiddleware(HttpProxyMiddleware):
     def process_request(self, request, spider):
         request.meta["proxy"] = proxyServer
         request.headers["Proxy-Authorization"] = proxyAuth
+        print('添加了代理IP----------------')
 
     def process_exception(self, request, exception, spider):
 
@@ -165,6 +166,27 @@ class ProxyMiddleware(HttpProxyMiddleware):
         # if status:
         db = RedisClient()
         db.add_value(key, value_url)
+
+    def process_response(self, request, response, spider):
+        print('到这了：{}'.format('process_response'))
+        print(request.url)
+        if response.status != 200:
+            print('----')
+            print('出现问题了，这是状态码：{}'.format(response.status))
+            try:
+                value_url = request.meta.get('redirect_urls')[0]
+            except:
+                value_url = request.url
+            print('可能被重定向了，本次url：{}   需要重新入库处理'.format(value_url))
+            key = getattr(spider, 'redis_key')
+            print('本次的类名加属性名字为：{}'.format(key))
+            # if status:
+            db = RedisClient()
+            db.add_value(key, value_url)
+        if 'captcha' in request.url:
+            print(request)
+        return response
+
 
 url = 'http://127.0.0.1:5000/get'
 class RandomProxy(object):
@@ -214,6 +236,6 @@ class RandomProxy(object):
             request.meta['proxy'] = "http://{}".format(proxies_ips.text)
             print('使用第二个更换了代理IP:{}'.format(proxies_ips.text))
             return request
-        if 'captcha-verify' in request.url:
+        if 'captcha' in request.url:
             print(request)
         return response

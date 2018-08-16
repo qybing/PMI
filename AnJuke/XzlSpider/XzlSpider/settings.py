@@ -22,11 +22,10 @@ DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 SCHEDULER_PERSIST = True
 
-SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
+# SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
 #SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderQueue"
 #SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
 
-REDIE_URL = None
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'XzlSpider (+http://www.yourdomain.com)'
@@ -40,7 +39,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 2
+# DOWNLOAD_DELAY = 2
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -67,8 +66,8 @@ DOWNLOAD_DELAY = 2
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'XzlSpider.middlewares.XzlspiderDownloaderMiddleware': 543,
-    'XzlSpider.middlewares.UserAgentMiddleware':543,
-    'XzlSpider.middlewares.RandomProxy':532
+    'XzlSpider.middlewares.UserAgentMiddleware':444,
+    'XzlSpider.middlewares.ProxyMiddleware':543
 }
 
 # Enable or disable extensions
@@ -80,8 +79,8 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   # 'XzlSpider.pipelines.XzlspiderPipeline': 300,
-    'scrapy_redis.pipelines.RedisPipeline': 300,
+   'XzlSpider.pipelines.XzlspiderPipeline': 300,
+   #  'scrapy_redis.pipelines.RedisPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -118,7 +117,8 @@ REDIS_PARAMS = {
 }
 REDIS_URL = None
 #防止反爬
-DOWNLOAD_DELAY = 2
+CONCURRENT_REQUESTS = 5
+DOWNLOAD_DELAY = 1
 
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 #重试次数
@@ -133,7 +133,8 @@ REDIS_START_URLS_AS_SET = True
 
 
 
-
+MONGO_URI = 'localhost'
+MONGO_DATABASE = 'AnJuKeXzl'
 
 
 

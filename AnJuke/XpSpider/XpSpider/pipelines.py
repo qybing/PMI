@@ -28,8 +28,8 @@ class XpspiderPipeline(object):
     def process_item(self, item, spider):
         print('我错了吗')
         print(item)
-        self.db[item['sheetname']].update({'url': item['url']}, dict(item), True)
+        self.db[item['sheetname']].update({'url': item['url']}, {'$set': dict(item)}, True)
         print('我错在上面一句话吗')
-        print(item)
+        # print(item)
         print('已经存进去了')
         return item

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import logging
 import re
 from time import sleep
 
@@ -17,7 +18,7 @@ from SpZu.items import SpzuItem
 from tools.get_province import get_key
 from tools.handle_redis import RedisClient
 
-
+logger = logging.getLogger(__name__)
 class SpDetailSpider(RedisSpider):
     name = 'sp_detail'
     allowed_domains = ['anjuke.comm']
@@ -72,12 +73,10 @@ class SpDetailSpider(RedisSpider):
     # }
 
     def parse(self, response):
-        if 'captcha-verify' in response.url:
-            print('遇到验证码了，url放入待爬队列里面')
-            # pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
-            # r = redis.Redis(connection_pool=pool)
+        if 'verify' in response.url:
+            logger.info('遇到验证码了，url放入待爬队列里面')
             db = RedisClient()
-            urls = response.meta.get('redirect_urls')
+            urls = response.meta.get('redirect_urls')[0]
             for url in urls:
                 db.add_value('sp_detail:start_urls', url)
         else:
@@ -90,7 +89,7 @@ class SpDetailSpider(RedisSpider):
             every_address = [str(ad).replace('商铺出租', '').replace('房产网', '').replace('商铺出售', '') for ad in
                              xpath_css.xpath('/html/body/div[2]/a/text()').extract()[1:3]]
             new_address = self.gen_address(every_address)
-            print(new_address)
+            logger.info(new_address)
             item['province'], item['city'], item['county'] = new_address[0], new_address[1], new_address[2]
             pin = Pinyin()
             item['sheetname'] = pin.get_pinyin(item['province'], "").replace('sheng', '').replace('shi', '')
@@ -148,14 +147,14 @@ class SpDetailSpider(RedisSpider):
             item['describe'] = real_describe.strip()
             shop_name = xpath_css.xpath('//div[@class="item-mod"]/h3/b/text()').extract_first().strip()
             item['shop_name'] = shop_name
-            print(real_house_facilities)
+            logger.info(real_house_facilities)
             item['lat_lng'] = real_lat_lng
             public_time = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[1].root
             item['public_time'] = public_time
             house_number = xpath_css.xpath('//*[@id="xzl_desc"]/h3/div/text()')[2].root
             item['house_number'] = house_number
             # item['real_house_facilities'] = real_house_facilities
-            # # print(real_house_facilities)
+            # # logger.info(real_house_facilities)
             # item['total_price'] = ''
             # item['unit_price'] = ''
             # item['monthly_rent'] = ''

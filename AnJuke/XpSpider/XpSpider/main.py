@@ -1,4 +1,4 @@
 # -*- coding=utf8 -*-
 from scrapy import cmdline
 
-cmdline.execute("scrapy crawl XinPan_spider".split())
+cmdline.execute("scrapy crawl DetailList".split())
