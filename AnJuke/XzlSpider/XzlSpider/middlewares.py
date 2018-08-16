@@ -141,7 +141,7 @@ proxyServer = "http://proxy.abuyun.com:9020"
 proxyUser = "H58053994503UZ9F"
 proxyPass = "6A29C1C28E3929F7"
 # proxyAuth = "Basic " + base64.urlsafe_b64encode(proxyUser + ":" + proxyPass)
-proxyAuth = "Basic " + "SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjky"
+proxyAuth = "Basic " + "SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjkz"
 class ProxyMiddleware(HttpProxyMiddleware):
     proxies = {}
 
