@@ -27,8 +27,8 @@ class CrawlSpListSpider(RedisSpider):
         sp_urls = xpath_css.xpath('//*[@id="list-content"]/div[@class="list-item"]/@link').extract()
         if 'verify' in response.url:
             urls = response.meta.get('redirect_urls')
-            logger.info(response.url)
-            logger.info('遇到验证码了，url:{}----放入待爬队列里面'.format(urls))
+            logger.warning(response.url)
+            logger.warning('遇到验证码了，url:{}----放入待爬队列里面'.format(urls))
             for url in urls:
                 db.add_value('crawl_sp_list:start_urls', url)
         elif len(sp_urls) < 0:
@@ -47,5 +47,5 @@ class CrawlSpListSpider(RedisSpider):
                     page = re.search(r'p(\d+)', next_page)
                     logger.info('第{}页---网址为：{}'.format(page.group(1), next_page))
                 except Exception as e:
-                    logger.info('出错原因：{}'.format(e.args))
+                    logger.warning('出错原因：{}'.format(e.args))
                 yield Request(url=next_page, callback=self.parse)

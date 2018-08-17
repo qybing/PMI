@@ -13,6 +13,7 @@ from scrapy.downloadermiddlewares.httpproxy import HttpProxyMiddleware
 import redis
 from fake_useragent import UserAgent
 from scrapy import signals
+from scrapy.downloadermiddlewares.redirect import RedirectMiddleware
 
 from tool.handle_redis import RedisClient
 
@@ -135,7 +136,7 @@ class UserAgentMiddleware(object):
     #         logger.info('url:{} 入库成功'.format(request.url))
 
 # 代理服务器
-proxyServer = "http://proxy.abuyun.com:9020"
+proxyServer = "http-dyn.abuyun.com:9020"
 
 # 隧道身份信息
 proxyUser = "H58053994503UZ9F"
@@ -156,37 +157,58 @@ class ProxyMiddleware(HttpProxyMiddleware):
 
     def process_exception(self, request, exception, spider):
 
-        logger.info('错误原因：{}'.format(exception))
+        logger.warning('错误原因：{}'.format(exception))
         try:
             value_url = request.meta.get('redirect_urls')[0]
         except:
             value_url = request.url
-        logger.info('IP代理不可用，本次url：{}   需要重新入库处理'.format(value_url))
+        logger.warning('IP代理不可用，本次url：{}   需要重新入库处理'.format(value_url))
         key = getattr(spider, 'redis_key')
-        logger.info('本次的类名加属性名字为：{}'.format(key))
-        # if status:
+        logger.warning('本次的类名加属性名字为：{}'.format(key))
         db = RedisClient()
         db.add_value(key, value_url)
 
     def process_response(self, request, response, spider):
-        print('到这了：{}'.format('process_response'))
-        print(request.url)
+        logger.info('到这了：{}'.format('process_response'))
+        logger.info(request.url)
         if response.status != 200:
-            print('----')
-            print('出现问题了，这是状态码：{}'.format(response.status))
+            logger.warning('----')
+            logger.warning('出现问题了，这是状态码：{}'.format(response.status))
             try:
                 value_url = request.meta.get('redirect_urls')[0]
             except:
                 value_url = request.url
-            print('可能被重定向了，本次url：{}   需要重新入库处理'.format(value_url))
-            key = getattr(spider, 'redis_key')
-            print('本次的类名加属性名字为：{}'.format(key))
-            # if status:
-            db = RedisClient()
-            db.add_value(key, value_url)
-        if 'captcha' in request.url:
-            print(request)
+            if value_url and 'verify' not in value_url:
+                logger.warning('可能被重定向了，本次url：{}   需要重新入库处理'.format(value_url))
+                key = getattr(spider, 'redis_key')
+                logger.warning('本次的类名加属性名字为：{}'.format(key))
+                db = RedisClient()
+                db.add_value(key, value_url)
+            else:
+                logger.warning('这是个严重错误，request:{},response'.format(request,response))
+        if 'verify' in request.url:
+            logger.info(request)
         return response
+
+class ThreatDefenceRedirectMiddleware(RedirectMiddleware):
+    proxies = {}
+    def __init__(self, auth_encoding='latin-1'):
+        self.auth_encoding = auth_encoding
+        self.proxies[proxyServer] = proxyUser + proxyPass
+
+    def _redirect(self, redirected, request, spider, reason):
+        # 如果没有特殊的防范性重定向那就正常工作
+        if not self.is_threat_defense_url(redirected.url):
+            return super()._redirect(redirected, request, spider, reason)
+        logger.warning('被重定向了，原因：{}，重定向到：{}，重定向之前：{}'.format(reason,redirected.url,request.url))
+        request.meta["proxy"] = proxyServer
+        request.headers["Proxy-Authorization"] = proxyAuth
+        logger.warning('更换了代理IP')
+        request.dont_filter = True # 防止原始链接被标记为重复链接
+        return request
+
+    def is_threat_defense_url(self, url):
+        return 'verify' in url or 'params' in url
 
 url = 'http://127.0.0.1:5000/get'
 class RandomProxy(object):

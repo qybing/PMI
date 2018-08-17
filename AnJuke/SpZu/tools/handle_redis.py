@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 class RedisClient(object):
     def __init__(self):
-        self.pool = redis.ConnectionPool(host='localhost', port=6379, db=2, decode_responses=True)
+        self.pool = redis.ConnectionPool(host='localhost', port=6379, db=10, decode_responses=True)
         self.r = redis.Redis(connection_pool=self.pool)
 
     def __del__(self):

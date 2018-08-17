@@ -11,6 +11,7 @@ import base64
 from scrapy.downloadermiddlewares.httpproxy import HttpProxyMiddleware
 from fake_useragent import UserAgent
 from scrapy import signals
+from scrapy.downloadermiddlewares.redirect import RedirectMiddleware
 
 from tool.handle_redis import RedisClient
 
@@ -122,28 +123,17 @@ class UserAgentMiddleware(object):
         # print(agent)
         print('更换了--------------UserAgent:{}'.format(agent))
 
-    # def process_exception(self, request, exception, spider):
-    #     print('UserAgent不可用，本次url需要重新入库处理')
-    #     print(exception)
-    #     status = exception.osError
-    #     key = getattr(spider, 'redis_key')
-    #     if status:
-    #         pool = redis.ConnectionPool(host='localhost', port=6379, db=0, decode_responses=True)
-    #         r = redis.Redis(connection_pool=pool)
-    #         r.rpush(key, request.url)
-    #         print('url:{} 入库成功'.format(request.url))
-
 # 代理服务器
-proxyServer = "http://proxy.abuyun.com:9020"
+proxyServer = "http-dyn.abuyun.com:9020"
 
 # 隧道身份信息
-proxyUser = "H58053994503UZ9F"
-proxyPass = "6A29C1C28E3929F7"
+proxyUser = "HE028T9448613Y4D"
+proxyPass = "9CFB203161ACD692"
 # proxyAuth = "Basic " + base64.urlsafe_b64encode(proxyUser + ":" + proxyPass)
 proxyAuth = "Basic " + "SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjky"
+
 class ProxyMiddleware(HttpProxyMiddleware):
     proxies = {}
-
     def __init__(self, auth_encoding='latin-1'):
         self.auth_encoding = auth_encoding
         self.proxies[proxyServer] = proxyUser + proxyPass
@@ -154,7 +144,6 @@ class ProxyMiddleware(HttpProxyMiddleware):
         print('添加了代理IP----------------')
 
     def process_exception(self, request, exception, spider):
-
         print('错误原因：{}'.format(exception))
         try:
             value_url = request.meta.get('redirect_urls')[0]
@@ -186,6 +175,27 @@ class ProxyMiddleware(HttpProxyMiddleware):
         if 'captcha' in request.url:
             print(request)
         return response
+
+
+class ThreatDefenceRedirectMiddleware(RedirectMiddleware):
+    proxies = {}
+    def __init__(self, auth_encoding='latin-1'):
+        self.auth_encoding = auth_encoding
+        self.proxies[proxyServer] = proxyUser + proxyPass
+
+    def _redirect(self, redirected, request, spider, reason):
+        # 如果没有特殊的防范性重定向那就正常工作
+        if not self.is_threat_defense_url(redirected.url):
+            return super()._redirect(redirected, request, spider, reason)
+        print('被重定向了，原因：{}，重定向到：{}，重定向之前：{}'.format(reason,redirected.url,request.url))
+        request.meta["proxy"] = proxyServer
+        request.headers["Proxy-Authorization"] = proxyAuth
+        print('更换了代理IP')
+        request.dont_filter = True # 防止原始链接被标记为重复链接
+        return request
+
+    def is_threat_defense_url(self, url):
+        return 'verify' in url or 'params' in url
 
 
 url = 'http://127.0.0.1:5000/get'
@@ -239,3 +249,8 @@ class RandomProxy(object):
         if 'captcha' in request.url:
             print(request)
         return response
+
+
+
+
+

@@ -29,12 +29,11 @@ class XinpanSpiderSpider(RedisSpider):
 
 
     def parse(self, response):
-        if 'captcha-verify' in response.url:
+        if 'verify' in response.url:
             db = RedisClient()
-            urls = response.meta.get('redirect_urls')
+            urls = response.meta.get('redirect_urls')[0]
             print('遇到验证码了，url:{}重新放入待爬队列里面'.format(urls))
-            for url in urls:
-                db.add_value('XinPan_spiders:start_urls', url)
+            db.add_value('XinPan_spiders:start_urls', urls)
         else:
             item = {}
             start_url_content = response.text
@@ -42,9 +41,6 @@ class XinpanSpiderSpider(RedisSpider):
             xpath_css = Selector(text=detail_urls_content)
             every_address = [str(ad).replace('楼盘', '') for ad in xpath_css.xpath('//*[@id="header"]/div[2]/div[1]/a/text()').extract()[1:3]]
             if len(every_address)>0:
-                # every_address[0] = every_address[0] + '市'
-                # province = get_key(every_address[0])
-                # every_address.insert(0, province)
                 new_address = self.gen_address(every_address)
                 item['province'], item['city'], item['county'] = new_address[0], new_address[1], new_address[2]
                 item['url'] = response.url
@@ -71,7 +67,7 @@ class XinpanSpiderSpider(RedisSpider):
                                         .replace(r'[查看地图]', '').replace(r'[房贷计算器]','')
                                         .replace(r'[查看详情]', '').replace(r'[查看详情]', '')
                                         )
-                yield item
+                print(item)
 
 
 

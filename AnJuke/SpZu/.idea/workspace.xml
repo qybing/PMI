@@ -3,32 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="fb9f76dc-e896-4198-93c1-e3d98454aa51" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpZu/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpZu/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpZu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpZu/spiders/crawl_city.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/spiders/crawl_city.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpZu/spiders/crawl_county.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/spiders/crawl_county.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpZu/spiders/crawl_sp_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/spiders/crawl_sp_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/spiders/crawl_sp_page.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SpZu/spiders/crawl_town.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/spiders/crawl_town.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/get_province.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/get_province.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/handle_redis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/DetailList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/DetailList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/tool/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/tool/handle_redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPan_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPan_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/spiders/CitySpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/spiders/CitySpider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/spiders/CountySpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/spiders/CountySpider.py" afterDir="false" />
@@ -37,7 +29,6 @@
       <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/spiders/XzlList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/spiders/XzlList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/tool/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/tool/area.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/tool/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/tool/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/tool/get_province.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/tool/get_province.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/tool/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/tool/handle_redis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +38,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/SpZu$main.coverage" NAME="main Coverage Results" MODIFIED="1534417847170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpZu" />
+    <SUITE FILE_PATH="coverage/SpZu$main.coverage" NAME="main Coverage Results" MODIFIED="1534498945817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpZu" />
+    <SUITE FILE_PATH="coverage/SpZu$sp_detail.coverage" NAME="sp_detail Coverage Results" MODIFIED="1534485751251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpZu/spiders" />
     <SUITE FILE_PATH="coverage/SpZu$module_test.coverage" NAME="module_test Coverage Results" MODIFIED="1534170844487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/SpZu$tes.coverage" NAME="tes Coverage Results" MODIFIED="1533739290763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/SpZu$push_keys.coverage" NAME="push_keys Coverage Results" MODIFIED="1533728464365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpZu" />
@@ -117,23 +109,23 @@
           <entry key="a" value="1" />
           <entry key="b" value="1" />
           <entry key="log" value="1" />
-          <entry key="py" value="245" />
+          <entry key="py" value="281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="245" />
+          <entry key="Python" value="281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1478" />
+          <entry key="py" value="1723" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1478" />
+          <entry key="Python" value="1723" />
         </counts>
       </usages-collector>
     </session>
@@ -141,15 +133,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
+        <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_city.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+            <state relative-caret-position="236">
+              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="71" />
+              <folding>
+                <element signature="e#24#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="133" column="23" selection-start-line="133" selection-end-line="133" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="176" column="39" selection-start-line="176" selection-start-column="39" selection-end-line="176" selection-end-column="39" />
+              <folding>
+                <element signature="e#168#182#0" expanded="true" />
+                <element signature="e#578#2240#0" />
+                <element signature="e#4238#4296#0" />
+                <element signature="e#8629#8640#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpZu/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
@@ -159,12 +178,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_town.py">
+        <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="-560">
+              <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
+                <element signature="e#4004#4080#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/handle_redis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,26 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>遇到验证码了</find>
-      <find>CONCURRENT_REQUESTS</find>
-      <find>并发</find>
-      <find>DOWNLOADER_MIDDLEWARES_BASE</find>
-      <find>nanshan</find>
-      <find>https://nt.sp.anjuke.com/zu/rugaoshi/</find>
-      <find>DOWNLOAD_TIMEOUT</find>
-      <find>https://wh.sp.anjuke.com/zu/</find>
-      <find>第4页</find>
-      <find>第2页</find>
-      <find>https://sh.sp.anjuke.com/zu/baoshan-p5/</find>
-      <find>TimeoutError(&quot;Getting %s took longer</find>
-      <find>HttpProxyMiddleware</find>
-      <find>https://hf.sp.anjuke.com/zu/binhuxinqu/</find>
-      <find>expected_rental_income</find>
-      <find>monthly_rent</find>
-      <find>failed 4 times</find>
-      <find>r.rpush</find>
-      <find>DOWNLOAD_DELAY</find>
-      <find>sp_item</find>
       <find>https://cc.sp.anjuke.com/shou/zhongdongruijia</find>
       <find>https://bj.sp.anjuke.com/shou/xianghe/</find>
       <find>https://ty.sp.anjuke.com/shou/</find>
@@ -210,7 +222,27 @@
       <find>from &lt;GET</find>
       <find>出现问题</find>
       <find>可能被重定向了，本次url</find>
+      <find>https://cd.sp.anjuke.com/zu/</find>
+      <find>https://gz.sp.anjuke.com/zu/conghuaqu/</find>
+      <find>https://sh.sp.anjuke.com/shou/laoximen-p8/</find>
+      <find>[]</find>
       <find>print</find>
+      <find>总价</find>
+      <find>wa</find>
+      <find>\t</find>
+      <find>这是个严重错误</find>
+      <find>被重定向了，原因</find>
+      <find>https://sh.sp.anjuke.com/shou/59632009/</find>
+      <find>https://cd.sp.anjuke.com/shou/59329242/</find>
+      <find>https://sz.sp.anjuke.com/zu/58070255/</find>
+      <find>SpzuItem does not support field: None</find>
+      <find>D:</find>
+      <find>D:\anaconda</find>
+      <find>https://cd.sp.anjuke.com/shou/59178159/?pt=2</find>
+      <find>https://hz.sp.anjuke.com/shou/59756620/</find>
+      <find>https://hz.sp.anjuke.com/zu/58674709/</find>
+      <find>出现问题了，这是状态码</find>
+      <find>D:\anaconda\lib\site-packages</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -250,16 +282,16 @@
         <option value="$PROJECT_DIR$/tools/db.py" />
         <option value="$PROJECT_DIR$/SpZu/items.py" />
         <option value="$PROJECT_DIR$/tools/get_province.py" />
+        <option value="$PROJECT_DIR$/SpZu/pipelines.py" />
+        <option value="$PROJECT_DIR$/SpZu/spiders/crawl_city.py" />
+        <option value="$PROJECT_DIR$/SpZu/spiders/crawl_county.py" />
         <option value="$PROJECT_DIR$/SpZu/spiders/crawl_sp_list.py" />
         <option value="$PROJECT_DIR$/SpZu/spiders/crawl_town.py" />
-        <option value="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" />
-        <option value="$PROJECT_DIR$/SpZu/pipelines.py" />
-        <option value="$PROJECT_DIR$/SpZu/spiders/crawl_county.py" />
-        <option value="$PROJECT_DIR$/SpZu/middlewares.py" />
         <option value="$PROJECT_DIR$/tools/handle_redis.py" />
-        <option value="$PROJECT_DIR$/SpZu/spiders/crawl_city.py" />
-        <option value="$PROJECT_DIR$/SpZu/settings.py" />
         <option value="$PROJECT_DIR$/SpZu/main.py" />
+        <option value="$PROJECT_DIR$/SpZu/middlewares.py" />
+        <option value="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" />
+        <option value="$PROJECT_DIR$/SpZu/settings.py" />
       </list>
     </option>
   </component>
@@ -269,7 +301,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="47" />
     <option name="y" value="99" />
     <option name="width" value="1386" />
@@ -316,7 +348,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" />
   </component>
   <component name="RecentsManager">
@@ -405,7 +437,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="push_keys" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sp_detail" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SpZu" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -413,12 +445,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SpZu" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SpZu/spiders" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SpZu/push_keys.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -451,18 +483,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.push_keys" />
       <item itemvalue="Python.tes" />
       <item itemvalue="Python.middlewares" />
       <item itemvalue="Python.module_test" />
+      <item itemvalue="Python.sp_detail" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.sp_detail" />
         <item itemvalue="Python.module_test" />
         <item itemvalue="Python.middlewares" />
         <item itemvalue="Python.tes" />
-        <item itemvalue="Python.push_keys" />
       </list>
     </recent_temporary>
   </component>
@@ -487,23 +519,46 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32820514" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.3707483" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5015129" side_tool="true" weight="0.7931624" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32991454" />
       <window_info anchor="bottom" id="Python Console" order="4" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32991454" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49924356" visible="true" weight="0.4017094" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49848714" visible="true" weight="0.7931624" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.47521368" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="right" id="Database" order="0" weight="0.32980332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="SciView" order="2" weight="0.32980332" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2980333" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32820514" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.3707483" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32991454" />
+      <window_info anchor="bottom" id="Python Console" order="4" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32991454" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49924356" weight="0.4017094" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.47521368" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Database" order="0" weight="0.32980332" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="2" weight="0.32980332" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -567,7 +622,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py</url>
-          <line>76</line>
+          <line>32</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -589,15 +644,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../sp_zu_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="18" lean-forward="true" selection-end-line="223" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/anaconda/Lib/site-packages/scrapy/http/response/__init__.py" />
-    <entry file="file://D:/anaconda/Lib/re.py" />
     <entry file="file://D:/anaconda/Lib/site-packages/pymysql/cursors.py" />
     <entry file="file://D:/anaconda/Lib/site-packages/redis/client.py" />
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/57359179/builtins.py" />
@@ -610,8 +656,6 @@
     <entry file="file://D:/anaconda/Lib/site-packages/parsel/selector.py" />
     <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_zu.py" />
     <entry file="file://D:/anaconda/Lib/site-packages/scrapy/http/request/__init__.py" />
-    <entry file="file://D:/anaconda/Lib/site-packages/scrapy/core/downloader/middleware.py" />
-    <entry file="file://D:/anaconda/Lib/site-packages/twisted/python/failure.py" />
     <entry file="file://D:/anaconda/Lib/site-packages/twisted/internet/defer.py" />
     <entry file="file://$PROJECT_DIR$/SpZu/spiders/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -663,13 +707,6 @@
         <state relative-caret-position="-552" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/middl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2149">
@@ -700,65 +737,125 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/get_province.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="351">
           <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/pipelines.py">
+    <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_county.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="299">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="23" />
           <folding>
-            <element signature="e#193#207#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/handle_redis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_sp_list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="351">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_town.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="e#193#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/scrapy/item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/scrapy/downloadermiddlewares/redirect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/twisted/python/failure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="490" selection-start-line="490" selection-end-line="490" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/scrapy/core/downloader/middleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-754">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/scrapy/core/downloader/handlers/http11.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/handle_redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="-560">
+          <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#4004#4080#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_city.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_county.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="236">
+          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="71" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
           </folding>
@@ -767,35 +864,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="187" column="12" selection-start-line="187" selection-start-column="12" selection-end-line="187" selection-end-column="12" />
+        <state relative-caret-position="152">
+          <caret line="176" column="39" selection-start-line="176" selection-start-column="39" selection-end-line="176" selection-end-column="39" />
           <folding>
             <element signature="e#168#182#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_town.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#578#2240#0" />
+            <element signature="e#4238#4296#0" />
+            <element signature="e#8629#8640#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="23">
+          <caret line="133" column="23" selection-start-line="133" selection-end-line="133" selection-end-column="23" />
         </state>
       </provider>
     </entry>

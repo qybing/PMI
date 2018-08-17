@@ -24,12 +24,12 @@ class CrawlCitySpider(RedisSpider):
         sp_urls = xpath_css.xpath('//*[@id="list-content"]/div[@class="list-item"]/@link').extract()
         if 'verify' in response.url:
             urls = response.meta.get('redirect_urls')
-            logger.info(response.url)
-            logger.info('遇到验证码了，url:{}重新放入待爬队列里面'.format(urls))
+            logger.warning(response.url)
+            logger.warning('遇到验证码了，url:{}重新放入待爬队列里面'.format(urls))
             for url in urls:
                 db.add_value('crawl_city:start_urls',url)
         elif len(sp_urls) < 0 :
-            logger.info('本url:{}-----没有搜索结果'.format(response.url))
+            logger.warning('本url:{}-----没有搜索结果'.format(response.url))
             db.add_value('not_url:sp', response.url)
             # r.sadd('not_url:sp', response.url)
         else:

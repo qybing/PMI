@@ -4,12 +4,13 @@ import logging
 import redis
 import scrapy
 from parsel import Selector
+from scrapy_redis.spiders import RedisSpider
 
 from tool.handle_redis import RedisClient
 
 logger = logging.getLogger(__name__)
 
-class CityspiderSpider(scrapy.Spider):
+class CityspiderSpider(RedisSpider):
     name = 'CitySpider'
     allowed_domains = ['anjuke.com']
     start_urls = ['https://sh.xzl.anjuke.com/zu/?from=navigation']
@@ -21,12 +22,12 @@ class CityspiderSpider(scrapy.Spider):
         xpath_css = Selector(text=detail_urls_content)
         sp_urls = xpath_css.xpath('//*[@id="list-content"]/div[@class="list-item"]/@link').extract()
         if 'verify' in response.url:
-            logger.info('遇到验证码了，url放入待爬队列里面')
+            logger.warning('遇到验证码了，url放入待爬队列里面')
             urls = response.meta.get('redirect_urls')
             for url in urls:
                 db.add_value('CitySpider:start_urls', url)
         elif len(sp_urls) < 0 or '请换个搜索词或试试筛选吧' in detail_urls_content:
-                logger.info('本url:{}-----没有搜索结果'.format(response.url))
+                logger.warning('本url:{}-----没有搜索结果'.format(response.url))
                 db.add_value('not_url:xzl', response.url)
         else:
             countys = xpath_css.xpath('//*[@id="city_list"]/dl/dd/a/@href').extract()

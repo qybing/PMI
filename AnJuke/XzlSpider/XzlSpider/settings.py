@@ -34,7 +34,7 @@ SCHEDULER_PERSIST = True
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+# CONCURRENT_REQUESTS = 4
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -66,8 +66,10 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'XzlSpider.middlewares.XzlspiderDownloaderMiddleware': 543,
+   #  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
     'XzlSpider.middlewares.UserAgentMiddleware':444,
-    'XzlSpider.middlewares.ProxyMiddleware':543
+    'XzlSpider.middlewares.ProxyMiddleware':543,
+    # 'XzlSpider.middlewares.ThreatDefenceRedirectMiddleware':600,
 }
 
 # Enable or disable extensions
@@ -113,20 +115,22 @@ REDIS_HOST = 'localhost'  # 也可以根据情况改成 localhost
 REDIS_PORT = 6379
 REDIS_PARAMS = {
    # 'password': 在此设置密码,
-   'db': 1
+   'db': 3
 }
 REDIS_URL = None
 #防止反爬
 CONCURRENT_REQUESTS = 5
-DOWNLOAD_DELAY = 1
-
+DOWNLOAD_DELAY = 1.5
+#状态码
+HTTPERROR_ALLOWED_CODES = [302,500, 503, 504, 400, 403, 404, 408]
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 #重试次数
-RETRY_TIMES= 3
+RETRY_TIMES= 4
 #下载时间设置
 DOWNLOAD_TIMEOUT = 15
 #使用集合对start_requests去重
 REDIS_START_URLS_AS_SET = True
+# REDIRECT_ENABLED = False
 
 
 

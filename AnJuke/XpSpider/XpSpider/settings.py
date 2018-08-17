@@ -55,7 +55,9 @@ DOWNLOADER_MIDDLEWARES = {
    # 'XpSpider.middlewares.XpspiderDownloaderMiddleware': 543,
    #  'XpSpider.middlewares.RandomProxy':543,
     'XpSpider.middlewares.UserAgentMiddleware':444,
-    'XpSpider.middlewares.ProxyMiddleware':543
+    'XpSpider.middlewares.ProxyMiddleware':543,
+    # 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware':None,
+    # 'XpSpider.middlewares.ThreatDefenceRedirectMiddleware':600,
 }
 
 
@@ -113,11 +115,11 @@ REDIS_PARAMS = {
    'db': 9
 }
 #防止反爬
-CONCURRENT_REQUESTS = 5
+CONCURRENT_REQUESTS = 4
 DOWNLOAD_DELAY = 2
 
-REDIRECT_ENABLED = False
-
+# REDIRECT_ENABLED = False
+HTTPERROR_ALLOWED_CODES = [302,500, 503, 504, 400, 403, 404, 408]
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 #重试次数
 RETRY_TIMES= 3

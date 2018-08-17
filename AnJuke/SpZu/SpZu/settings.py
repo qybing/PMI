@@ -55,8 +55,10 @@ COOKIES_ENABLED = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'SpZu.middlewares.SpzuDownloaderMiddleware': 543,
+   #  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
     'SpZu.middlewares.UserAgentMiddleware':444,
     'SpZu.middlewares.ProxyMiddleware':543,
+    # 'SpZu.middlewares.ThreatDefenceRedirectMiddleware':600,
     # 'SpZu.middlewares.RandomProxy':415
 
 }
@@ -115,7 +117,7 @@ REDIS_HOST = '127.0.0.1'  # 主机ip
 REDIS_PORT = 6379
 REDIS_PARAMS = {
    # 'password': 在此设置密码,
-   'db': 2
+   'db': 10
 }
 
 
@@ -126,20 +128,23 @@ REDIS_PARAMS = {
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
 #防止反爬
-CONCURRENT_REQUESTS = 5
-DOWNLOAD_DELAY = 1
+CONCURRENT_REQUESTS = 4
+DOWNLOAD_DELAY = 2.5
+#状态码
+HTTPERROR_ALLOWED_CODES = [500, 503, 504, 400, 403, 404, 408]
 
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 #重试次数
-RETRY_TIMES= 3
+RETRY_TIMES= 4
 #下载时间设置
 DOWNLOAD_TIMEOUT = 15
 #使用集合对start_requests去重
 REDIS_START_URLS_AS_SET = True
+#
 # LOG_FILE = "sp.log"
 # LOG_LEVEL = "DEBUG"
 #重定向
-REDIRECT_ENABLED = False
+# REDIRECT_ENABLED = False
 
 
 
@@ -147,7 +152,7 @@ REDIRECT_ENABLED = False
 
 
 MONGO_URI = 'localhost'
-MONGO_DATABASE = 'AnJuKeXp'
+MONGO_DATABASE = 'AnJuKeSp'
 
 
 

@@ -28,9 +28,9 @@ class CrawlCountySpider(RedisSpider):
 
         if 'verify' in response.url:
             urls = response.meta.get('redirect_urls')
-            logger.info(response.url)
+            logger.warning(response.url)
 
-            logger.info('遇到验证码了，url:{}重新放入待爬队列里面'.format(urls))
+            logger.warning('遇到验证码了，url:{}重新放入待爬队列里面'.format(urls))
             for url in urls:
                 db.add_value('crawl_county:start_urls', url)
         # if '访问验证-安居客' not in detail_urls_content:

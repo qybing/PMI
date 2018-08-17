@@ -45,8 +45,7 @@ def main():
     xpath_css = Selector(text=html)
     all_urls = xpath_css.xpath('//tr[@class="provincetr"]/td/a')
     base = 'http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2017/'
-    # print(len(all_urls))
-    for url in all_urls[22:24]:
+    for url in all_urls[18:19]:
         province_url = base + url.xpath('./@href').extract_first()
         province = url.xpath('./text()').extract_first()
         res = get_html_content(province_url)
@@ -57,7 +56,7 @@ def main():
         city_list = xpath_css.xpath('//tr[@class="citytr"]/td[2]/a/text()').extract()
         city_urls = xpath_css.xpath('//tr[@class="citytr"]/td[1]/a/@href').extract()
         for i in range(len(city_urls)):
-            url1 = base + city_urls[i]
+            url1 = base + city_urls[12]
             res = get_html_content(url1)
             enc = chardet.detect(res)
             html = res.decode(enc['encoding'],errors = 'ignore')
@@ -67,17 +66,18 @@ def main():
             county_urls = xpath_css.xpath('//tr[@class="countytr"]/td[1]/a/@href').extract()
             for j in range(len(county_urls)):
                 # print('省：{}--市：{}--县：{}'.format(province,city_list[i],county_list[j]))
-                url2 = url1[0:-9]+county_urls[j]
+                url2 = url1[0:-9]+county_urls[1]
                 res = get_html_content(url2)
                 enc = chardet.detect(res)
-                html = res.decode(enc['encoding'],errors = 'ignore')
+                html = res.decode('gbk',errors = 'ignore')
+                print(html)
                 xpath_css = Selector(text=html)
                 town_code = xpath_css.xpath('//tr[@class="towntr"]/td[1]/a/text()').extract()
                 town_list = xpath_css.xpath('//tr[@class="towntr"]/td[2]/a/text()').extract()
                 town_urls = xpath_css.xpath('//tr[@class="towntr"]/td[1]/a/@href').extract()
                 for k in range(len(town_urls)):
                     # print('省：{}--市：{}--县：{}--镇：{}'.format(province,city_list[i],county_list[j],town_list[k]))
-                    url3 = url2[0:-11] + town_urls[k]
+                    url3 = url2[0:-11] + town_urls[2]
                     print(url3)
                     res = get_html_content(url3)
                     enc = chardet.detect(res)

@@ -59,9 +59,8 @@ class DetailspiderSpider(scrapy.Spider):
         if 'verify' in response.url:
             logger.info('遇到验证码了，url放入待爬队列里面')
             db = RedisClient()
-            urls = response.meta.get('redirect_urls')
-            for url in urls:
-                db.add_value('DetailSpider:start_urls', url)
+            urls = response.meta.get('redirect_urls')[0]
+            db.add_value('DetailSpider:start_urls', urls)
         else:
             detail_urls_content = response.text
             lat_lng = re.findall(r'lat: "(.*?)",.*?lng: "(.*?)"', detail_urls_content, re.S)

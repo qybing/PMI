@@ -7,10 +7,10 @@ from scrapy_redis.spiders import RedisSpider
 from tool.handle_redis import RedisClient
 
 
-class XinpancitySpider(RedisSpider):
+class XinpancitySpider(scrapy.Spider):
     name = 'XinPanCity'
     allowed_domains = ['anjuke.com']
-    start_urls = ['http://anjuke.com/']
+    start_urls = ['https://sh.fang.anjuke.com/xzl/all/w5/?from=navigation']
     redis_key = "XinPanCity:start_urls"
 
     def parse(self, response):
@@ -20,7 +20,7 @@ class XinpancitySpider(RedisSpider):
         citys = xpath_css.xpath('//div[@class="sel-city"]/div[@class="city-mod"]/dl/dd/a/@href').extract()
         urls_list = xpath_css.xpath(
             '//*[@id="container"]/div[2]/div[1]/div[@class="key-list"]/div/@data-link').extract()
-        if 'captcha-verify' in response.url:
+        if 'verify' in response.url:
             urls = response.meta.get('redirect_urls')
             print('遇到验证码了，url:{}重新放入待爬队列里面'.format(urls))
             for url in urls:
