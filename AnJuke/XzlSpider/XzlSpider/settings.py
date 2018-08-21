@@ -137,7 +137,7 @@ REDIS_START_URLS_AS_SET = True
 
 
 
-MONGO_URI = 'localhost'
+MONGO_URI = '192.168.0.21'
 MONGO_DATABASE = 'AnJuKeXzl'
 
 

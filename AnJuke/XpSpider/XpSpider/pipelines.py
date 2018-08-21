@@ -20,6 +20,8 @@ class XpspiderPipeline(object):
 
     def open_spider(self, spider):
         self.client = pymongo.MongoClient(self.mongo_uri)
+        db_auth = self.client.admin
+        db_auth.authenticate('laocheng', 'laocheng')
         self.db = self.client[self.mongo_db]
 
     def close_spider(self, spider):
