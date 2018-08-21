@@ -45,7 +45,7 @@ ROBOTSTXT_OBEY = False
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -115,12 +115,12 @@ REDIS_HOST = 'localhost'  # 也可以根据情况改成 localhost
 REDIS_PORT = 6379
 REDIS_PARAMS = {
    # 'password': 在此设置密码,
-   'db': 3
+   'db': 11
 }
 REDIS_URL = None
 #防止反爬
 CONCURRENT_REQUESTS = 5
-DOWNLOAD_DELAY = 1.5
+# DOWNLOAD_DELAY = 1.2
 #状态码
 HTTPERROR_ALLOWED_CODES = [302,500, 503, 504, 400, 403, 404, 408]
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
@@ -180,4 +180,5 @@ NEWHOUSE ={
     '省份':'province',
     '市':'city',
     '县':'county',
+    '预估月支出':'estimated_monthly_expenditure',
 }

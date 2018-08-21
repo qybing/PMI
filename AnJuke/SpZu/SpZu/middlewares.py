@@ -135,7 +135,6 @@ class UserAgentMiddleware(object):
     #         r.rpush(key, request.url)
     #         logger.info('url:{} 入库成功'.format(request.url))
 
-# 代理服务器
 proxyServer = "http-dyn.abuyun.com:9020"
 
 # 隧道身份信息
@@ -187,7 +186,7 @@ class ProxyMiddleware(HttpProxyMiddleware):
                 db = RedisClient()
                 db.add_value(key, value_url)
             else:
-                logger.error('这是个严重错误，request:{},response'.format(request,response))
+                logger.error('这是个严重错误，request:{},response：{}'.format(request,response))
         if 'captcha' in request.url:
             logger.info(request)
         return response

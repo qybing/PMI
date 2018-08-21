@@ -51,11 +51,13 @@
 # '城市':'city',
 # '区':'county',}
 
-
-from xpinyin import Pinyin
-pin = Pinyin()
-# test1 = pin.get_pinyin("大河向东流")   #默认分割符为-
-# print(test1)
-
-test2 = pin.get_pinyin("浙江省", "")
-print(test2.replace('sheng',''))
+a = [1,2,3,4,5,6,7]
+print(a[0:2])
+# print(a[2:])
+# from xpinyin import Pinyin
+# pin = Pinyin()
+# # test1 = pin.get_pinyin("大河向东流")   #默认分割符为-
+# # print(test1)
+#
+# test2 = pin.get_pinyin("浙江省", "")
+# print(test2.replace('sheng',''))

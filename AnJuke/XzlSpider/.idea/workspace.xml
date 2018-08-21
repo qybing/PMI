@@ -2,32 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fdedc5e-607b-4479-a080-6fb2c30d59b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../XpSpider/tool/area.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XpSpider/tool/area1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XpSpider/tool/area2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XpSpider/tool/mongdb.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpZu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_city.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_city.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_county.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_county.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_sp_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_sp_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_town.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/spiders/crawl_town.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/spiders/sp_detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/spiders/sp_detail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpZu/tools/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/tools/handle_redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpZu/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/scrapy.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPan_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPan_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XpSpider/tool/myTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/tool/myTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XzlSpider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XzlSpider/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XzlSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XzlSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XzlSpider/spiders/CitySpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/spiders/CitySpider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XzlSpider/spiders/CountySpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/spiders/CountySpider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XzlSpider/spiders/TownSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/spiders/TownSpider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XzlSpider/spiders/XzlList.py" beforeDir="false" afterPath="$PROJECT_DIR$/XzlSpider/spiders/XzlList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool/area.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/area.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/handle_redis.py" afterDir="false" />
     </list>
@@ -38,8 +31,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/XzlSpider$db.coverage" NAME="db Coverage Results" MODIFIED="1534487678750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
-    <SUITE FILE_PATH="coverage/XzlSpider$main.coverage" NAME="main Coverage Results" MODIFIED="1534498598265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XzlSpider" />
+    <SUITE FILE_PATH="coverage/XzlSpider$db.coverage" NAME="db Coverage Results" MODIFIED="1534837694563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/XzlSpider$main.coverage" NAME="main Coverage Results" MODIFIED="1534841807640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XzlSpider" />
     <SUITE FILE_PATH="coverage/XzlSpider$get_province.coverage" NAME="get_province Coverage Results" MODIFIED="1534242241527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
     <SUITE FILE_PATH="coverage/XzlSpider$area.coverage" NAME="area Coverage Results" MODIFIED="1534501466985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
   </component>
@@ -83,22 +76,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="112" />
+          <entry key="py" value="153" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="112" />
+          <entry key="Python" value="153" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1652" />
+          <entry key="py" value="2641" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1652" />
+          <entry key="Python" value="2641" />
         </counts>
       </usages-collector>
     </session>
@@ -106,10 +99,62 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XzlSpider/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="34" column="27" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="27" />
+              <folding>
+                <element signature="e#193#207#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XzlSpider/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="122" column="42" lean-forward="true" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
+              <folding>
+                <element signature="e#24#38#0" expanded="true" />
+                <marker date="1534841186483" expanded="true" signature="1265:1271" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/XzlSpider/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="123" column="4" lean-forward="true" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/XzlSpider/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XzlSpider/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1685">
-              <caret line="210" column="41" selection-start-line="210" selection-start-column="35" selection-end-line="210" selection-end-column="41" />
+            <state relative-caret-position="184">
+              <caret line="168" column="36" selection-start-line="168" selection-start-column="36" selection-end-line="168" selection-end-column="36" />
               <folding>
                 <element signature="e#168#182#0" expanded="true" />
                 <element signature="e#7767#9532#0" />
@@ -119,68 +164,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/XzlList.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-              <folding>
-                <element signature="e#24#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1246">
-              <caret line="62" column="57" lean-forward="true" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
-              <folding>
-                <element signature="e#24#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tool/handle_redis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XzlSpider/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tool/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tool/area.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="282">
+              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1534501466941" expanded="true" signature="5249:5254" ph="..." />
-                <marker date="1534501466941" expanded="true" signature="5249:5561" ph="..." />
+                <element signature="e#430#485#0" />
               </folding>
             </state>
           </provider>
@@ -197,24 +186,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'(.*?)'</find>
-      <find>,</find>
-      <find>lat_lng</find>
-      <find>DetailSpider:start_urls</find>
-      <find>r.rpush</find>
-      <find>NEWHOUSE</find>
-      <find>DOWNLOAD_DELAY</find>
-      <find>CONCURRENT_REQUESTS</find>
-      <find>这是个严重错误</find>
-      <find>print</find>
-      <find>https://su.xzl.anjuke.com/zu/huxi-p20/</find>
-      <find>https://su.xzl.anjuke.com/zu/59733864/</find>
       <find>https://su.xzl.anjuke.com/zu/59770926/</find>
       <find>https://su.xzl.anjuke.com/zu/59739923/</find>
       <find>HTTPERROR_ALLOWED_CODES</find>
       <find>https://wx.xzl.anjuke.com/shou/xizhang/</find>
-      <find>https://zz.xzl.anjuke.com/shou/dongjiancai/</find>
       <find>HttpProxyMiddleware</find>
+      <find>https://zz.xzl.anjuke.com/shou/dongjiancai/</find>
+      <find>https://bj.xzl.anjuke.com/zu/yizhuang-p</find>
+      <find>https://bj.xzl.anjuke.com/zu/yizhuang-p32/</find>
+      <find>找</find>
+      <find>https://bj.xzl.anjuke.com/zu/yizhuang-p31/</find>
+      <find>duplicates</find>
+      <find>RFPDupeFilter</find>
+      <find>sheetname</find>
+      <find>total</find>
+      <find>预估月支出</find>
+      <find>已经存进去了</find>
+      <find>集中式中央空调</find>
+      <find>CONCURRENT_REQUESTS</find>
+      <find>\r</find>
+      <find>scraped</find>
+      <find>site</find>
+      <find>D;</find>
+      <find>404</find>
+      <find>items</find>
+      <find>daily_hire</find>
+      <find>get_house</find>
+      <find>D:</find>
+      <find>covered_area</find>
+      <find>'status': 429,</find>
+      <find>剩余租期</find>
     </findStrings>
     <replaceStrings>
       <replace>$1 = scrapy.Field()</replace>
@@ -228,20 +229,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/XzlSpider/items.py" />
         <option value="$PROJECT_DIR$/XzlSpider/pipelines.py" />
         <option value="$PROJECT_DIR$/tool/get_province.py" />
-        <option value="$PROJECT_DIR$/tool/handle_redis.py" />
-        <option value="$PROJECT_DIR$/XzlSpider/main.py" />
-        <option value="$PROJECT_DIR$/XzlSpider/middlewares.py" />
         <option value="$PROJECT_DIR$/XzlSpider/spiders/CitySpider.py" />
         <option value="$PROJECT_DIR$/XzlSpider/spiders/CountySpider.py" />
         <option value="$PROJECT_DIR$/XzlSpider/spiders/TownSpider.py" />
+        <option value="$PROJECT_DIR$/XzlSpider/spiders/XzlList.py" />
+        <option value="$PROJECT_DIR$/tool/area.py" />
+        <option value="$PROJECT_DIR$/tool/handle_redis.py" />
+        <option value="$PROJECT_DIR$/XzlSpider/middlewares.py" />
+        <option value="$PROJECT_DIR$/XzlSpider/main.py" />
+        <option value="$PROJECT_DIR$/XzlSpider/items.py" />
         <option value="$PROJECT_DIR$/tool/db.py" />
         <option value="$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py" />
         <option value="$PROJECT_DIR$/XzlSpider/settings.py" />
-        <option value="$PROJECT_DIR$/XzlSpider/spiders/XzlList.py" />
-        <option value="$PROJECT_DIR$/tool/area.py" />
       </list>
     </option>
   </component>
@@ -257,7 +258,9 @@
     <option name="width" value="1386" />
     <option name="height" value="735" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -280,6 +283,12 @@
               <item name="XzlSpider" type="b2602c69:ProjectViewProjectNode" />
               <item name="XzlSpider" type="462c0819:PsiDirectoryNode" />
               <item name="XzlSpider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XzlSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XzlSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="XzlSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XzlSpider" type="b2602c69:ProjectViewProjectNode" />
@@ -319,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.area">
+  <component name="RunManager" selected="Python.main">
     <configuration name="area" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="XzlSpider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -416,9 +425,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.area" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.db" />
+        <item itemvalue="Python.area" />
         <item itemvalue="Python.get_province" />
       </list>
     </recent_temporary>
@@ -447,14 +456,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27458397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.8923077" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3982906" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.61709404" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.50769234" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
@@ -470,6 +480,29 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27458397" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46495727" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.50769234" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32993197" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32993197" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -482,7 +515,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tool/db.py</url>
-          <line>11</line>
+          <line>12</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -518,13 +551,6 @@
     <entry file="file://$PROJECT_DIR$/XzlSpider/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/XzlSpider/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="48" column="23" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="49" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/anaconda/Lib/site-packages/requests/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -539,27 +565,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XzlSpider/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="e#193#207#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tool/get_province.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="43" column="10" lean-forward="true" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XzlSpider/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -573,36 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/CitySpider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/CountySpider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1246">
-          <caret line="62" column="57" lean-forward="true" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/XzlList.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -610,13 +589,6 @@
           <folding>
             <element signature="e#24#38#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XzlSpider/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -636,10 +608,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/scrapy_redis/dupefilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="144" column="41" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/CitySpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/xpinyin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/CountySpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/handle_redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/area.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1534501466941" expanded="true" signature="5249:5254" ph="..." />
+            <marker date="1534501466941" expanded="true" signature="5249:5561" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XzlSpider/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/XzlSpider/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1685">
-          <caret line="210" column="41" selection-start-line="210" selection-start-column="35" selection-end-line="210" selection-end-column="41" />
+        <state relative-caret-position="184">
+          <caret line="168" column="36" selection-start-line="168" selection-start-column="36" selection-end-line="168" selection-end-column="36" />
           <folding>
             <element signature="e#168#182#0" expanded="true" />
             <element signature="e#7767#9532#0" />
@@ -647,32 +685,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool/handle_redis.py">
+    <entry file="file://$PROJECT_DIR$/XzlSpider/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="575">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="27" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#193#207#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tool/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        <state relative-caret-position="282">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="e#430#485#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool/area.py">
+    <entry file="file://$PROJECT_DIR$/XzlSpider/spiders/DetailSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="176">
+          <caret line="122" column="42" lean-forward="true" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1534501466941" expanded="true" signature="5249:5254" ph="..." />
-            <marker date="1534501466941" expanded="true" signature="5249:5561" ph="..." />
+            <element signature="e#24#38#0" expanded="true" />
+            <marker date="1534841186483" expanded="true" signature="1265:1271" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XzlSpider/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="123" column="4" lean-forward="true" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XzlSpider/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

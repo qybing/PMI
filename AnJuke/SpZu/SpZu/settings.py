@@ -128,8 +128,8 @@ REDIS_PARAMS = {
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
 #防止反爬
-CONCURRENT_REQUESTS = 4
-DOWNLOAD_DELAY = 2.5
+CONCURRENT_REQUESTS = 5
+# DOWNLOAD_DELAY =4
 #状态码
 HTTPERROR_ALLOWED_CODES = [500, 503, 504, 400, 403, 404, 408]
 
@@ -194,4 +194,5 @@ SP_HOSER = {
         '竣工时间': 'completion_time',
         '总楼层': 'total_floor',
         '总面积': 'total_area',
+        '剩余租期':'remaining_lease_term'
     }

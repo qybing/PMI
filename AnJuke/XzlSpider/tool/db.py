@@ -2,14 +2,21 @@ import redis
 
 
 def redis_client():
-    pool = redis.ConnectionPool(host='localhost', port=6379, db=2, decode_responses=True)
+    pool = redis.ConnectionPool(host='localhost', port=6379, db=11, decode_responses=True)
     r = redis.Redis(connection_pool=pool)
-    n = r.smembers('sp_detail:start_urls')
+    n = r.smembers('not_url:sp_detail')
     # n = r.smembers('crawl_town:start_urls')
-    pool = redis.ConnectionPool(host='localhost', port=6379, db=10, decode_responses=True)
+    pool = redis.ConnectionPool(host='localhost', port=6379, db=3, decode_responses=True)
     r = redis.Redis(connection_pool=pool)
+    # r.sdiffstore()
     count = 0
     for i in n:
+        # if i == 'https://bj.xzl.anjuke.com/zu/yizhuang-p31/':
+        #     print('找到了')
+        # else:
+        #     print(i)
+
+
         # print(i)
         # if i == 'https://zs.sp.anjuke.com/shou/zhangjiabian/':
         #     # print(i)
@@ -19,15 +26,19 @@ def redis_client():
             # print('没找到：{}'.format(i))
         # if count==30:
         #     break
-        # if count==50:
+        # if count==10000000:
         #     break
-        a = r.sadd('sp_detail:start_urls',i)
+        a = r.sadd('DetailSpider:start_urls',i)
 
         if a==1:
             count+=1
             print('成功')
         else:
             print('已经存在')
+            r.srem('DetailSpider:start_urls',i)
+            print('删除成功')
+            count+=1
+    print('删除成功',count)
 
 
 if __name__ == '__main__':
