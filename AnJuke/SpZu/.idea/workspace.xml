@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb9f76dc-e896-4198-93c1-e3d98454aa51" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/Supermarket.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +23,7 @@
     <SUITE FILE_PATH="coverage/SpZu$sp_detail.coverage" NAME="sp_detail Coverage Results" MODIFIED="1534485751251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpZu/spiders" />
     <SUITE FILE_PATH="coverage/SpZu$module_test.coverage" NAME="module_test Coverage Results" MODIFIED="1534170844487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/SpZu$tes.coverage" NAME="tes Coverage Results" MODIFIED="1533739290763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/SpZu$dianping.coverage" NAME="dianping Coverage Results" MODIFIED="1534913645815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
     <SUITE FILE_PATH="coverage/SpZu$push_keys.coverage" NAME="push_keys Coverage Results" MODIFIED="1533728464365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpZu" />
     <SUITE FILE_PATH="coverage/SpZu$middlewares.coverage" NAME="middlewares Coverage Results" MODIFIED="1533811493245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpZu" />
     <SUITE FILE_PATH="coverage/SpZu$ip_proxies.coverage" NAME="ip_proxies Coverage Results" MODIFIED="1533722440857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpZu" />
@@ -79,10 +80,10 @@
     <session id="800297027">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="3" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -91,26 +92,26 @@
           <entry key="b" value="1" />
           <entry key="cfg" value="1" />
           <entry key="log" value="1" />
-          <entry key="py" value="298" />
+          <entry key="py" value="314" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Ini" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="298" />
+          <entry key="Python" value="314" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cfg" value="11" />
-          <entry key="py" value="2389" />
+          <entry key="py" value="2396" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Ini" value="11" />
-          <entry key="Python" value="2389" />
+          <entry key="Python" value="2396" />
         </counts>
       </usages-collector>
     </session>
@@ -120,17 +121,77 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+            <state relative-caret-position="606">
+              <caret line="153" column="26" selection-start-line="153" selection-start-column="26" selection-end-line="153" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Desktop/dianping.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="49" />
+              <folding>
+                <element signature="e#87#96#0" expanded="true" />
+                <element signature="e#7174#12144#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/anaconda/Lib/site-packages/pmipy/pmi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+              <folding>
+                <element signature="e#63#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="116" selection-start-line="116" selection-end-line="124" selection-end-column="66" />
+              <folding>
+                <element signature="e#168#182#0" expanded="true" />
+                <element signature="e#578#2240#0" />
+                <element signature="e#4238#4296#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpZu/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" lean-forward="true" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/get_province.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="583">
+              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="41" />
+              <folding>
+                <element signature="e#24#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,7 +199,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpZu/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="621">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#193#207#0" expanded="true" />
@@ -158,10 +219,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>出现问题了，这是状态码</find>
-      <find>total</find>
-      <find>pages</find>
-      <find>list index out of range</find>
       <find>antispam</find>
       <find>total_price</find>
       <find>unit_price</find>
@@ -188,6 +245,10 @@
       <find>'status': 429,</find>
       <find>重错误看日志</find>
       <find>剩余租期</find>
+      <find>shopping_file</find>
+      <find>HTTPERROR_ALLOW_ALL</find>
+      <find>getStoreInfo</find>
+      <find>镇海</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -238,6 +299,7 @@
         <option value="$PROJECT_DIR$/SpZu/items.py" />
         <option value="$PROJECT_DIR$/SpZu/pipelines.py" />
         <option value="$PROJECT_DIR$/SpZu/settings.py" />
+        <option value="$USER_HOME$/Desktop/dianping.py" />
       </list>
     </option>
   </component>
@@ -247,7 +309,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="47" />
     <option name="y" value="99" />
     <option name="width" value="1386" />
@@ -261,6 +323,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,16 +336,26 @@
               <item name="SpZu" type="462c0819:PsiDirectoryNode" />
               <item name="SpZu" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SpZu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpZu" type="462c0819:PsiDirectoryNode" />
+              <item name="SpZu" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpZu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpZu" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../XpSpider/XpSpider/spiders/XinPanCity.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PublicRemarke/SuperShop.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -307,7 +380,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.dianping">
+    <configuration name="dianping" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SpZu" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/dianping.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SpZu" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -396,42 +491,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tes" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SpZu" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/tes.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.tes" />
       <item itemvalue="Python.middlewares" />
       <item itemvalue="Python.module_test" />
       <item itemvalue="Python.sp_detail" />
+      <item itemvalue="Python.dianping" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dianping" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.sp_detail" />
         <item itemvalue="Python.module_test" />
         <item itemvalue="Python.middlewares" />
-        <item itemvalue="Python.tes" />
       </list>
     </recent_temporary>
   </component>
@@ -450,10 +523,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2980333" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.30257186" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49848714" weight="0.32820514" />
@@ -573,6 +645,11 @@
           <line>31</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Desktop/dianping.py</url>
+          <line>187</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -582,15 +659,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/anaconda/Lib/site-packages/redis/client.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/57359179/builtins.py" />
-    <entry file="file://$USER_HOME$/Desktop/weibo_store_redis_key.py" />
-    <entry file="file://D:/anaconda/Lib/site-packages/requests/api.py" />
-    <entry file="file://$PROJECT_DIR$/SpZu/spiders/anjuke_com.py" />
-    <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_pro.py" />
-    <entry file="file://D:/anaconda/Lib/site-packages/scrapy/http/response/text.py" />
-    <entry file="file://D:/anaconda/Lib/site-packages/scrapy/spidermiddlewares/depth.py" />
-    <entry file="file://D:/anaconda/Lib/site-packages/parsel/selector.py" />
     <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_zu.py" />
     <entry file="file://D:/anaconda/Lib/site-packages/scrapy/http/request/__init__.py" />
     <entry file="file://D:/anaconda/Lib/site-packages/twisted/internet/defer.py" />
@@ -616,14 +684,8 @@
     <entry file="file://$PROJECT_DIR$/SpZu/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_sp_page.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/sp.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_sp_page.py" />
+    <entry file="file://$PROJECT_DIR$/SpZu/sp.log" />
     <entry file="file://$PROJECT_DIR$/tools/middl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2149">
@@ -652,20 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/get_province.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/spiders/crawl_county.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="37" column="23" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -683,9 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-86">
           <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,9 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="71" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,18 +786,6 @@
           <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-805">
-          <caret line="143" column="69" selection-start-line="143" selection-start-column="69" selection-end-line="143" selection-end-column="69" />
-          <folding>
-            <element signature="e#168#182#0" expanded="true" />
-            <element signature="e#578#2240#0" />
-            <element signature="e#4238#4296#0" />
           </folding>
         </state>
       </provider>
@@ -773,19 +807,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py" />
     <entry file="file://$PROJECT_DIR$/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -802,7 +824,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="621">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#193#207#0" expanded="true" />
@@ -810,17 +832,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="112" column="34" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+        <state relative-caret-position="606">
+          <caret line="153" column="26" selection-start-line="153" selection-start-column="26" selection-end-line="153" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="3075" column="8" selection-start-line="3075" selection-start-column="8" selection-end-line="3075" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/xlrd/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1879">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/pymongo/collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="645" column="8" selection-start-line="645" selection-start-column="8" selection-end-line="645" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/57359179/sys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="552" selection-start-line="552" selection-end-line="552" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/pymongo/mongo_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/pmipy/pmi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+          <folding>
+            <element signature="e#63#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PublicRemarke/SuperShop.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="116" selection-start-line="116" selection-end-line="124" selection-end-column="66" />
+          <folding>
+            <element signature="e#168#182#0" expanded="true" />
+            <element signature="e#578#2240#0" />
+            <element signature="e#4238#4296#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" lean-forward="true" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/get_province.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/dianping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="49" />
+          <folding>
+            <element signature="e#87#96#0" expanded="true" />
+            <element signature="e#7174#12144#1" />
+          </folding>
         </state>
       </provider>
     </entry>
