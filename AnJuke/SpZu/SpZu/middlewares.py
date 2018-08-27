@@ -15,6 +15,7 @@ from scrapy.downloadermiddlewares.httpproxy import HttpProxyMiddleware
 from scrapy import signals
 from fake_useragent import UserAgent
 from scrapy.downloadermiddlewares.redirect import RedirectMiddleware
+from scrapy.exceptions import IgnoreRequest
 
 from tools.handle_redis import RedisClient
 
@@ -138,10 +139,10 @@ class UserAgentMiddleware(object):
 proxyServer = "http-dyn.abuyun.com:9020"
 
 # 隧道身份信息
-proxyUser = "H58053994503UZ9G"
-proxyPass = "6A29C1C28E3929F8"
-# proxyAuth = "Basic " + base64.urlsafe_b64encode(proxyUser + ":" + proxyPass)
-proxyAuth = "Basic " + "SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjkz"
+proxyUser = "HE028T9448613Y4E"
+proxyPass = "9CFB203161ACD693"
+proxyAuth = 'Basic SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjkz'
+
 class ProxyMiddleware(HttpProxyMiddleware):
     proxies = {}
 
@@ -171,7 +172,12 @@ class ProxyMiddleware(HttpProxyMiddleware):
     def process_response(self, request, response, spider):
         logger.info('到这了：{}'.format('process_response'))
         logger.info(request.url)
-        if response.status != 200:
+        db = RedisClient()
+        if response.status==404:
+            logger.warning('该URL：{}已经失效，放入失效库，可查看'.format(response.url))
+            db.add_value('sp:not_url', response.url)
+            raise IgnoreRequest
+        if response.status != 200 and response.status != 404:
             logger.warning('----')
             logger.warning('出现问题了，这是状态码：{}'.format(response.status))
             try:
@@ -182,13 +188,11 @@ class ProxyMiddleware(HttpProxyMiddleware):
                 logger.warning('可能被重定向了，本次url：{}   需要重新入库处理'.format(value_url))
                 key = getattr(spider, 'redis_key')
                 logger.warning('本次的类名加属性名字为：{}'.format(key))
-                # if status:
-                db = RedisClient()
                 db.add_value(key, value_url)
             else:
                 logger.error('这是个严重错误，request:{},response：{}'.format(request,response))
         if 'captcha' in request.url:
-            logger.info(request)
+            logger.info('该URL：{}含有验证码应该加入到重'.format(response.url))
         return response
 
 
@@ -229,21 +233,6 @@ class RandomProxy(object):
             if proxies_ips.status_code == 500:
                 logger.info('没有可用代理了，我休息一会')
                 sleep(5 * 60)
-        # else:
-        #     sleep(2)
-        #     proxies_ips = requests.get(url)
-        #     request.meta['proxy'] = "http://{}".format(proxies_ips.text)
-        #     logger.info('使用第二个更换了代理IP:{}'.format(proxies_ips.text))
-
-    #     else:
-    #         url = 'http://127.0.0.1:8080/get'
-    #         proxies_ips = requests.get(url)
-    #         if proxies_ips.status_code == 200:
-    #             # logger.info(proxies_ips)
-    #             request.meta['proxy'] = "http://{}".format(proxies_ips.text)
-    #             logger.info('使用第一个更换了代理IP:{}'.format(proxies_ips.text))
-    #         else:
-    #             sleep(10 * 60)
 
     def process_exception(self, request, exception, spider):
 

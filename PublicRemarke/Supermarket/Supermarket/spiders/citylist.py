@@ -1,20 +1,25 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
+from tool.handle_redis import RedisClient
+
 
 class CitylistSpider(scrapy.Spider):
     name = 'citylist'
     allowed_domains = ['dianping.com']
     start_urls = ['http://www.dianping.com/citylist']
+    redis_key = "CitylistSpider:start_urls"
+
 
     def parse(self, response):
         city_list = response.xpath('//div[@class="findHeight"]/a/@href').extract()
         base_url = 'http://www.dianping.com'
         end_url = '/ch20/g187'
         citys = []
-
+        db = RedisClient()
         for city in city_list:
-            citys.append(base_url+city.replace(r'//www.dianping.com','')+end_url)
+            citty = base_url+city.replace(r'//www.dianping.com','')+end_url
+            citys.append(citty)
+            db.add_value('TradeArea:start_urls', citty)
         print(citys)
-        print(len(citys))
-            # print(city.replace(r'//www.dianping.com/',''))
+        print('一共有{}个城市URL入库成功'.format(len(citys)))

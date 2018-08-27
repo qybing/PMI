@@ -4,6 +4,8 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+import logging
+
 import redis
 import requests
 from time import sleep
@@ -12,8 +14,10 @@ from scrapy.downloadermiddlewares.httpproxy import HttpProxyMiddleware
 from fake_useragent import UserAgent
 from scrapy import signals
 from scrapy.downloadermiddlewares.redirect import RedirectMiddleware
+from scrapy.exceptions import IgnoreRequest
 
 from tool.handle_redis import RedisClient
+logger = logging.getLogger(__name__)
 
 
 class XpspiderSpiderMiddleware(object):
@@ -123,14 +127,12 @@ class UserAgentMiddleware(object):
         # print(agent)
         print('更换了--------------UserAgent:{}'.format(agent))
 
-# 代理服务器
 proxyServer = "http-dyn.abuyun.com:9020"
 
 # 隧道身份信息
-proxyUser = "HE028T9448613Y4F"
+proxyUser = "HE028T9448613Y4E"
 proxyPass = "9CFB203161ACD693"
-# proxyAuth = "Basic " + base64.urlsafe_b64encode(proxyUser + ":" + proxyPass)
-proxyAuth = "Basic " + "SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjkz"
+proxyAuth = 'Basic SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjkz'
 
 class ProxyMiddleware(HttpProxyMiddleware):
     proxies = {}
@@ -141,40 +143,48 @@ class ProxyMiddleware(HttpProxyMiddleware):
     def process_request(self, request, spider):
         request.meta["proxy"] = proxyServer
         request.headers["Proxy-Authorization"] = proxyAuth
-        print('添加了代理IP----------------')
+        logger.info('添加了代理IP----------------')
 
     def process_exception(self, request, exception, spider):
-        print('错误原因：{}'.format(exception))
+
+        logger.warning('错误原因：{}'.format(exception))
         try:
             value_url = request.meta.get('redirect_urls')[0]
         except:
             value_url = request.url
-        print('IP代理不可用，本次url：{}   需要重新入库处理'.format(value_url))
+        logger.warning('IP代理不可用，本次url：{}   需要重新入库处理'.format(value_url))
         key = getattr(spider, 'redis_key')
-        print('本次的类名加属性名字为：{}'.format(key))
+        logger.warning('本次的类名加属性名字为：{}'.format(key))
         # if status:
         db = RedisClient()
         db.add_value(key, value_url)
 
     def process_response(self, request, response, spider):
-        print('到这了：{}'.format('process_response'))
-        print(request.url)
-        if response.status != 200:
-            print('----')
-            print('出现问题了，这是状态码：{}'.format(response.status))
+        logger.info('到这了：{}'.format('process_response'))
+        logger.info(request.url)
+        db = RedisClient()
+        if response.status==404:
+            logger.warning('该URL：{}已经失效，放入失效库，可查看'.format(response.url))
+            db.add_value('xp:not_url', response.url)
+            raise IgnoreRequest
+        if response.status != 200 and response.status != 404:
+            logger.warning('----')
+            logger.warning('出现问题了，这是状态码：{}'.format(response.status))
             try:
                 value_url = request.meta.get('redirect_urls')[0]
             except:
                 value_url = request.url
-            print('可能被重定向了，本次url：{}   需要重新入库处理'.format(value_url))
-            key = getattr(spider, 'redis_key')
-            print('本次的类名加属性名字为：{}'.format(key))
-            # if status:
-            db = RedisClient()
-            db.add_value(key, value_url)
+            if value_url and 'verify' not in value_url:
+                logger.warning('可能被重定向了，本次url：{}   需要重新入库处理'.format(value_url))
+                key = getattr(spider, 'redis_key')
+                logger.warning('本次的类名加属性名字为：{}'.format(key))
+                db.add_value(key, value_url)
+            else:
+                logger.error('这是个严重错误，request:{},response：{}'.format(request,response))
         if 'captcha' in request.url:
-            print(request)
+            logger.info('该URL：{}含有验证码应该加入到重'.format(response.url))
         return response
+
 
 
 class ThreatDefenceRedirectMiddleware(RedirectMiddleware):

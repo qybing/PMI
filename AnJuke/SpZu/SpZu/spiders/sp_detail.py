@@ -13,12 +13,13 @@ from xpinyin import Pinyin
 
 from SpZu.items import SpzuItem
 
-
 # class SpDetailSpider(scrapy.Spider):
 from tools.get_province import get_key
 from tools.handle_redis import RedisClient
 
 logger = logging.getLogger(__name__)
+
+
 class SpDetailSpider(RedisSpider):
     name = 'sp_detail'
     allowed_domains = ['anjuke.comm']
@@ -50,7 +51,8 @@ class SpDetailSpider(RedisSpider):
                     pin = Pinyin()
                     item['sheetname'] = pin.get_pinyin(item['province'], "").replace('sheng', '').replace('shi', '')
                     item['total'] = xpath_css.xpath('//*[@id="content"]/div/h1/text()').extract_first().strip()
-                    house_facilities = xpath_css.xpath('//ul[@class="mod-peitao clearfix"]/li[not(contains(@class,"gray"))]')
+                    house_facilities = xpath_css.xpath(
+                        '//ul[@class="mod-peitao clearfix"]/li[not(contains(@class,"gray"))]')
                     real_house_facilities = []
                     for rs in house_facilities:
                         one = rs.xpath('./p/text()').extract_first()
@@ -76,30 +78,9 @@ class SpDetailSpider(RedisSpider):
                         key1 = house_resource.xpath('./span[1]/text()').extract_first().split('：')[0]
                         key = new_house.get(key1)
                         item[key] = remove_tags(str(house_resource.xpath('./span[2]').extract_first()))
-                    # house_msgs_r = xpath_css.xpath('//*[@id="fy_info"]/ul[@class="ritem"]/li')
-                    # for house_msg in house_msgs_r:
-                    #     key1 = house_msg.xpath('./span[1]/text()').extract_first()
-                    #     key = house_config.get(house_msg.xpath('./span[1]/text()').extract_first())
-                    #     if key1 == '预估月支出' and 'zu' in url:
-                    #         continue
-                    #     else:
-                    #         sp_item[key1] = remove_tags(str(house_msg.xpath('./span[2]').extract_first()))
-                    # house_resources_l = xpath_css.xpath('//div[@class="itemCon clearfix"]/ul[@class="litem"]/li')
-                    # for house_resource in house_resources_l:
-                    #     key1 = house_resource.xpath('./span[1]/text()').extract_first()
-                    #     key = house_config.get(house_resource.xpath('./span[1]/text()').extract_first())
-                    #     sp_item[key1] = remove_tags(str(house_resource.xpath('./span[2]').extract_first()))
-                    # house_resources_r = xpath_css.xpath('//div[@class="itemCon clearfix"]/ul[@class="ritem"]/li')
-                    # for house_resource in house_resources_r:
-                    #     key1 = house_resource.xpath('./span[1]/text()').extract_first()
-                    #     key = house_config.get(house_resource.xpath('./span[1]/text()').extract_first())
-                    #     if key1 == '得房率':
-                    #         continue
-                    #     else:
-                    #         sp_item[key1] = remove_tags(str(house_resource.xpath('./span[2]').extract_first()))
                     describes = xpath_css.xpath('//*[@id="xzl_desc"]/div').extract_first()
                     real_describe = remove_tags(str(describes))
-                    item['describe'] = real_describe.replace('\xa0','').replace('\t','').strip()
+                    item['describe'] = real_describe.replace('\xa0', '').replace('\t', '').strip()
                     shop_name = xpath_css.xpath('//div[@class="item-mod"]/h3/b/text()').extract_first().strip()
                     item['shop_name'] = shop_name
                     logger.info(real_house_facilities)
@@ -110,7 +91,7 @@ class SpDetailSpider(RedisSpider):
                     item['house_number'] = house_number.strip()
                     yield item
                 except Exception as e:
-                    logger.error('严重错误看日志',e.args)
+                    logger.error('严重错误看日志', e.args)
                     if 'antispam' in response.url or 'jump' in response.url:
                         url = response.meta.get('redirect_urls')[0]
                     else:
@@ -122,8 +103,8 @@ class SpDetailSpider(RedisSpider):
                 logger.error('该URL已经失效：{}'.format(response.url))
                 db.add_value('not_url:sp_detail', response.url)
 
-    def gen_address(self,every_address):
-        every_address[0] = every_address[0]+'市'
+    def gen_address(self, every_address):
+        every_address[0] = every_address[0] + '市'
         province = get_key(every_address[0])
-        every_address.insert(0,province)
+        every_address.insert(0, province)
         return every_address

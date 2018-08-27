@@ -6,6 +6,7 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 from fake_useragent import UserAgent
 from scrapy import signals
+from scrapy.downloadermiddlewares.httpproxy import HttpProxyMiddleware
 
 
 class SupermarketSpiderMiddleware(object):
@@ -111,5 +112,61 @@ class UserAgentMiddleware(object):
     def process_request(self, request, spider):
         ua = UserAgent()
         agent = ua.random
+        request.headers['Host'] = 'www.dianping.com'
+        request.headers["Connection"] = 'keep-alive'
+        request.headers['Pragma'] = 'no-cache'
+        request.headers['Cache-Control'] = 'no-cache'
+        request.headers['Upgrade-Insecure-Requests'] = 1
         request.headers["User-Agent"] = agent
+        request.headers["Accept"] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+        request.headers['Accept-Encoding'] = 'gzip, deflate'
+        request.headers['Accept-Language'] = 'zh-CN,zh;q=0.9'
         print('更换了--------------UserAgent:{}'.format(agent))
+
+    def process_response(self, request, response, spider):
+        # Called with the response returned from the downloader.
+        # Must either;
+        # - return a Response object
+        # - return a Request object
+        # - or raise IgnoreRequest
+        return response
+
+
+    def process_exception(self, request, exception, spider):
+        # Called when a download handler or a process_request()
+        # (from other downloader middleware) raises an exception.
+        print('错误原因：{}'.format(exception))
+        try:
+            value_url = request.meta.get('redirect_urls')[0]
+        except:
+            value_url = request.url
+        print('IP代理不可用，本次url：{}   需要重新入库处理'.format(value_url))
+        # Must either:
+        # - return None: continue processing this exception
+        # - return a Response object: stops process_exception() chain
+        # - return a Request object: stops process_exception() chain
+        pass
+
+# 代理服务器
+proxyServer = "http-dyn.abuyun.com:9020"
+import base64  # 代理服务器
+
+# 隧道身份信息
+proxyUser = "HE028T9448613Y4D"
+proxyPass = "9CFB203161ACD692"
+proxyAuth = 'Basic SEUwMjhUOTQ0ODYxM1k0RDo5Q0ZCMjAzMTYxQUNENjky'
+
+class ProxyMiddleware(HttpProxyMiddleware):
+    proxies = {}
+
+    def __init__(self, auth_encoding='latin-1'):
+        self.auth_encoding = auth_encoding
+        self.proxies[proxyServer] = proxyUser + proxyPass
+
+    def process_request(self, request, spider):
+        request.meta["proxy"] = proxyServer
+        request.headers["Proxy-Authorization"] = proxyAuth
+        print('添加了代理IP----------------')
+
+
+
