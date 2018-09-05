@@ -10,6 +10,8 @@
       <change beforePath="$PROJECT_DIR$/../SpZu/SpZu/spiders/sp_detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SpZu/SpZu/spiders/sp_detail.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpZu/tools/module_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpZu/tools/tes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XpSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/XpSpider/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XpSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/XpSpider/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool/abuyun.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" afterDir="false" />
@@ -118,19 +120,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="middlewares.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="middlewares.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/XpSpider/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="132" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="47">
+              <caret line="167" column="30" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
               <folding>
-                <element signature="e#168#180#0" expanded="true" />
+                <element signature="e#168#182#0" expanded="true" />
+                <element signature="e#7135#7646#0" />
+                <element signature="e#7718#8340#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XpSpider/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="118">
@@ -214,7 +218,6 @@
         <option value="$PROJECT_DIR$/XpSpider/spiders/XinPanCity.py" />
         <option value="$PROJECT_DIR$/XpSpider/main.py" />
         <option value="$PROJECT_DIR$/XpSpider/spiders/XinPan_spider.py" />
-        <option value="$PROJECT_DIR$/XpSpider/middlewares.py" />
         <option value="$PROJECT_DIR$/tool/area.py" />
         <option value="$PROJECT_DIR$/tool/area1.py" />
         <option value="$PROJECT_DIR$/tool/myTest.py" />
@@ -222,6 +225,7 @@
         <option value="$PROJECT_DIR$/tool/mongdb.py" />
         <option value="$PROJECT_DIR$/XpSpider/pipelines.py" />
         <option value="$PROJECT_DIR$/XpSpider/settings.py" />
+        <option value="$PROJECT_DIR$/XpSpider/middlewares.py" />
       </list>
     </option>
   </component>
@@ -496,31 +500,6 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/XpSpider/middlewares.py</url>
-          <line>176</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/XpSpider/middlewares.py</url>
-          <line>202</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/XpSpider/middlewares.py</url>
-          <line>158</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/XpSpider/middlewares.py</url>
-          <line>151</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/XpSpider/middlewares.py</url>
-          <line>141</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tool/area.py</url>
           <line>81</line>
           <option name="timeStamp" value="38" />
@@ -661,20 +640,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XpSpider/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-          <folding>
-            <element signature="e#168#180#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/XpSpider/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XpSpider/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="167" column="30" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
+          <folding>
+            <element signature="e#168#182#0" expanded="true" />
+            <element signature="e#7135#7646#0" />
+            <element signature="e#7718#8340#0" />
+          </folding>
         </state>
       </provider>
     </entry>

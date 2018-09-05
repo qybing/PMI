@@ -1,29 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf5798bf-8b95-494c-b01c-e25ded15a838" name="Default Changelist" comment="" />
+    <list default="true" id="bf5798bf-8b95-494c-b01c-e25ded15a838" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../AnJuke/Community/Community/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tool/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AnJuke/SpZu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AnJuke/SpZu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AnJuke/XpSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AnJuke/XpSpider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AnJuke/XzlSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AnJuke/XzlSpider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/spiders/Shop.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/spiders/Shop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/spiders/ShopList.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/spiders/ShopList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/spiders/TradeArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/spiders/TradeArea.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/spiders/citylist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/spiders/citylist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Supermarket/spiders/village.py" beforeDir="false" afterPath="$PROJECT_DIR$/Supermarket/spiders/village.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/AA.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/AA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/c.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/c.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/dianping.js" beforeDir="false" afterPath="$PROJECT_DIR$/tool/dianping.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/handle_redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/module_tes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/module_tes.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Supermarket$module_test.coverage" NAME="module_test Coverage Results" MODIFIED="1534937067347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
-    <SUITE FILE_PATH="coverage/Supermarket$main.coverage" NAME="main Coverage Results" MODIFIED="1535102250298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Supermarket" />
-    <SUITE FILE_PATH="coverage/Supermarket$module_tes.coverage" NAME="module_tes Coverage Results" MODIFIED="1535020892974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
-    <SUITE FILE_PATH="coverage/Supermarket$c.coverage" NAME="c Coverage Results" MODIFIED="1535105923429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
     <SUITE FILE_PATH="coverage/Supermarket$pytest_in_inter_tes_py.coverage" NAME="pytest in inter_tes.py Coverage Results" MODIFIED="1535000386676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
-    <SUITE FILE_PATH="coverage/Supermarket$sp_zu_1.coverage" NAME="sp_zu_1 Coverage Results" MODIFIED="1535106561758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
-    <SUITE FILE_PATH="coverage/Supermarket$check.coverage" NAME="check Coverage Results" MODIFIED="1535011900842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$MyTest.coverage" NAME="MyTest Coverage Results" MODIFIED="1536043205906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$qq.coverage" NAME="qq Coverage Results" MODIFIED="1535512537229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
     <SUITE FILE_PATH="coverage/Supermarket$Shop.coverage" NAME="Shop Coverage Results" MODIFIED="1534996031372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Supermarket/spiders" />
-    <SUITE FILE_PATH="coverage/Supermarket$AA.coverage" NAME="AA Coverage Results" MODIFIED="1535101500913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$main.coverage" NAME="main Coverage Results" MODIFIED="1535959191961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Supermarket" />
+    <SUITE FILE_PATH="coverage/Supermarket$check.coverage" NAME="check Coverage Results" MODIFIED="1535534212549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$xx.coverage" NAME="xx Coverage Results" MODIFIED="1535709772354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$db1.coverage" NAME="db1 Coverage Results" MODIFIED="1535955094736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$module_tes.coverage" NAME="module_tes Coverage Results" MODIFIED="1535020892974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$module_test.coverage" NAME="module_test Coverage Results" MODIFIED="1534937067347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$sp_zu_1.coverage" NAME="sp_zu_1 Coverage Results" MODIFIED="1535106561758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$GovSpider.coverage" NAME="GovSpider Coverage Results" MODIFIED="1535954459215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Supermarket/spiders" />
+    <SUITE FILE_PATH="coverage/Supermarket$c.coverage" NAME="c Coverage Results" MODIFIED="1535424728459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$AA.coverage" NAME="AA Coverage Results" MODIFIED="1535707997120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
+    <SUITE FILE_PATH="coverage/Supermarket$db.coverage" NAME="db Coverage Results" MODIFIED="1535940267384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tool" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-647812155">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.opened" value="2" />
         </counts>
@@ -53,77 +82,200 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1693167957">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="133" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="133" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1138" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1138" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1400061535">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="13" />
+          <entry key="py" value="1691" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="13" />
+          <entry key="Python" value="1691" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="4" />
+          <entry key="py" value="99" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="4" />
+          <entry key="Python" value="99" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1753718111">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="log" value="1" />
+          <entry key="py" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="86" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="86" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TradeArea.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Supermarket/spiders/TradeArea.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/MyTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="400">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <element signature="e#24#37#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shop.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Supermarket/spiders/Shop.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/qq.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
+            <state relative-caret-position="-1904">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/sp_zu_1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="281" column="21" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="21" />
               <folding>
-                <element signature="e#24#35#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="middlewares.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Supermarket/middlewares.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/utils.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tool/xx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="196">
+              <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
               <folding>
-                <element signature="e#168#204#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="citylist.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Supermarket/spiders/citylist.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/dian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="10" column="21" selection-start-line="10" selection-end-line="11" />
+            <state relative-caret-position="509">
+              <caret line="321" column="3" selection-start-line="321" selection-start-column="3" selection-end-line="321" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/get_province.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-375" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/handle_redis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/inter_tes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2129">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
-                <element signature="e#24#37#0" expanded="true" />
+                <element signature="e#15#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="village.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Supermarket/spiders/village.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool/module_tes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="28" selection-end-column="62" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopList.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Supermarket/spiders/ShopList.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-              <folding>
-                <element signature="e#24#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="171">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -140,23 +292,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>(\w+):</find>
-      <find>loadUserDomain</find>
-      <find>power</find>
-      <find>map</find>
-      <find>fn-UqkY</find>
-      <find>(.*?):(.*)</find>
-      <find>来福士广场店</find>
-      <find>h</find>
-      <find>http</find>
-      <find>(\d+)</find>
-      <find>(http)</find>
-      <find>(.*?):(.*?)</find>
-      <find>:(.*)</find>
-      <find>您的IP是</find>
-      <find>源申图文</find>
-      <find>base_url+city.replace(r'//www.dianping.com','')+end_url</find>
+      <find>http://www.dianping.com/shop/100462804</find>
+      <find>这是结果：</find>
+      <find>fn-JEFb</find>
+      <find>(.*):(.*)</find>
+      <find>员商店</find>
+      <find>山姆会员商</find>
+      <find>高科西路店</find>
+      <find>重百超市</find>
+      <find>北部新区商场店</find>
+      <find>需要重新入队列</find>
+      <find>山姆会员商店(高科西路店)</find>
+      <find>中山街道南板桥路52号</find>
+      <find>&lt;/textarea&gt;</find>
+      <find>=</find>
+      <find>zi.onWebviewAppearAutoPV</find>
+      <find>抱歉！页面无法访问</find>
       <find>getCaptchaUrl</find>
+      <find>jsctx</find>
+      <find>找-到</find>
+      <find>状态码异常，请查看原因</find>
+      <find>_lxsdk</find>
+      <find>ii</find>
+      <find>http://58.53.197.134</find>
+      <find>这是个严重错误，请查看详情:</find>
+      <find>该地区已经满50页需要在划分</find>
+      <find>E:\Pycharm\Supermarket\</find>
+      <find>region-nav-sub</find>
+      <find>查找页数失败，失败原因</find>
+      <find>D:</find>
+      <find>base</find>
     </findStrings>
     <replaceStrings>
       <replace>'$1'</replace>
@@ -166,34 +331,49 @@
       <replace>$1',</replace>
       <replace>'$1</replace>
       <replace>:'$1',</replace>
+      <replace>'$1':'$2',</replace>
+      <replace>=scrapy.Field()                 #</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tool/module_test.py" />
         <option value="$PROJECT_DIR$/tool/inter_tes.py" />
-        <option value="$PROJECT_DIR$/tool/check.py" />
-        <option value="$PROJECT_DIR$/tool/module_tes.py" />
-        <option value="$PROJECT_DIR$/Supermarket/middlewares.py" />
         <option value="$PROJECT_DIR$/tool/a.py" />
         <option value="$PROJECT_DIR$/tool/b.py" />
-        <option value="$PROJECT_DIR$/tool/handle_redis.py" />
-        <option value="$PROJECT_DIR$/Supermarket/spiders/citylist.py" />
-        <option value="$PROJECT_DIR$/tool/AA.py" />
         <option value="D:/anaconda/Lib/site-packages/PyV8.py" />
-        <option value="$PROJECT_DIR$/tool/dianping.js" />
-        <option value="$PROJECT_DIR$/Supermarket/main.py" />
-        <option value="$PROJECT_DIR$/Supermarket/settings.py" />
-        <option value="$PROJECT_DIR$/tool/c.py" />
         <option value="$PROJECT_DIR$/tool/sp_zu_1.py" />
-        <option value="$PROJECT_DIR$/Supermarket/spiders/village.py" />
+        <option value="$PROJECT_DIR$/tool/dian.py" />
+        <option value="$PROJECT_DIR$/tool/handle_redis.py" />
+        <option value="$PROJECT_DIR$/tool/check.py" />
         <option value="$PROJECT_DIR$/Supermarket/spiders/TradeArea.py" />
-        <option value="$PROJECT_DIR$/Supermarket/spiders/ShopList.py" />
+        <option value="$PROJECT_DIR$/Supermarket/spiders/village.py" />
+        <option value="$PROJECT_DIR$/Supermarket/items.py" />
+        <option value="$PROJECT_DIR$/Supermarket/pipelines.py" />
         <option value="$PROJECT_DIR$/Supermarket/spiders/Shop.py" />
+        <option value="D:/Python/Python36/Lib/site-packages/PyV8.py" />
+        <option value="$PROJECT_DIR$/tool/AA.py" />
+        <option value="$PROJECT_DIR$/tool/dianping.js" />
+        <option value="$PROJECT_DIR$/tool/db.py" />
+        <option value="$PROJECT_DIR$/Supermarket/spiders/village1.py" />
+        <option value="$PROJECT_DIR$/Supermarket/spiders/ShopList.py" />
+        <option value="$PROJECT_DIR$/Supermarket/spiders/citylist.py" />
+        <option value="$PROJECT_DIR$/tool/analytics.js" />
+        <option value="$PROJECT_DIR$/tool/db1.py" />
+        <option value="$PROJECT_DIR$/Supermarket/main.py" />
+        <option value="$PROJECT_DIR$/Supermarket/spiders/TradeArea1.py" />
+        <option value="$PROJECT_DIR$/Supermarket/spiders/GovSpider.py" />
+        <option value="$PROJECT_DIR$/Supermarket/settings.py" />
+        <option value="$PROJECT_DIR$/tool/MyTest.py" />
+        <option value="$PROJECT_DIR$/Supermarket/middlewares.py" />
+        <option value="$PROJECT_DIR$/tool/c.py" />
+        <option value="$PROJECT_DIR$/tool/module_tes.py" />
+        <option value="$PROJECT_DIR$/tool/qq.py" />
+        <option value="$PROJECT_DIR$/tool/xx.py" />
       </list>
     </option>
   </component>
@@ -203,13 +383,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="399" />
-    <option name="y" value="3" />
-    <option name="width" value="1386" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="670" />
+    <option name="y" value="67" />
+    <option name="width" value="889" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -241,6 +418,10 @@
               <item name="Supermarket" type="462c0819:PsiDirectoryNode" />
               <item name="tool" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Supermarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -250,14 +431,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Github/PMI/AnJuke/Community" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/tool/b.py" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/tool/xx.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Pycharm\Supermarket\tool" />
+      <recent name="E:\Pycharm\Supermarket\Supermarket\spiders" />
+      <recent name="D:\Python\Python36\Lib\site-packages" />
+      <recent name="C:\Users\Administrator\Desktop\PMI\PublicRemarke\Supermarket\tool" />
       <recent name="E:\Jovan\PMI\PMI\PublicRemarke\Supermarket\tool" />
     </key>
   </component>
@@ -273,27 +458,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sp_zu_1">
-    <configuration name="AA" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Supermarket" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tool" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool/AA.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+  <component name="RunManager" selected="Python.MyTest">
+    <configuration name="Unnamed" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="node" path-to-js-file="tool/dianping.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
     </configuration>
-    <configuration name="c" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="GovSpider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Supermarket" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Supermarket/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Supermarket/spiders/GovSpider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MyTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Supermarket" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -306,11 +497,58 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool/c.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool/MyTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Supermarket" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tool" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool/db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="db1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Supermarket" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tool" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool/db1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Supermarket" />
@@ -330,59 +568,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="module_tes" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Supermarket" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tool" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool/module_tes.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="sp_zu_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Supermarket" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tool" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tool/sp_zu_1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.module_tes" />
-      <item itemvalue="Python.sp_zu_1" />
-      <item itemvalue="Python.c" />
-      <item itemvalue="Python.AA" />
+      <item itemvalue="Python.db" />
+      <item itemvalue="Python.GovSpider" />
+      <item itemvalue="Python.db1" />
+      <item itemvalue="Python.MyTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sp_zu_1" />
-        <item itemvalue="Python.c" />
+        <item itemvalue="Python.MyTest" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.AA" />
-        <item itemvalue="Python.module_tes" />
+        <item itemvalue="Python.db1" />
+        <item itemvalue="Python.GovSpider" />
+        <item itemvalue="Python.db" />
       </list>
     </recent_temporary>
   </component>
@@ -417,50 +620,50 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.4" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.30711043" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49924356" weight="0.37094018" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32892805" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32991454" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22012103" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="right" id="SciView" order="2" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49924356" weight="0.50769234" />
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49924356" weight="0.55947137" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49924356" weight="0.4904552" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49924356" weight="0.37094018" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21709532" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25113463" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Python Console" order="4" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49924356" weight="0.50769234" />
-      <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32991454" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Python Console" order="4" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49924356" weight="0.30375427" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" sideWeight="0.49924356" visible="true" weight="0.49146757" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,20 +696,6 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Supermarket/spiders/Shop.py</url>
-          <line>125</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Supermarket/middlewares.py</url>
-          <line>166</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Supermarket/spiders/Shop.py</url>
-          <line>89</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tool/sp_zu_1.py</url>
           <line>142</line>
           <option name="timeStamp" value="35" />
@@ -522,23 +711,149 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tool/AA.py</url>
-          <line>158</line>
-          <option name="timeStamp" value="38" />
+          <url>file://$PROJECT_DIR$/Supermarket/spiders/Shop.py</url>
+          <line>116</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Supermarket/spiders/TradeArea.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="39" />
+          <url>file://$PROJECT_DIR$/Supermarket/spiders/Shop.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tool/xx.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Supermarket/middlewares.py</url>
+          <line>255</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Supermarket/middlewares.py</url>
+          <line>260</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Supermarket/middlewares.py</url>
+          <line>246</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Supermarket/spiders/Shop.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tool/AA.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tool/AA.py</url>
+          <line>167</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Supermarket/spiders/GovSpider.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tool/dianping.js</url>
+          <line>4669</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/downloadermiddlewares/ajaxcrawl.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/downloadermiddlewares/retry.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/downloadermiddlewares/redirect.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/twisted/web/client.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/spiderloader.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/core/downloader/middleware.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/requests/__init__.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/http/request/rpc.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/http/request/form.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/http/request/__init__.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/http/response/text.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/http/response/html.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/http/response/__init__.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.925/setup.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/PyV8.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/_PyV8.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/execjs/__init__.py" />
+    <entry file="file://D:/Python/Python36/Lib/subprocess.py" />
+    <entry file="file://D:/Python/Python36/Lib/site-packages/execjs/_external_runtime.py" />
+    <entry file="file://$PROJECT_DIR$/Supermarket/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/dianping.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-201">
+          <caret line="4502" column="12" selection-start-line="4502" selection-start-column="12" selection-end-line="4502" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/village1.py" />
+    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/village.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="24" selection-start-line="21" selection-start-column="16" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Supermarket/spiders/TradeArea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="425">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/analytics.js" />
+    <entry file="file://D:/Python/Python36/Lib/json/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Supermarket/ghostdriver.log" />
+    <entry file="file://$PROJECT_DIR$/Supermarket/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/ShopList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Supermarket/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2875">
+          <caret line="115" column="17" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/GovSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="39" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
@@ -547,134 +862,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Supermarket/spiders/citylist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="10" column="21" selection-start-line="10" selection-end-line="11" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/village.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="28" selection-end-column="62" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/ShopList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="625">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Supermarket/spiders/Shop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2093">
-          <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
+        <state relative-caret-position="1800">
+          <caret line="79" column="95" selection-start-line="79" selection-start-column="82" selection-end-line="79" selection-end-column="95" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/anaconda/Lib/site-packages/demjson.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/re.pyi">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../dianping.py" />
-    <entry file="file://E:/Program Files/Python36/Lib/site-packages/twisted/internet/defer.py" />
-    <entry file="file://$PROJECT_DIR$/tool/module_tes.py">
+    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/TradeArea1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="38" column="16" selection-start-line="24" selection-end-line="25" />
+        <state relative-caret-position="650">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Supermarket/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Supermarket/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="247" column="29" selection-start-line="247" selection-start-column="29" selection-end-line="247" selection-end-column="29" />
+          <folding>
+            <element signature="e#168#181#0" expanded="true" />
+            <element signature="e#3861#4134#0" />
+            <element signature="e#4173#4362#0" />
+            <element signature="e#4532#4578#0" />
+            <element signature="e#4852#4870#0" />
+            <marker date="1536156020365" expanded="true" signature="8316:8317" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/AA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <element signature="e#162#171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/c.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/db1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/dian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="321" column="3" selection-start-line="321" selection-start-column="3" selection-end-line="321" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/get_province.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/handle_redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tool/inter_tes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="35" column="61" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="61" />
+        <state relative-caret-position="-2129">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+    <entry file="file://$PROJECT_DIR$/tool/module_tes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1657" selection-start-line="1657" selection-end-line="1657" />
+        <state relative-caret-position="171">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool/a.py" />
-    <entry file="file://$PROJECT_DIR$/tool/b.py" />
-    <entry file="file://D:/anaconda/Lib/copy.py" />
-    <entry file="file://D:/anaconda/Lib/site-packages/PyV8.py" />
-    <entry file="file://D:/anaconda/Lib/site-packages/_PyV8.py" />
-    <entry file="file://$PROJECT_DIR$/tool/dianping.js">
+    <entry file="file://$PROJECT_DIR$/tool/MyTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="4664" column="25" selection-start-line="4664" selection-start-column="25" selection-end-line="4664" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool/handle_redis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool/AA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="158" column="16" lean-forward="true" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="53" />
+        <state relative-caret-position="400">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#161#172#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool/check.py">
+    <entry file="file://$PROJECT_DIR$/tool/qq.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool/c.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        <state relative-caret-position="-1904">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tool/sp_zu_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
+        <state relative-caret-position="121">
           <caret line="281" column="21" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="21" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -682,62 +1010,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/ShopList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tool/utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/TradeArea.py">
+    <entry file="file://$PROJECT_DIR$/tool/xx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="196">
+          <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/citylist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="10" column="21" selection-start-line="10" selection-end-line="11" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/village.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="28" selection-end-column="62" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/spiders/Shop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Supermarket/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#168#204#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

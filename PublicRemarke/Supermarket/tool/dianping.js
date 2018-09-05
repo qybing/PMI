@@ -6,10 +6,10 @@ window.seed.env = 'pro';
 var btoa = function (str){
     function Base64() {
 
-        // private property
+        // private property  
         _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
-        // public method for encoding
+        // public method for encoding  
         this.encode = function (input) {
             var output = "";
             var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
@@ -35,7 +35,7 @@ var btoa = function (str){
             return output;
         }
 
-        // private method for UTF-8 encoding
+        // private method for UTF-8 encoding  
         _utf8_encode = function (string) {
             string = string.replace(/\r\n/g, "\n");
             var utftext = "";
@@ -3236,7 +3236,7 @@ var btoa = function (str){
                     return [t, e]
                 },
                     s = function () {
-
+                        
                     },
                     u = function () {
                         return window._phantom || window.phantom || window.callPhantom ? "ps" : o.getWebdriver()
@@ -4663,7 +4663,7 @@ function getToken(requestCode){
 function getCaptchaUrl(requestCode){
     var _token = getToken(requestCode);
     var randomId = Math.random();
-    captchaUrl = 'https://vgetCaptchaUrlerify.meituan.com/v2/captcha?request_code=' + requestCode + '&action=spiderindefence&randomId=' + randomId +'&_token='+_token;
+    captchaUrl = 'https://verify.meituan.com/v2/captcha?request_code=' + requestCode + '&action=spiderindefence&randomId=' + randomId +'&_token='+_token;
     return captchaUrl;
 }
 var requestCode = '4537075565804dcfb8d58c9d544bcb35';

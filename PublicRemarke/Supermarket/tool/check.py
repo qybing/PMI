@@ -1,10 +1,16 @@
-import re
+import time
+from random import random
 
-# a = '<span id="avgPriceTitle" class="item">消费: 1<span class="fn-67HV">.</span><span class="fn-67HV"></span> 元</span>'
-# b = re.sub('\.',r'<span class="fppppppppppp"></span>',a)
-# print(b)
-# print(a)
-a = '021-6689189518918372830'
-print(a[0:12])
-print(a[12:])
-print(len(a))
+
+def get_hcv():
+    """
+    计算cookies中的_hc.v
+    """
+    def n():
+        def n():
+            return str(hex(int(65536 * (1 + random()))))[3:]
+        return '-'.join([n()+n(), n(), n(), n(), n()+n()+n()])
+    def i():
+        return n() + '.' + str(int(time.time()))
+    return i()
+print(get_hcv())

@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb9f76dc-e896-4198-93c1-e3d98454aa51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpZu/spiders/sp_detail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/module_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/XpSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XpSpider/tool/abuyun.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XpSpider/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XzlSpider/XzlSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../XzlSpider/XzlSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/Shop.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/Shop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/ShopList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/ShopList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/TradeArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/TradeArea.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/citylist.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/citylist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/scrapy.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../W.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../新建文本文档.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -136,7 +111,32 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="sp_detail.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-81">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
+              <folding>
+                <element signature="e#24#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="middlewares.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="724">
+              <caret line="143" column="63" selection-start-line="143" selection-start-column="63" selection-end-line="143" selection-end-column="63" />
+              <folding>
+                <element signature="e#168#182#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -286,7 +286,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../XzlSpider" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/高德POI爬虫代码" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -739,30 +739,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpZu/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3">
           <caret line="128" column="13" lean-forward="true" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="143" column="63" selection-start-line="143" selection-start-column="63" selection-end-line="143" selection-end-column="63" />
-          <folding>
-            <element signature="e#168#182#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -811,6 +791,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1058">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/spiders/sp_detail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpZu/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="143" column="63" selection-start-line="143" selection-start-column="63" selection-end-line="143" selection-end-column="63" />
+          <folding>
+            <element signature="e#168#182#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

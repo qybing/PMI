@@ -64,8 +64,10 @@ COOKIES_ENABLED = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'Supermarket.middlewares.SupermarketDownloaderMiddleware': 543,
-    'Supermarket.middlewares.UserAgentMiddleware':540,
-    # 'Supermarket.middlewares.ProxyMiddleware':530,
+    'Supermarket.middlewares.UserAgentMiddleware':541,
+    'Supermarket.middlewares.ProxyMiddleware':543,
+    # 'Supermarket.middlewares.ProxyRequestsMiddleware':420
+    # 'Supermarket.middlewares.CookiesMiddleware':530,
 }
 
 # Enable or disable extensions
@@ -111,12 +113,13 @@ REDIS_PARAMS = {
 REDIS_URL = None
 #防止反爬
 CONCURRENT_REQUESTS = 5
-# DOWNLOAD_DELAY = 1.2
+DOWNLOAD_DELAY =4
 #状态码
-HTTPERROR_ALLOWED_CODES = [302,500, 503, 504, 400, 403, 404, 408]
-RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+HTTPERROR_ALLOW_ALL =True
+# HTTPERROR_ALLOWED_CODES = [302,500, 503, 504, 400, 403, 404, 408]
+# RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 #重试次数
-RETRY_TIMES= 4
+RETRY_TIMES= 3
 #下载时间设置
 DOWNLOAD_TIMEOUT = 15
 #使用集合对start_requests去重
@@ -124,3 +127,6 @@ REDIS_START_URLS_AS_SET = True
 # REDIRECT_ENABLED = False
 
 
+
+MONGO_URI = '192.168.0.21'
+MONGO_DATABASE = 'DianPing'

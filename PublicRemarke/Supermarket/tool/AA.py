@@ -6,7 +6,7 @@
 @Last Modified time: 2018-05-31 17:14:11 
 @desc: 大众点评验证码加密破解
 """
-import PyV8
+
 import os
 import requests
 from copy import deepcopy
@@ -15,16 +15,16 @@ import math
 import time
 import re
 import json
+import execjs
+node = execjs.get()
 
-jsctx = PyV8.JSContext()
-jsctx.enter()
 js_file_path = os.path.join(os.path.dirname(__file__), 'dianping.js')
-jsctx.eval(open(js_file_path).read().decode('utf-8'))
-
+jsctx = node.compile(open(js_file_path,encoding='UTF-8').read())
+print(jsctx)
 session = requests.Session()
 headers = {
     'Host': 'www.dianping.com',
-    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
 }       
 data_headers = deepcopy(headers)
 proxies = {
@@ -47,7 +47,8 @@ def get_captcha_url(request_code):
     """
     计算captcha验证码
     """
-    return jsctx.eval('getCaptchaUrl')(request_code)
+    js = 'getCaptchaUrl("{0}")'.format(request_code)
+    return jsctx.eval(js)
 
 def download_captcha(captcha_url):
     """
@@ -65,7 +66,8 @@ def get_token(request_code):
     """
     计算token
     """
-    return jsctx.eval('getToken')(request_code)
+    js = 'getToken("{0}")'.format(request_code)
+    return jsctx.eval(js)
 
 def get_data(data_url, is_first):
     """
@@ -79,6 +81,7 @@ def get_data(data_url, is_first):
                       allow_redirects=False, proxies=proxies)
     req.encoding = "utf-8"
     status_code = req.status_code
+    print(req.text)
     if status_code == 200:
         return (status_code, req.text)
     elif status_code == 302 and 'Location' in req.headers:
@@ -104,7 +107,8 @@ def verify_captcha(verify_page_url, data_url):
             'Referer': 'https://verify.meituan.com/v2/web/general_page?action=spiderindefence&requestCode=ae02af4518124c56a05a6e46a7f50acb&platform=1&adaptor=auto&succCallbackUrl=https%3A%2F%2Foptimus-mtsi.meituan.com%2Foptimus%2FverifyResult%3ForiginUrl%3Dhttp%253A%252F%252Fwww.dianping.com%252Fshop%252F93482327&theme=dianping',
         }
         captcha_code = input('输入验证码：')
-        _token = jsctx.eval('getToken')(request_code)
+        js = 'getToken("{}")'.format(request_code)
+        _token = jsctx.eval(js)
         data = {
             'id': 71,
             'request_code': request_code,
@@ -156,7 +160,7 @@ def verify_result(origin_url, request_code, response_code):
 
 def main():
 
-    data_url = 'http://www.dianping.com/shop/93482327'
+    data_url = 'http://www.dianping.com/shop/102580366'
     (status_code, result) = get_data(data_url, True)
     if status_code == 200:
         print(result)
