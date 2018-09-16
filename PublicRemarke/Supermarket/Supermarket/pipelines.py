@@ -4,6 +4,7 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+import pymongo
 
 
 class SupermarketPipeline(object):
@@ -29,7 +30,7 @@ class SupermarketPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
-        self.db[item['sheetname']].update({'url': item['url']}, {'$set': dict(item)}, True)
-        logger.info(item)
-        logger.info('已经存进去了')
+        self.db[item['sheetName']].update({'shopId': item['shopId']}, {'$set': dict(item)}, True)
+        print('这是结果：{}'.format(item))
+        print('已经存进去了')
         return item

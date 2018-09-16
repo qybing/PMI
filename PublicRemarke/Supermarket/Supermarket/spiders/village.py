@@ -14,7 +14,7 @@ class VillageSpider(RedisSpider):
     def parse(self, response):
         html = response.text
         db = RedisClient()
-        if 'verify' not in response.url and len(html) > 400 and r'https://www.abuyun.com' not in html:
+        if 'verify' not in response.url and len(html) > 550 and r'https://www.abuyun.com' not in html:
             trade_areas = response.xpath('//*[@id="bussi-nav-sub"]/a/@href').extract()
             if trade_areas:
                 for trade_area in trade_areas[1:]:
@@ -26,7 +26,7 @@ class VillageSpider(RedisSpider):
                 print('以商圈为单位当前URL：{}'.format(response.url))
                 print('该商圈没有商圈地点，存入本商圈ULR：{}'.format(response.url))
                 db.add_value('ShopList:start_urls', response.url)
-        elif len(html) < 400 and 'verify' not in response.url:
+        elif len(html) < 550 and 'verify' not in response.url:
             print('遇到反爬了，该URL：{}需要重新入队列'.format(response.url))
             print('返回状态：{}，返回内容：{}'.format(response.status, html))
             print('需要重新入库')

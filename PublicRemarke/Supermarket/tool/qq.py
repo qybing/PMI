@@ -11,8 +11,8 @@ proxyHost = "http-dyn.abuyun.com"
 proxyPort = "9020"
 
 # 代理隧道验证信息
-proxyUser = "xxxxxxx"
-proxyPass = "xxxxxxx"
+proxyUser = "HE028T9448613Y4D"
+proxyPass = "9CFB203161ACD692"
 
 def create_proxy_auth_extension(proxy_host, proxy_port,
                                proxy_username, proxy_password,

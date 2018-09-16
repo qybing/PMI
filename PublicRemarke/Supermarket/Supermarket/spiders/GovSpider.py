@@ -27,11 +27,12 @@ class GovspiderSpider(RedisSpider):
                 areas = response.xpath('//*[@id="region-nav-sub"]/a/@href').extract()
                 if areas:
                     for area in areas:
-                        db.add_value('ShopList:start_urls', area)
+                        db.add_value('village:start_urls', area)
                     print(areas)
                     print('一共有{}个详细地点入库'.format(len(areas)))
                 else:
                     print('该URL：{}出现异常,该网页内容为：{}'.format(response.url, html))
+                    db.add_value('ExGovSpider:start_urls',response.url)
             else:
                 print('该地区页数不满50页，一共有{}页,直接将本页存入本URL：{}'.format(page,response.url))
                 db.add_value('ShopList:start_urls',response.url)

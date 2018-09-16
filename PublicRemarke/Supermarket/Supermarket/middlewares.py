@@ -5,17 +5,34 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 import base64
-from random import random
+import random
 import time
 
+import faker
 from fake_useragent import UserAgent
 from scrapy import signals
 from scrapy.downloadermiddlewares.httpproxy import HttpProxyMiddleware
 from scrapy.exceptions import IgnoreRequest
+from jovan.js_file import get_lxsdk_cuid, get_lxsdk_s, get_hc
 
 from tool.handle_redis import RedisClient
 
-
+useragent = ['Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.67 Safari/537.36',
+     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1944.0 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36 Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10',
+     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+     'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36",
+     "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36",
+     "Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36",
+     "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36",
+             ]
 class SupermarketSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
@@ -110,29 +127,12 @@ class SupermarketDownloaderMiddleware(object):
     def spider_opened(self, spider):
         spider.print('Spider opened: %s' % spider.name)
 
-
-def get_hcv():
-    """
-    计算cookies中的_hc.v
-    """
-
-    def n():
-        def n():
-            return str(hex(int(65536 * (1 + random()))))[3:]
-
-        return '-'.join([n() + n(), n(), n(), n(), n() + n() + n()])
-
-    def i():
-        return n() + '.' + str(int(time.time()))
-
-    return i()
-
 class CookiesMiddleware(object):
     """ 换User-Agent """
 
     def process_request(self, request, spider):
-        dict={'_hc.v':get_hcv()}
-        request.cookies =dict
+        # dict={'_hc.v':get_hcv()}
+        # request.cookies =dict
         print('更换了--------------Cookies:{}'.format(dict))
 
 
@@ -140,20 +140,41 @@ class UserAgentMiddleware(object):
     """ 换User-Agent """
 
     def process_request(self, request, spider):
-        ua = UserAgent()
-        agent = ua.random
-        # request.headers['Host'] = 'www.dianping.com'
-        # request.headers["Connection"] = 'keep-alive'
+        # a = ['Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.67 Safari/537.36',
+        #      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1944.0 Safari/537.36',
+        #      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17',
+        #      'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
+        #      'Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36',
+        #      'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36 Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10',
+        #      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
+        #      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+        #      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36",
+        #      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8",
+        #      "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
+        #      ]
+        # ua = UserAgent()
+        # agent = ua.random
+        agent = random.choice(useragent)
+        agent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+        same = get_lxsdk_cuid(agent)
+
+        # agent = random.choice
+        # f = faker.Faker(locale='zh_cn')
+        # agent = f.user_agent()
+        request.headers['Host'] = 'www.dianping.com'
+        request.headers["Proxy-Connection"] = 'keep-alive'
         # request.headers['Pragma'] = 'no-cache'
         # request.headers['Cache-Control'] = 'no-cache'
-        # request.headers['Upgrade-Insecure-Requests'] = 1
+        request.headers['Upgrade-Insecure-Requests'] = 1
         request.headers["User-Agent"] = agent
-        # request.headers[
-        #     "Accept"] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
-        # request.headers['Accept-Encoding'] = 'gzip, deflate'
-        # request.headers['Accept-Language'] = 'zh-CN,zh;q=0.9'
-        request.headers['Cookie'] = '_hc.v={};'.format(get_hcv())
-        # request.headers['Cookie'] = '{}'.format('_lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic; _lxsdk_cuid=1657a454988c8-064dd5236927-2711639-100200-1657a454988c8; _lxsdk=1657a454988c8-064dd5236927-2711639-100200-1657a454988c8; _hc.v=3198aa04-8172-a269-8faa-f1384c933a17.1535354686; s_ViewType=10; cy=7; cye=shenzhen; _lxsdk_s=1657f41d359-85f-3f0-ac9%7C%7C927')
+        cook = '_lxsdk_cuid={}; _lxsdk={}; _hc.v={}; _lxsdk_s={}'.format(same,same,get_hc(),get_lxsdk_s())
+        request.headers["Cookie"] = cook
+        cookie = {'_lxsdk_cuid': same,
+                  '_lxsdk': same,
+                  '_hc.v': get_hc(),
+                  '_lxsdk_s': get_lxsdk_s(),
+                  }
+        # request.cookies = cookie
 
         print('更换了--------------UserAgent:{}'.format(agent))
 
@@ -162,8 +183,13 @@ class UserAgentMiddleware(object):
 proxyServer = "http://http-dyn.abuyun.com:9020"
 
 # 代理隧道验证信息
-proxyUser = "xxx"
-proxyPass = "xxxxxxx"
+proxyUser = "HE028T9448613Y4D"
+proxyPass = "9CFB203161ACD692"
+
+# for Python2
+# proxyAuth = "Basic " + base64.b64encode(proxyUser + ":" + proxyPass)
+
+
 # for Python3
 proxyAuth = "Basic " + base64.urlsafe_b64encode(bytes((proxyUser + ":" + proxyPass), "ascii")).decode("utf8")
 
@@ -224,28 +250,32 @@ class ProxyMiddleware(object):
         return response
 
 
+
 class ProxyRequestsMiddleware(object):
     def process_request(self, request, spider):
-        ua = UserAgent(use_cache_server=False)
-        agent = ua.random
+        # ua = UserAgent()
+        # agent = ua.chrome
+        # f = faker.Faker(locale='zh_cn')
+        # agent = f.user_agent()
+        agent = random.choice(useragent)
+        same = get_lxsdk_cuid(agent)
+        cook = '_lxsdk_cuid={}; _lxsdk={}; _hc.v={}; _lxsdk_s={}'.format(
+            same, same, get_hc(), get_lxsdk_s())
+        # cook = '_lxsdk_cuid={}; _lxsdk={}; _hc.v={}; _lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic; _lxsdk_s={}'.format(same,same,get_hc(),get_lxsdk_s())
+        cook1 = 'cy=1236; cityid=1236; cye=huixian; _lx_utm=utm_source%3DBaidu%26utm_medium%3Dorganic; _lxsdk_cuid=165c6b8e911c8-0383cc5ec3114e-37664109-144000-165c6b8e91289; _lxsdk=165c6b8e911c8-0383cc5ec3114e-37664109-144000-165c6b8e91289; _hc.v=0c84e8b5-c945-5c86-bb54-94e4936012e5.1536637332; s_ViewType=10; cye=beijing; _lxsdk_s=165cb7d7e23-268-18-f1%7C%7C87'
+        # print(cook)
         headers = {
-            # 'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-            # 'Accept-Encoding':'gzip, deflate',
-            # 'Accept-Language':'zh-CN,zh;q=0.9',
-            # 'Cache-Control':'no-cache',
-            # 'Connection':'keep-alive',
-            # 'Cookie':'s_ViewType=10; _lxsdk_cuid=16584f26411c8-053ce1508e1bb1-2711639-100200-16584f26412c8; _lxsdk=16584f26411c8-053ce1508e1bb1-2711639-100200-16584f26412c8; _hc.v=22baacb8-5b7b-bc0e-3786-233fcf8541b7.1535533803; _lxsdk_s=16584f26414-d22-5b5-1ee%7C%7C42',
-            # 'Host':'www.dianping.com',
-            # 'Pragma':'no-cache',
-            # 'Upgrade-Insecure-Requests':'1',
-            'Cookie': get_hcv(),
+            'Host':'www.dianping.com',
+            'Upgrade-Insecure-Requests':'1',
+            'Cookie':cook,
             'User-Agent':agent ,
+            # 'Proxy-Connection':'keep-alive'
         }
         proxyHost = "http-dyn.abuyun.com"
         proxyPort = "9020"
         # 代理隧道验证信息
-        proxyUser = "xxxxxx"
-        proxyPass = "xxxxxxxx"
+        proxyUser = "HE028T9448613Y4D"
+        proxyPass = "9CFB203161ACD692"
         proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
             "host": proxyHost,
             "port": proxyPort,
@@ -257,16 +287,41 @@ class ProxyRequestsMiddleware(object):
             # "http": proxyMeta,
             "https": proxyMeta,
         }
+        proxiess = {
+            "https": "http://140.255.6.45:5649",
+            # "https": "http://118.79.54.90:6996",
+            # "https": "http://117.42.201.221:6214",
+
+        }
+
         import requests
-        res = requests.get(request.url,headers=headers,proxies=proxies)
-        if res.status_code !=200:
-            print('该URL:{},状态码：{}，内容为：{}'.format(request.url,res.status_code,res.text))
+        #s = requests.Session()
+        #base = 'https://www.dianping.com/'
+        try:
+            # start_url = requests.get(base, headers=headers, proxies=proxies, timeout=15)
+            # print(start_url.text)
+            res = requests.get(request.url, headers=headers, proxies=proxies, timeout=15)
+            if res.status_code != 200 or len(res.text) < 560:
+                if res.status_code == 403 or res.status_code == 404:
+                    content = '页面无法访问'
+                else:
+                    content = res.text
+                print('该URL:{},状态码：{}，内容为：{}'.format(request.url, res.status_code, content))
+                key = getattr(spider, 'redis_key')
+                db = RedisClient()
+                print('该URL：{}需要重新入队列'.format(request.url))
+                db.add_value(key, request.url)
+                raise IgnoreRequest
+            else:
+                from scrapy.http.response.html import HtmlResponse
+                rs = res.content.decode('utf-8')
+                # print(rs)
+                response = HtmlResponse(url=request.url, body=res.content.decode('utf-8'), encoding="utf-8", request=request)
+                return response
+        except Exception as e:
+            print('出现错误，原因{}'.format(e.args))
             key = getattr(spider, 'redis_key')
             db = RedisClient()
             print('该URL：{}需要重新入队列'.format(request.url))
-            db.add_value(key,request.url)
+            db.add_value(key, request.url)
             raise IgnoreRequest
-        else:
-            from scrapy.http.response.html import HtmlResponse
-            response = HtmlResponse(url=request.url,body=res.text,encoding="utf-8",request=request)
-            return response

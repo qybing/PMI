@@ -23,51 +23,127 @@ def get_hcv():
 
     return i()
 a = str(hex(int(65536 * (1 + random()))))[3:]
-print(a)
-ua = UserAgent()
-agent = ua.random
-headers={
-# 'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-# 'Accept-Encoding':'gzip, deflate',
-# 'Accept-Language':'zh-CN,zh;q=0.9',
-# 'Cache-Control':'no-cache',
-# 'Connection':'keep-alive',
-# 'Cookie':'s_ViewType=10; _lxsdk_cuid=16584f26411c8-053ce1508e1bb1-2711639-100200-16584f26412c8; _lxsdk=16584f26411c8-053ce1508e1bb1-2711639-100200-16584f26412c8; _hc.v=22baacb8-5b7b-bc0e-3786-233fcf8541b7.1535533803; _lxsdk_s=16584f26414-d22-5b5-1ee%7C%7C42',
-# 'Host':'www.dianping.com',
-# 'Pragma':'no-cache',
-# 'Upgrade-Insecure-Requests':'1',
-    # 'Cookie':get_hcv(),
-'User-Agent':agent,
-    # 'Cookie':'_lxsdk_cuid=1659e1d2b71c8-09c4421e7c65e4-37664109-144000-1658e1d2b71c8; _lxsdk=1658e08c9d457-03f523ea4f47fe-37664109-144000-1658e08c9d6c8; _hc.v=717e6927-3c19-a6e0-ae54-7d4d84fe190a.1535687601; s_ViewType=10; _lxsdk_s=1658e1d2b85-a58-a12-cd7%7C%7C23'
-}
-proxies = {
-  # "https": "http://115.196.46.164:1246",
-  # "https": "http://118.79.54.90:6996",
-  "https": "http://115.202.129.74:7586",
+# print(a)
+def get_text(i):
+    ua = UserAgent()
+    agent = ua.random
+    headers={
+        # 'Cookie':get_hcv(),
+    'User-Agent':agent,
+        # 'Cookie':'_lxsdk_cuid=1659e1d2b71c8-09c4421e7c65e4-37664109-144000-1658e1d2b71c8; _lxsdk=1658e08c9d457-03f523ea4f47fe-37664109-144000-1658e08c9d6c8; _hc.v=717e6927-3c19-a6e0-ae54-7d4d84fe190a.1535687601; s_ViewType=10; _lxsdk_s=1658e1d2b85-a58-a12-cd7%7C%7C23'
+    }
+    proxies = {
+      "https": "http://117.42.201.221:6214",
+      # "https": "http://118.79.54.90:6996",
+      # "https": "http://117.42.201.221:6214",
 
-}
-proxyHost = "http-dyn.abuyun.com"
-proxyPort = "9020"
-# 代理隧道验证信息
-proxyUser = "xxxxxx"
-proxyPass = "xxxxxxxxx"
-proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
-    "host": proxyHost,
-    "port": proxyPort,
-    "user": proxyUser,
-    "pass": proxyPass,
-}
+    }
+    proxyHost = "http-dyn.abuyun.com"
+    proxyPort = "9020"
+    # 代理隧道验证信息
+    proxyUser = "HE028T9448613Y4D"
+    proxyPass = "9CFB203161ACD692"
+    proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
+        "host": proxyHost,
+        "port": proxyPort,
+        "user": proxyUser,
+        "pass": proxyPass,
+    }
 
-proxiess = {
-    # "http": proxyMeta,
-    "https": proxyMeta,
-}
-'http://m.dianping.com/shop/2619856'
-url = 'http://www.dianping.com/shop/15748800'
-test = 'https://ip.cn/'
-res = requests.get(url,headers=headers,proxies=proxiess,allow_redirects=False)
-a = res.text
-print(a)
+    proxiess = {
+        # "http": proxyMeta,
+        "https": proxyMeta,
+    }
+    base = 'https://www.dianping.com/'
+    url = 'http://www.dianping.com/shop/19421407'
+    test = 'https://ip.cn/'
+    s = requests.Session()
+    # for i in range(10):
+    b = s.get(base,headers=headers,proxies=proxies,allow_redirects=False)
+    c = s.get(url,headers=headers,proxies=proxies,allow_redirects=False)
+    # print('这是第{}'.format(i)+re.findall('<div class="well">(.*?)GeoIP',b.text)[0])
+    # print('这是第{}'.format(i)+re.findall('<div class="well">(.*?)GeoIP',c.text)[0])
+    # print(b.text)
+    print(c.text)
+    print('这是第{}'.format(i)+'======================')
+if __name__ == '__main__':
+    for i in range(3):
+        get_text(i)
+    # b = s.get(url,headers=headers,proxies=proxiess,allow_redirects=False)
+    # print(res.get_)
+    # c = b.text
+    # print('{}---------------'.format(i),b.text)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # b = re.findall('<meta name="location" content="province=(.*?);city=(.*?);">',a,re.S)
 # print(b[0][0],b[0][1])
 # b = a.split(r'id="shop-detail">')[-1]

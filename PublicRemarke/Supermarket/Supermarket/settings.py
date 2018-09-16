@@ -19,11 +19,7 @@ NEWSPIDER_MODULE = 'Supermarket.spiders'
 #USER_AGENT = 'Supermarket (+http://www.yourdomain.com)'
 
 
-#使用scrapy-redis里的去重组件，不使用scrapy默认的去重
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-#使用scrapy-redis里的调度器组件，不使用scrapy默认的去重
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-SCHEDULER_PERSIST = True
+
 
 
 
@@ -64,7 +60,7 @@ COOKIES_ENABLED = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'Supermarket.middlewares.SupermarketDownloaderMiddleware': 543,
-    'Supermarket.middlewares.UserAgentMiddleware':541,
+    'Supermarket.middlewares.UserAgentMiddleware':555,
     'Supermarket.middlewares.ProxyMiddleware':543,
     # 'Supermarket.middlewares.ProxyRequestsMiddleware':420
     # 'Supermarket.middlewares.CookiesMiddleware':530,
@@ -78,9 +74,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Supermarket.pipelines.SupermarketPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'Supermarket.pipelines.SupermarketPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -104,16 +100,29 @@ DOWNLOADER_MIDDLEWARES = {
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-REDIS_HOST = 'localhost'  # 也可以根据情况改成 localhost
+
+
+#使用scrapy-redis里的去重组件，不使用scrapy默认的去重
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+#使用scrapy-redis里的调度器组件，不使用scrapy默认的去重
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+SCHEDULER_PERSIST = True
+# 使用集合对start_requests去重
+REDIS_START_URLS_AS_SET = True
+
+
+LOG_LEVEL = "INFO"
+
+REDIS_HOST = '127.0.0.1'  # 也可以根据情况改成 localhost
 REDIS_PORT = 6379
 REDIS_PARAMS = {
-   # 'password': 在此设置密码,
+   # 'password': 420319,
    'db': 1
 }
 REDIS_URL = None
 #防止反爬
-CONCURRENT_REQUESTS = 5
-DOWNLOAD_DELAY =4
+CONCURRENT_REQUESTS = 1
+# DOWNLOAD_DELAY = 3
 #状态码
 HTTPERROR_ALLOW_ALL =True
 # HTTPERROR_ALLOWED_CODES = [302,500, 503, 504, 400, 403, 404, 408]
@@ -122,8 +131,6 @@ HTTPERROR_ALLOW_ALL =True
 RETRY_TIMES= 3
 #下载时间设置
 DOWNLOAD_TIMEOUT = 15
-#使用集合对start_requests去重
-REDIS_START_URLS_AS_SET = True
 # REDIRECT_ENABLED = False
 
 

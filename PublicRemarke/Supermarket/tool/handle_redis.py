@@ -6,12 +6,13 @@ logger = logging.getLogger(__name__)
 
 class RedisClient(object):
     def __init__(self):
-        self.pool = redis.ConnectionPool(host='localhost', port=6379, db=1, decode_responses=True)
+        # password = '420319'
+        self.pool = redis.ConnectionPool(host='127.0.0.1', port=6379, db=1,decode_responses=True)
         self.r = redis.Redis(connection_pool=self.pool)
 
-    def __del__(self):
-        self.pool.disconnect()
-        logger.info('关闭了')
+    # def __del__(self):
+    #     self.pool.disconnect()
+    #     logger.info('关闭了')
 
     def add_value(self, key, value):
         is_repeat = self.r.sadd(key, value)

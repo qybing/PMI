@@ -27,8 +27,22 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
 }       
 data_headers = deepcopy(headers)
+
+proxyHost = "http-dyn.abuyun.com"
+proxyPort = "9020"
+# 代理隧道验证信息
+proxyUser = "HE028T9448613Y4D"
+proxyPass = "9CFB203161ACD692"
+proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
+    "host": proxyHost,
+    "port": proxyPort,
+    "user": proxyUser,
+    "pass": proxyPass,
+}
+
 proxies = {
-    
+    # "http": proxyMeta,
+    "https": proxyMeta,
 }
 
 def get_hcv():
@@ -75,7 +89,7 @@ def get_data(data_url, is_first):
     """
     if is_first:
         data_headers.update({
-            'Cookie': '_hc.v={};'.format(get_hcv())
+            # 'Cookie': '_hc.v={};'.format(get_hcv())
         })
     req = session.get(data_url, headers=data_headers,
                       allow_redirects=False, proxies=proxies)
@@ -160,7 +174,7 @@ def verify_result(origin_url, request_code, response_code):
 
 def main():
 
-    data_url = 'http://www.dianping.com/shop/102580366'
+    data_url = 'http://www.dianping.com/shop/74834891'
     (status_code, result) = get_data(data_url, True)
     if status_code == 200:
         print(result)

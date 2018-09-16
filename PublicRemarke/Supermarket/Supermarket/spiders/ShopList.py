@@ -52,3 +52,5 @@ class ShoplistSpider(RedisSpider):
         else:
             print('当前URL：{}'.format(response.url))
             print('这是个严重错误，请查看详情:{}   该网页内容：{}'.format(response.url, html))
+            db.add_value('Error:start_urls', response.url)
+

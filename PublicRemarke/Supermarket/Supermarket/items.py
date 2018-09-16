@@ -28,4 +28,6 @@ class SupermarketItem(scrapy.Item):
     province = scrapy.Field()           #省份
     city = scrapy.Field()               #市县区
     sheetName = scrapy.Field()          #表名字
+    now_time = scrapy.Field()           #当前时间
+
     pass
