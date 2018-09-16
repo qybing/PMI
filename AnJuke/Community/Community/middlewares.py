@@ -120,8 +120,8 @@ class UserAgentMiddleware(object):
 proxyServer = "http://http-dyn.abuyun.com:9020"
 
 # 代理隧道验证信息
-proxyUser = "HE028T9448613Y4D"
-proxyPass = "9CFB203161ACD692"
+proxyUser = "xxxx"
+proxyPass = "xxxxxxxxx"
 # for Python3
 proxyAuth = "Basic " + base64.urlsafe_b64encode(bytes((proxyUser + ":" + proxyPass), "ascii")).decode("utf8")
 
