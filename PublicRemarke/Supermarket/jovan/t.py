@@ -1,4 +1,5 @@
-import datetime
 
-now_time = datetime.datetime.now()
-print(str(now_time)[0:-7])
+x = 1
+s = cmp(x, 0)
+print(s)
+# r = int(`s*x`[::-1])

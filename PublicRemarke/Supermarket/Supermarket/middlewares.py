@@ -155,14 +155,13 @@ class UserAgentMiddleware(object):
         # ua = UserAgent()
         # agent = ua.random
         agent = random.choice(useragent)
-        agent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+        # agent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
         same = get_lxsdk_cuid(agent)
 
         # agent = random.choice
         # f = faker.Faker(locale='zh_cn')
         # agent = f.user_agent()
         request.headers['Host'] = 'www.dianping.com'
-        request.headers["Proxy-Connection"] = 'keep-alive'
         # request.headers['Pragma'] = 'no-cache'
         # request.headers['Cache-Control'] = 'no-cache'
         request.headers['Upgrade-Insecure-Requests'] = 1
@@ -197,7 +196,9 @@ proxyAuth = "Basic " + base64.urlsafe_b64encode(bytes((proxyUser + ":" + proxyPa
 class ProxyMiddleware(object):
     def process_request(self, request, spider):
         request.meta["proxy"] = proxyServer
-        request.headers["Proxy-Authorization"] = proxyAuth
+
+        # request.meta["proxy"] = proxyServer
+        # request.headers["Proxy-Authorization"] = proxyAuth
         print('添加了代理IP----------------')
 
     def process_exception(self, request, exception, spider):

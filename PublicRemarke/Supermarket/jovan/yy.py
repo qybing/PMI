@@ -42,12 +42,20 @@ from jovan.js_file import get_lxsdk_cuid, get_lxsdk_s, get_hc
 
 a = ['Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.67 Safari/537.36',
      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1944.0 Safari/537.36',
-     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17',
      'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
      'Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36',
      'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36 Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10',
      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36']
+     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+     'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36",
+     "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36",
+     "Mozilla/5.0 (Windows NT 6.4; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36",
+     "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36",
+             ]
 
 def get_text(i):
     # ua = UserAgent()
@@ -62,46 +70,37 @@ def get_text(i):
         'Cookie':cook,
         'User-Agent':agent,
     }
-    proxyHost = "http-dyn.abuyun.com"
-    proxyPort = "9020"
-    # 代理隧道验证信息
-    proxyUser = "HE028T9448613Y4D"
-    proxyPass = "9CFB203161ACD692"
-    proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
-        "host": proxyHost,
-        "port": proxyPort,
-        "user": proxyUser,
-        "pass": proxyPass,
-    }
-
-    proxies = {
-      # "https": "https://106.110.91.225:4224",
-      "https": "http://118.190.95.35:9001",
-      # "https": "http://117.42.201.221:6214",
-
-    }
-    proxiess = {
-        # "http": proxyMeta,
-        "https": proxyMeta,
+    # proxyHost = "http-dyn.abuyun.com"
+    # proxyPort = "9020"
+    # # 代理隧道验证信息
+    # proxyUser = "HE028T9448613Y4D"
+    # proxyPass = "9CFB203161ACD692"
+    # proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
+    #     "host": proxyHost,
+    #     "port": proxyPort,
+    #     "user": proxyUser,
+    #     "pass": proxyPass,
+    # }
+    # proxiess = {
+    #     # "http": proxyMeta,
+    #     "https": proxyMeta,
+    # }
+    daili = {
+        "https": "http://36.27.215.15:11862",
     }
     base = 'https://www.dianping.com'
-    url = 'http://www.dianping.com/shop/1754932'
+    url = 'http://www.dianping.com/shop/8291516'
     test = 'https://ip.cn/'
-    testulr = 'https://httpbin.org/headers'
-    c = requests.get(url,headers=headers,proxies=proxiess)
+    testulr = 'http://icanhazip.com/'
+    c = requests.get(url,headers=headers,proxies=daili)
     print(c.content.decode('utf-8'))
     print('这是第{}'.format(i)+'======================')
 if __name__ == '__main__':
-    a = ['Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.67 Safari/537.36',
-         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1944.0 Safari/537.36',
-         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17',
-         'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-         'Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36',
-         'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36 Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10',
-         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36']
+
     # get_text(1)
-    for i in range(3):
+    for i in range(100):
         get_text(i)
+        time.sleep(5)
     # b = s.get(url,headers=headers,proxies=proxiess,allow_redirects=False)
     # print(res.get_)
     # c = b.text
