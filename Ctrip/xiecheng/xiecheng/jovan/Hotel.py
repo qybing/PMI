@@ -8,21 +8,22 @@ from parsel import Selector
 from w3lib.html import remove_tags
 city_list = 'http://hotels.ctrip.com/domestic-city-hotel.html'
 
-def get_html_content(start_url):
+def get_html_content(start_url,data=None):
     for tries in range(5):
         # ua = UserAgent()
-        data = {
-            'cityId':'1',
-            'page':'1'
-        }
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36',
             'Host':'hotels.ctrip.com'
         }
         try:
-            res = requests.get(url=start_url,params=data,headers=headers)
-            if res.status_code == 200:
-                return res.content.decode('utf-8')
+            if data:
+                res = requests.get(url=start_url,params=data,headers=headers)
+                if res.status_code == 200:
+                    return res.content.decode('utf-8')
+            else:
+                res = requests.get(url=start_url,headers=headers)
+                if res.status_code == 200:
+                    return res.content.decode('utf-8')
         except Exception as e:
             print(e.args)
             if tries < (5 - 1):
@@ -34,7 +35,7 @@ def get_html_content(start_url):
                 return ''
 
 
-def handler_content(content):
+def handler_mes(content):
     html = Selector(text=content)
     name = html.xpath('//*[@id="J_htl_info"]/div[1]/h2[1]/text()').extract_first()
     a = html.xpath('//*[@id="ctl00_MainContentPlaceHolder_commonHead_imgStar"]/@title').extract_first()
@@ -74,14 +75,31 @@ def handler_url(content):
     print(type(htllist))
 
 
+def get_city(content):
+    base_url = 'http://hotels.ctrip.com/'
+    html = Selector(text=content)
+    url_list = html.xpath('//*[@id="base_bd"]/dl/dd/a/@href').extract()
+    city_url = []
+    for i in url_list:
+        print(base_url+i)
+        city_url.append(base_url+i)
+    print(len(city_url))
+
+
 def start():
     url = 'http://hotels.ctrip.com/hotel/6817123.html'
     api = 'http://hotels.ctrip.com/Domestic/Tool/AjaxHotelList.aspx'
-    content = get_html_content(api)
-    # print(content)
-    # handler_content(content)
-    handler_url(content)
+    cityList = 'http://hotels.ctrip.com/domestic-city-hotel.html'
+    data = {
+        'cityId': '110',
+        'page': '1'
+    }
+    content = get_html_content(api,data)
 
+    print(content)
+    # handler_mes(content)
+    handler_url(content)
+    # get_city(content)
 
 if __name__ == '__main__':
     start()
