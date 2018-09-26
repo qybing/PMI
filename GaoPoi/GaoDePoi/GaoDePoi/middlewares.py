@@ -6,10 +6,10 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 import logging
 import urllib
-from random import choice
 from urllib.parse import urlencode
-from scrapy import signals
 from urllib import parse
+from random import choice
+from scrapy import signals
 
 from tool import APIkeys
 from tool.handle_redis import RedisClient

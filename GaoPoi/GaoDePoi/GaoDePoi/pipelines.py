@@ -23,9 +23,9 @@ class GaodepoiPipeline(object):
         )
 
     def open_spider(self, spider):
-        self.client = pymongo.MongoClient(self.mongo_uri)
+        self.client = pymongo.MongoClient(host=self.mongo_uri,port=27018)
         db_auth = self.client.admin
-        db_auth.authenticate('laocheng', 'laocheng')
+        db_auth.authenticate('pmi_data', 'pmi_data')
         self.db = self.client[self.mongo_db]
 
 

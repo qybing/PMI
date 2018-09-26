@@ -92,7 +92,7 @@ class GaodepoibypolygonSpider(RedisSpider):
             elif maxPage - int(now_page) < 0 and  len(item['pois']) == 0:
                 if maxPage == 0 and int(now_page) == 1:
                     logger.info('第一页就没有结果没有结果的URL：{}'.format(response.url))
-                elif now_page - maxPage == 1:
+                elif int(now_page) - maxPage == 1:
                     logger.info('当前第{}页了一共有{}'.format(now_page, maxPage + 1))
                     logger.info('没有结果的URL：{}'.format(response.url))
                 else:
