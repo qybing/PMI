@@ -1,6 +1,7 @@
-a = '07531b13b9dd9e6a975861b69607e130486c83129ade75701fd4fa0aa8d055f9'
-c = '07531b13b9dd9e6a975861b69607e130486c83129ade75701fd4fa0aa8d055f'
-b = '7707783f6125375d3fb8caa684af62c34942db00a6b018a5960d975355bf99f9'
-d = '23a4011be638aa64271b3c0ae2312ae8190b247f0ba4c458220f1e5404884074'
-print(len(a))
-print(len(b))
+from selenium import webdriver
+
+driver_path = r'E:\ch\chromedriver.exe'
+driver = webdriver.Chrome(executable_path=driver_path)
+driver.get('http://hotels.ctrip.com/hotel/428365.html')
+html = driver.page_source
+print(html)

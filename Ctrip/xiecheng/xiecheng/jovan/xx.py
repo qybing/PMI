@@ -5,6 +5,5 @@ a= '{"hotelid":"452197","amount":"988"},{"hotelid":"467314","amount":"998"},{"ho
 print(a)
 b = a[1:-1].split('},{')
 for i in b:
-    # print(i)
     c = re.findall('"hotelid":"(\d+)","amount":"(\d+)"',i)
     print(c[0][0],c[0][1])

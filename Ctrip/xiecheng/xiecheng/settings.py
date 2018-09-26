@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'xiecheng.spiders'
 #USER_AGENT = 'xiecheng (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -52,9 +52,11 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'xiecheng.middlewares.XiechengDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   # 'xiecheng.middlewares.XiechengDownloaderMiddleware': 420,
+    'xiecheng.middlewares.UserAgentMiddleware':543,
+    'xiecheng.middlewares.UrlMiddleware':539
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -88,3 +90,35 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+#使用scrapy-redis里的去重组件，不使用scrapy默认的去重
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+#使用scrapy-redis里的调度器组件，不使用scrapy默认的去重
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+SCHEDULER_PERSIST = True
+
+
+REDIS_HOST = 'localhost'  # 也可以根据情况改成 localhost
+REDIS_PORT = 6379
+REDIS_PARAMS = {
+   # 'password': 在此设置密码,
+   'db': 15
+}
+REDIS_URL = None
+#防止反爬
+CONCURRENT_REQUESTS = 1
+# DOWNLOAD_DELAY =4
+#状态码
+HTTPERROR_ALLOW_ALL =True
+# HTTPERROR_ALLOWED_CODES = [302,500, 503, 504, 400, 403, 404, 408]
+# RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+#重试次数
+RETRY_TIMES= 3
+#下载时间设置
+DOWNLOAD_TIMEOUT = 15
+#使用集合对start_requests去重
+REDIS_START_URLS_AS_SET = True
+# REDIRECT_ENABLED = False
+
+# LOG_FILE = "mySpider10.log"
+# LOG_LEVEL = "INFO"

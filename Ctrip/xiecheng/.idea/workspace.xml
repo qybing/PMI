@@ -2,49 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f9989ba-49a9-4f65-a293-d21609ec1f83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/xiecheng.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng/jovan/CityList.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng/jovan/Hotel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng/jovan/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng/jovan/cas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng/jovan/wo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng/jovan/xx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng/jovan/yy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng/tool/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/.idea/GaoPoi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/.idea/GaoDePoi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/GaoDePoi/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/GaoDePoi/spiders/GaodeCode_python.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/GaoDePoi/spiders/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/jovan/AMap_adcode_citycode.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/jovan/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/jovan/crawlGDPOIbyPolygon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/jovan/crawlTypesUnitPolygon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/jovan/xx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/jovan/高德地图API POI分类编码表.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/APIkeys.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/GaodeCode.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/handle_redis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/modify_excle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/up_data_redis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/dianping.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/dianping3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/t.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/yanzhengma.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../AnJuke/XzlSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AnJuke/XzlSpider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GaoPoi/.idea/GaoPoi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GaoPoi/.idea/GaoPoi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GaoPoi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GaoPoi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/GaoDePoi/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/GaoDePoi/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/jovan/xx.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/jovan/xx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/handle_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/handle_redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/modify_excle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/modify_excle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/up_data_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../GaoPoi/GaoDePoi/tool/up_data_redis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/main.py" afterDir="false" />
@@ -59,6 +25,10 @@
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/citylist.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/citylist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/village.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/Supermarket/spiders/village.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/dianping.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/dianping.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/dianping3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/dianping3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/t.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/t.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/yanzhengma.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/jovan/yanzhengma.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/scrapy.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/tool/AA.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/tool/AA.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PublicRemarke/Supermarket/tool/MyTest.py" beforeDir="false" />
@@ -82,101 +52,76 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/xiecheng$xx.coverage" NAME="xx Coverage Results" MODIFIED="1537354395941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng/jovan" />
-    <SUITE FILE_PATH="coverage/xiecheng$Hotel.coverage" NAME="Hotel Coverage Results" MODIFIED="1537410713428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng/jovan" />
+    <SUITE FILE_PATH="coverage/xiecheng$xx.coverage" NAME="xx Coverage Results" MODIFIED="1537522031104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng/jovan" />
+    <SUITE FILE_PATH="coverage/xiecheng$CityId.coverage" NAME="CityId Coverage Results" MODIFIED="1537524088350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng/tool" />
+    <SUITE FILE_PATH="coverage/xiecheng$mytest.coverage" NAME="mytest Coverage Results" MODIFIED="1537866328355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng/jovan" />
+    <SUITE FILE_PATH="coverage/xiecheng$Hotel.coverage" NAME="Hotel Coverage Results" MODIFIED="1537870257119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng/jovan" />
+    <SUITE FILE_PATH="coverage/xiecheng$main.coverage" NAME="main Coverage Results" MODIFIED="1537867448178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng" />
     <SUITE FILE_PATH="coverage/xiecheng$yy.coverage" NAME="yy Coverage Results" MODIFIED="1537438161936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng/jovan" />
+    <SUITE FILE_PATH="coverage/xiecheng$ppp.coverage" NAME="ppp Coverage Results" MODIFIED="1537521566929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xiecheng/jovan" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-16550406">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="html" value="2" />
           <entry key="js" value="4" />
-          <entry key="py" value="9" />
+          <entry key="py" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="2" />
           <entry key="JavaScript" value="4" />
-          <entry key="Python" value="9" />
+          <entry key="Python" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="73" />
-          <entry key="py" value="767" />
+          <entry key="py" value="1932" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="73" />
-          <entry key="Python" value="767" />
+          <entry key="Python" value="1931" />
+          <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xiecheng/jovan/CityList.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xiecheng/jovan/Hotel.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xiecheng/spiders/hotel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+            <state relative-caret-position="206">
+              <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1537410712997" expanded="true" signature="3462:3803" ph="..." />
+                <element signature="e#24#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xiecheng/jovan/xx.py">
+        <entry file="file://$PROJECT_DIR$/xiecheng/spiders/CtripCity.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <caret line="7" column="23" selection-start-line="7" selection-end-line="8" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1537866916105" expanded="true" signature="746:753" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xiecheng/jovan/yy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xiecheng/jovan/cas.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xiecheng/jovan/wo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2331">
-              <caret line="7" column="40" selection-end-line="153" />
             </state>
           </provider>
         </entry>
@@ -186,8 +131,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -197,6 +143,10 @@
       <find>htllist</find>
       <find>data-pagecount</find>
       <find>808</find>
+      <find>深度睡眠房</find>
+      <find>child_name</find>
+      <find>豪华</find>
+      <find>ajaxGetHotelAddtionalInfo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,12 +155,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/xiecheng/jovan/xx.py" />
         <option value="$PROJECT_DIR$/xiecheng/jovan/CityList.py" />
-        <option value="$PROJECT_DIR$/xiecheng/jovan/Hotel.py" />
         <option value="$PROJECT_DIR$/xiecheng/jovan/cas.js" />
         <option value="$PROJECT_DIR$/xiecheng/jovan/wo.js" />
         <option value="$PROJECT_DIR$/xiecheng/jovan/yy.py" />
+        <option value="$PROJECT_DIR$/xiecheng/jovan/a.html" />
+        <option value="$PROJECT_DIR$/xiecheng/jovan/ppp.py" />
+        <option value="$PROJECT_DIR$/xiecheng/jovan/xx.py" />
+        <option value="$PROJECT_DIR$/xiecheng/tool/CityId.py" />
+        <option value="$PROJECT_DIR$/xiecheng/tool/handle_redis.py" />
+        <option value="$PROJECT_DIR$/xiecheng/jovan/mytest.py" />
+        <option value="$PROJECT_DIR$/xiecheng/spiders/CtripCity.py" />
+        <option value="$PROJECT_DIR$/xiecheng/main.py" />
+        <option value="$PROJECT_DIR$/xiecheng/middlewares.py" />
+        <option value="$PROJECT_DIR$/xiecheng/settings.py" />
+        <option value="$PROJECT_DIR$/xiecheng/jovan/Hotel.py" />
+        <option value="$PROJECT_DIR$/xiecheng/spiders/hotel.py" />
       </list>
     </option>
   </component>
@@ -220,10 +180,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1039" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -249,6 +209,12 @@
               <item name="xiecheng" type="462c0819:PsiDirectoryNode" />
               <item name="jovan" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="xiecheng" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiecheng" type="462c0819:PsiDirectoryNode" />
+              <item name="xiecheng" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -257,10 +223,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\Pycharm\PMI\Ctrip\xiecheng\xiecheng" />
+      <recent name="Z:\Pycharm\PMI\Ctrip\xiecheng\xiecheng\tool" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -274,11 +247,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.yy">
-    <configuration name="cas.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="cas.js" working-dir="$PROJECT_DIR$/xiecheng/jovan">
-      <method v="2" />
-    </configuration>
-    <configuration name="wo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="wo.js" working-dir="$PROJECT_DIR$/xiecheng/jovan">
+  <component name="RunManager" selected="Python.Hotel">
+    <configuration name="CityId" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="xiecheng" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xiecheng/tool" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xiecheng/tool/CityId.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Hotel" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -295,6 +284,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xiecheng/jovan/Hotel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="xiecheng" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xiecheng" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xiecheng/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mytest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="xiecheng" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xiecheng/jovan" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xiecheng/jovan/mytest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -325,41 +358,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="yy" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="xiecheng" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xiecheng/jovan" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xiecheng/jovan/yy.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.Hotel" />
       <item itemvalue="Python.xx" />
-      <item itemvalue="Node.js.cas.js" />
-      <item itemvalue="Python.yy" />
-      <item itemvalue="Node.js.wo.js" />
+      <item itemvalue="Python.CityId" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.mytest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.yy" />
-        <item itemvalue="Node.js.wo.js" />
-        <item itemvalue="Node.js.cas.js" />
         <item itemvalue="Python.Hotel" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.mytest" />
+        <item itemvalue="Python.CityId" />
         <item itemvalue="Python.xx" />
       </list>
     </recent_temporary>
@@ -378,16 +389,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1550" height="831" extended-state="1" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13672923" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1494638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39465874" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39910978" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3318649" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3979442" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -396,7 +407,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32937685" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -404,13 +415,13 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13672923" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1494638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39465874" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39910978" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3318649" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3979442" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -419,7 +430,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32937685" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -438,33 +449,68 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/xiecheng/jovan/Hotel.py</url>
-          <line>39</line>
+          <line>47</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/xiecheng/jovan/Hotel.py</url>
-          <line>38</line>
+          <line>45</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/xiecheng/jovan/Hotel.py</url>
-          <line>100</line>
-          <option name="timeStamp" value="5" />
+          <line>46</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/jovan/ppp.py</url>
+          <line>5584</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/jovan/Hotel.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/spiders/CtripCity.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/spiders/CtripCity.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/spiders/CtripCity.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/spiders/hotel.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/middlewares.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/middlewares.py</url>
+          <line>159</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiecheng/jovan/Hotel.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xiecheng/spiders/hotel.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/cas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xiecheng/jovan/wo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2331">
@@ -472,34 +518,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/cas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/a.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7775">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/xiecheng/jovan/CityList.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/Hotel.py">
+    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/ppp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        <state relative-caret-position="94">
+          <caret line="5510" column="8" lean-forward="true" selection-start-line="5510" selection-start-column="8" selection-end-line="5510" selection-end-column="8" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1537410712997" expanded="true" signature="3462:3803" ph="..." />
+            <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/xx.py">
+    <entry file="file://D:/Program Files/Python36/Lib/site-packages/scrapy/spiders/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="9" column="17" selection-start-line="9" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Python36/Lib/site-packages/scrapy/http/request/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/mytest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="3" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xiecheng/jovan/yy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+        <state relative-caret-position="150">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/xx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/tool/CityId.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-79">
+          <caret line="147" column="12" lean-forward="true" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#168#181#0" expanded="true" />
+            <marker date="1537867431524" expanded="true" signature="4574:4583" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/tool/handle_redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/jovan/Hotel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="44" column="14" selection-start-line="44" selection-end-line="45" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1537870390959" expanded="true" signature="3801:4307" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/spiders/CtripCity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="23" selection-start-line="7" selection-end-line="8" />
+          <folding>
+            <marker date="1537866916105" expanded="true" signature="746:753" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng/spiders/hotel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
